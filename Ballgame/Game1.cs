@@ -77,6 +77,10 @@ namespace Ballgame
 
             // TODO: Add your drawing code here
 
+            spriteBatch.Begin();
+
+            spriteBatch.End();
+
             base.Draw(gameTime);
         }
     }
