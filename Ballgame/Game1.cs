@@ -7,7 +7,7 @@ namespace Ballgame
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game 
+    public class Game1 : Game //github test
     {
         //(github teszt)
 
