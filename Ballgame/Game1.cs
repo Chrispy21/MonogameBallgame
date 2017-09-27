@@ -7,16 +7,11 @@ namespace Ballgame
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-<<<<<<< HEAD
-    public class Game1 : Game 
-    {
 
+   public class Game1 : Game
+   {
         GraphicsDeviceManager graphics;
-=======
-    public class Game1 : Game
-    {
-       GraphicsDeviceManager graphics;
->>>>>>> 249e81fe44c37bbfb044d005d4d122a4495331d7
+
         SpriteBatch spriteBatch;
         Racket racket;
 
@@ -120,6 +115,7 @@ namespace Ballgame
             //minden kirajzolást ide
             spriteBatch.Begin();
 
+            //Level.Draw();
            
             spriteBatch.Draw(ball, new Vector2(ballx, bally), Color.White);
             spriteBatch.Draw(racket, new Vector2(racketx, rackety), Color.White);
@@ -130,10 +126,7 @@ namespace Ballgame
 
             // TODO: Add your drawing code here
 
-<<<<<<< HEAD
-=======
-           
->>>>>>> 249e81fe44c37bbfb044d005d4d122a4495331d7
+
             base.Draw(gameTime);
         }
     }
