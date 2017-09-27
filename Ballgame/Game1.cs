@@ -7,13 +7,14 @@ namespace Ballgame
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game //github test
+    public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
+       GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Racket racket;
 
-       
-        Texture2D racket;
+        Texture2D rackett;
+        
 
         public int racketx=400;
         public int rackety=300;
@@ -22,12 +23,20 @@ namespace Ballgame
 
         public int ballx;
         public int bally;
-        
+
+        private double x;
+        private double y;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+        }
+
+        public Game1(double x, double y)
+        {
+            this.x = x;
+            this.y = y;
         }
 
         /// <summary>
@@ -86,27 +95,6 @@ namespace Ballgame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            KeyboardState keyboardState = Keyboard.GetState();
-
-            if (keyboardState.IsKeyDown(Keys.Left))
-            {
-                racketx -=100;
-            }
-            if (keyboardState.IsKeyDown(Keys.Right))
-            {
-                racketx += 100;
-            }
-           
-           
-
-            if (racketx < 0)
-            {
-                racketx = 0;
-            }
-            else if (racketx + racket.Width > graphics.PreferredBackBufferWidth)
-            {
-                racketx = graphics.PreferredBackBufferWidth - racket.Width;
-            }
            
            
 
@@ -135,10 +123,7 @@ namespace Ballgame
 
             // TODO: Add your drawing code here
 
-            spriteBatch.Begin();
-
-            spriteBatch.End();
-
+           
             base.Draw(gameTime);
         }
     }
