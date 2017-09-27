@@ -9,6 +9,8 @@ namespace Ballgame
     /// </summary>
     public class Game1 : Game 
     {
+        //(github teszt)
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
