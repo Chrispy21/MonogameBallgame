@@ -7,10 +7,22 @@ namespace Ballgame
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class Game1 : Game 
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+       
+        Texture2D racket;
+
+        public int racketx=400;
+        public int rackety=300;
+
+        Texture2D ball;
+
+        public int ballx;
+        public int bally;
+        
 
         public Game1()
         {
@@ -27,6 +39,11 @@ namespace Ballgame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.ApplyChanges();
+            
+
 
             base.Initialize();
         }
@@ -37,8 +54,14 @@ namespace Ballgame
         /// </summary>
         protected override void LoadContent()
         {
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //labda képének megadása
+            ball = Content.Load<Texture2D>("Images/ball");
+            //ütő képének megadása
+            racket = Content.Load<Texture2D>("Images/racket");
 
             // TODO: use this.Content to load your game content here
         }
@@ -57,10 +80,35 @@ namespace Ballgame
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            KeyboardState keyboardState = Keyboard.GetState();
+
+            if (keyboardState.IsKeyDown(Keys.Left))
+            {
+                racketx -=100;
+            }
+            if (keyboardState.IsKeyDown(Keys.Right))
+            {
+                racketx += 100;
+            }
+           
+           
+
+            if (racketx < 0)
+            {
+                racketx = 0;
+            }
+            else if (racketx + racket.Width > graphics.PreferredBackBufferWidth)
+            {
+                racketx = graphics.PreferredBackBufferWidth - racket.Width;
+            }
+           
+           
 
             // TODO: Add your update logic here
 
@@ -74,10 +122,21 @@ namespace Ballgame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            //minden kirajzolást ide
+            spriteBatch.Begin();
+
+           
+            spriteBatch.Draw(ball, new Vector2(ballx, bally), Color.White);
+            spriteBatch.Draw(racket, new Vector2(racketx, rackety), Color.White);
+
+
+
+            spriteBatch.End();//és ez fölé
 
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }
     }
+   
 }
