@@ -7,9 +7,8 @@ namespace Ballgame
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game //github test
+    public class Game1 : Game 
     {
-        //(github teszt)
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -136,10 +135,6 @@ namespace Ballgame
             spriteBatch.End();//és ez fölé
 
             // TODO: Add your drawing code here
-
-            spriteBatch.Begin();
-
-            spriteBatch.End();
 
             base.Draw(gameTime);
         }
