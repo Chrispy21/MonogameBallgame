@@ -29,3 +29,9 @@ C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\D
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Images\racket.xnb
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Images\rectangle.xnb
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Images\trollface.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnCredits.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnCreditsclick.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnExit.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnExitclick.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnNewGame.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnNewGameclick.xnb

@@ -1,45 +1,68 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Ballgame
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-
-   public class Game1 : Game
+   
+    public enum BallType { Bowling };
+    public enum RacketType { BlueGray };
+    public enum BrickType { DefaultBrick };
+   
+    public class Game1 : Game
    {
-        GraphicsDeviceManager graphics;
+        public static GraphicsDeviceManager Graphics { get; private set; }
+        public static SpriteBatch SpriteBatch { get; private set; }
 
-        SpriteBatch spriteBatch;
-        Racket racket;
+        public const float baseBallSpeed = -5;
 
-        Texture2D rackett;
-        
+        public static Random rnd = new Random();
 
-        public int racketx=400;
-        public int rackety=300;
+        private static int collectibleTypeCount = 3;
+        private static int ballTypeCount = 1;
+        private static int racketTypeCount = 1;
+        private static int brickTypeCount = 1;
+        private static int particleTypeCount = 1;
 
-        Texture2D ball;
+       
+        private static Texture2D[] ballSprites;
+        private static Texture2D[] racketSprites;
+        private static Texture2D[] brickSprites;
 
-        public int ballx;
-        public int bally;
 
-        private double x;
-        private double y;
+        public static DisplayMode Resolution
+        {
+            get
+            {
+                return GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
+            }
+        }
+        public static DisplayMode Resolution
+        {
+            get
+            {
+                return GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
+            }
+        }
+        static extern void ClipCursor(ref Rectangle rect);
+
+        public static List<DelayedAction> DelayedActionList { get; private set; }
+
+        public static Level CurrentLevel { get; private set; }
+
+        private static Rectangle mouseClipRect = new Rectangle();
 
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
 
-        public Game1(double x, double y)
-        {
-            this.x = x;
-            this.y = y;
-        }
+       
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -50,13 +73,25 @@ namespace Ballgame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 600;
-            graphics.ApplyChanges();
-            
+            DelayedActionList = new List<DelayedAction>();
 
+           
+            ballSprites = new Texture2D[ballTypeCount];
+            racketSprites = new Texture2D[racketTypeCount];
+            brickSprites = new Texture2D[brickTypeCount];
+           
+
+            Graphics.IsFullScreen = false;
+            Graphics.PreferredBackBufferWidth = 1920;
+            Graphics.PreferredBackBufferHeight = 1080;
+            Graphics.SynchronizeWithVerticalRetrace = false;
+            Graphics.ApplyChanges();
+
+            this.IsMouseVisible = false;
 
             base.Initialize();
+
+
         }
 
         /// <summary>
@@ -67,16 +102,26 @@ namespace Ballgame
         {
 
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            SpriteBatch = new SpriteBatch(GraphicsDevice);
+           
             //labda képének megadása
-            ball = Content.Load<Texture2D>("Images/ball");
-            //ütő képének megadása
-            racket = Content.Load<Texture2D>("Images/racket");
+            
+            
 
             // TODO: use this.Content to load your game content here
         }
 
+        private void StartGame()
+        {
+            CurrentLevel = new Level();
+            CurrentLevel.GenerateBricks();
+
+            // Clip mouse coordinates
+            mouseClipRect.X = CurrentLevel.Player.Body.Width / 2;
+            mouseClipRect.Y = 0;
+            mouseClipRect.Size = new Point(Resolution.Width - CurrentLevel.Player.Body.Width / 2, Resolution.Height);
+            //ClipCursor(ref mouseClipRect);
+        }
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
@@ -94,15 +139,29 @@ namespace Ballgame
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            
+            CheckInput();
 
-           
-           
+            CurrentLevel.Update(gameTime);
 
+            // Update delayed actions (timers)
+            for (int i = DelayedActionList.Count - 1; i >= 0; i--)
+            {
+                DelayedActionList[i].Update(gameTime.ElapsedGameTime.Milliseconds);
+            }
+            
             // TODO: Add your update logic here
 
             base.Update(gameTime);
+        }
+        private void CheckInput()
+        {
+            KeyboardState keyboardState = Keyboard.GetState();
+
+            // Close game on escape or the gamepad's back button
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || keyboardState.IsKeyDown(Keys.Escape))
+                Exit();
+
         }
 
         /// <summary>
@@ -111,24 +170,20 @@ namespace Ballgame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            //minden kirajzolást ide
-            spriteBatch.Begin();
+            this.GraphicsDevice.Clear(Color.LightGray);
 
-            //Level.Draw();
-           
-            spriteBatch.Draw(ball, new Vector2(ballx, bally), Color.White);
-            spriteBatch.Draw(racket, new Vector2(racketx, rackety), Color.White);
-
-
-
-            spriteBatch.End();//és ez fölé
-
-            // TODO: Add your drawing code here
-
+            SpriteBatch.Begin();
+            CurrentLevel.Draw(gameTime);
+            SpriteBatch.End();
 
             base.Draw(gameTime);
+
+            
+            // TODO: Add your drawing code here
+
+            
         }
+        
     }
    
 }

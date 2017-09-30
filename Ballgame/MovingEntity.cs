@@ -1,63 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Ballgame
 {
-    class MovingEntity:Game1
-    {
-        public double Speed;
-
-        private double speedx;
-        private double speedy;
-        private Racket racket;
-        private Texture2D racket1;
-
-        public double SpeedX
+   
+        public abstract class MovingEntity : Entity
         {
-            get
-            {
-                return speedx;
-            }
-            set
-            {
-                if(Math.Abs(value) !=1 && value!=0)
-                {
-                    throw new Exception("Az iránybéli sebesség csak 1,-1 vagy 0 lehet ");
-                }
-                this.speedx = value;
-            }
-        }
+            /// <summary>
+            /// The speed of the entity.
+            /// </summary>
+            public Vector2 Speed;
 
-
-        public double SpeedY
-        {
-            get
+            protected MovingEntity(int x, int y, Texture2D sprite)
+                : base(x, y, sprite)
             {
-                return speedy;
+                this.Speed = new Vector2(0, 0);
             }
-            set
-            {
-                if(Math.Abs(value)!=1 && value !=0)
-                {
-                    throw new Exception("Az iránybéli sebesség nem lehet csak 1,-1,0");
-                }
-                this.speedy = value;
-            }
-        }
-        
-        public MovingEntity(double x, double y, Texture2D racket1, int racketX, int racketY) : this(x, y, racket1)
-        {
-            this.racketx = racketX;
-            this.rackety = racketY;
-        }
 
-        public MovingEntity(double x, double y, Texture2D racket1) : base(x, y)
-        {
-            this.racket1 = racket1;
+            public override void Update(GameTime gameTime)
+            {
+                this.Move();
+            }
+
+            private void Move()
+            {
+                this.Body.X += (int)this.Speed.X;
+                this.Body.Y += (int)this.Speed.Y;
+            }
         }
     }
 }

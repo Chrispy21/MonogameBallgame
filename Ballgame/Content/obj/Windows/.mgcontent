@@ -12,5 +12,11 @@
     <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/rectangle.png</File>
     <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/trollface.png</File>
     <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/ball.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGame.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCredits.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCreditsclick.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExitclick.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGameclick.png</File>
   </SourceFiles>
 </SourceFileCollection>
