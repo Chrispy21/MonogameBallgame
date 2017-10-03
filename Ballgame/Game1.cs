@@ -8,11 +8,12 @@ namespace Ballgame
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-   
+    public enum CollectibleType { Dislike, Like, Trollface };
     public enum BallType { Bowling };
     public enum RacketType { BlueGray };
     public enum BrickType { DefaultBrick };
-   
+    public enum ParticleType { DefaultBrick };
+
     public class Game1 : Game
    {
         public static GraphicsDeviceManager Graphics { get; private set; }
@@ -28,11 +29,11 @@ namespace Ballgame
         private static int brickTypeCount = 1;
         private static int particleTypeCount = 1;
 
-       
+        private static Texture2D[] collectibleSprites;
         private static Texture2D[] ballSprites;
         private static Texture2D[] racketSprites;
         private static Texture2D[] brickSprites;
-
+        
 
         public static DisplayMode Resolution
         {
@@ -41,13 +42,7 @@ namespace Ballgame
                 return GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
             }
         }
-        public static DisplayMode Resolution
-        {
-            get
-            {
-                return GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
-            }
-        }
+       
         static extern void ClipCursor(ref Rectangle rect);
 
         public static List<DelayedAction> DelayedActionList { get; private set; }
@@ -75,11 +70,12 @@ namespace Ballgame
             // TODO: Add your initialization logic here
             DelayedActionList = new List<DelayedAction>();
 
-           
+            collectibleSprites = new Texture2D[collectibleTypeCount];
             ballSprites = new Texture2D[ballTypeCount];
             racketSprites = new Texture2D[racketTypeCount];
             brickSprites = new Texture2D[brickTypeCount];
-           
+            particleSprites = new Texture2D[particleTypeCount];
+
 
             Graphics.IsFullScreen = false;
             Graphics.PreferredBackBufferWidth = 1920;
@@ -110,7 +106,7 @@ namespace Ballgame
 
             // TODO: use this.Content to load your game content here
         }
-
+        
         private void StartGame()
         {
             CurrentLevel = new Level();
@@ -122,6 +118,7 @@ namespace Ballgame
             mouseClipRect.Size = new Point(Resolution.Width - CurrentLevel.Player.Body.Width / 2, Resolution.Height);
             //ClipCursor(ref mouseClipRect);
         }
+        
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
@@ -129,6 +126,19 @@ namespace Ballgame
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
+        }
+
+
+
+        public static Texture2D GetRacketSprite(RacketType type)
+        {
+            return racketSprites[(int)type];
+        }
+
+
+        public static Texture2D GetCollectibleSprite(CollectibleType type)
+        {
+            return collectibleSprites[(int)type];
         }
 
         /// <summary>
@@ -183,7 +193,15 @@ namespace Ballgame
 
             
         }
-        
+        public static void QueueAction(DelayedAction action)
+        {
+            DelayedActionList.Add(action);
+        }
+
+        public static Texture2D GetBrickSprite(BrickType type)
+        {
+            return brickSprites[(int)type];
+        }
     }
    
 }
