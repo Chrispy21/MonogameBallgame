@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Ballgame
+namespace Ballgame.Entities
 {
     class Collectible:MovingEntity
     {

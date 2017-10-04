@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 
-namespace Ballgame
+namespace Ballgame.Entities
 {
     class BrickParticle:MovingEntity
     {

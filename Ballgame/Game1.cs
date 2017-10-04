@@ -2,6 +2,9 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Ballgame.Entities;
 
 namespace Ballgame
 {
@@ -33,6 +36,7 @@ namespace Ballgame
         private static Texture2D[] ballSprites;
         private static Texture2D[] racketSprites;
         private static Texture2D[] brickSprites;
+        private static Texture2D[] particleSprites;
         
 
         public static DisplayMode Resolution
@@ -65,6 +69,12 @@ namespace Ballgame
         /// related content.  Calling base.Initialize will enumerate through any components
         /// and initialize them as well.
         /// </summary>
+        
+        public static Texture2D GetParticleSprite(ParticleType type)
+        {
+            return particleSprites[(int)type];
+        }
+
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
@@ -78,8 +88,8 @@ namespace Ballgame
 
 
             Graphics.IsFullScreen = false;
-            Graphics.PreferredBackBufferWidth = 1920;
-            Graphics.PreferredBackBufferHeight = 1080;
+            Graphics.PreferredBackBufferWidth = 800;
+            Graphics.PreferredBackBufferHeight = 600;
             Graphics.SynchronizeWithVerticalRetrace = false;
             Graphics.ApplyChanges();
 
@@ -112,6 +122,7 @@ namespace Ballgame
             CurrentLevel = new Level();
             CurrentLevel.GenerateBricks();
 
+            //javítani
             // Clip mouse coordinates
             mouseClipRect.X = CurrentLevel.Player.Body.Width / 2;
             mouseClipRect.Y = 0;
@@ -201,6 +212,11 @@ namespace Ballgame
         public static Texture2D GetBrickSprite(BrickType type)
         {
             return brickSprites[(int)type];
+        }
+
+        public static Texture2D GetBallSprite(BallType type)
+        {
+            return ballSprites[(int)type];
         }
     }
    

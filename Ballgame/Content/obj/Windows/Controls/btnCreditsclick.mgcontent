@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCreditsclick.png</SourceFile>
-  <SourceTime>2017-09-30T10:45:23.3481214+02:00</SourceTime>
-  <DestFile>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Controls/btnCreditsclick.xnb</DestFile>
-  <DestTime>2017-09-30T15:11:45.331917+02:00</DestTime>
+  <SourceFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCreditsclick.png</SourceFile>
+  <SourceTime>2017-09-27T15:13:47.4133323+02:00</SourceTime>
+  <DestFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Controls/btnCreditsclick.xnb</DestFile>
+  <DestTime>2017-10-04T10:25:16.1618386+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

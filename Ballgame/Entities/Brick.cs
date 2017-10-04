@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 
 
-namespace Ballgame
+namespace Ballgame.Entities
 {
     class Brick:Entity
     {

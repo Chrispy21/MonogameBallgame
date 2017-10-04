@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 
-namespace Ballgame
+namespace Ballgame.Entities
 {
     class Ball:MovingEntity
     {
@@ -42,7 +42,7 @@ namespace Ballgame
             }
 
             // Prevent ball from going out of the screen
-            if (this.Body.X <= 0 || this.Body.X + this.Body.Width >= Main.Resolution.Width)
+            if (this.Body.X <= 0 || this.Body.X + this.Body.Width >= Game1.Resolution.Width)
             {
                 this.Speed.X *= -1;
             }

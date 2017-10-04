@@ -41,15 +41,16 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Ball.cs" />
-    <Compile Include="Brick.cs" />
-    <Compile Include="BrickParticle.cs" />
-    <Compile Include="Collecitble.cs" />
+    <Compile Include="Entities\MovingEntities\Ball.cs" />
+    <Compile Include="Entities\Brick.cs" />
+    <Compile Include="Entities\MovingEntities\BrickParticle.cs" />
+    <Compile Include="Entities\MovingEntities\Collectible.cs" />
     <Compile Include="DelayedAction.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="MovingEntity.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="Entities\MovingEntity.cs" />
+    <Compile Include="Entities\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

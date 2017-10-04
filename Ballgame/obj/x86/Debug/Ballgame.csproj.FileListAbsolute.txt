@@ -35,3 +35,7 @@ C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\D
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnExitclick.xnb
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnNewGame.xnb
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnNewGameclick.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\obj\x86\Debug\Ballgame.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\obj\x86\Debug\Ballgame.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\obj\x86\Debug\Ballgame.exe
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\obj\x86\Debug\Ballgame.pdb
