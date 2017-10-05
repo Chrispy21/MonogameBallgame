@@ -6,7 +6,7 @@ using System;
 
 namespace Ballgame.Entities
 {
-    class Brick:Entity
+    public class Brick:Entity
     {
         private static Random rnd = new Random();
 

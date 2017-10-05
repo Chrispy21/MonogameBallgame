@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Ballgame.Entities
 {
-    class BrickParticle:MovingEntity
+    public class BrickParticle:MovingEntity
     {
         public float Size { get; private set; }
 

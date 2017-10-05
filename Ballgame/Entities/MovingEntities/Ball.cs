@@ -5,7 +5,7 @@ using System;
 
 namespace Ballgame.Entities
 {
-    class Ball:MovingEntity
+    public class Ball:MovingEntity
     {
         public Ball(int x, int y, BallType type) : base(x, y, Game1.GetBallSprite(type)) { }
 

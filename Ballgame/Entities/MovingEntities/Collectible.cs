@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Ballgame.Entities
 {
-    class Collectible:MovingEntity
+    public class Collectible:MovingEntity
     {
         public CollectibleType Type { get; private set; }
 

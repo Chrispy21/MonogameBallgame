@@ -46,14 +46,12 @@ namespace Ballgame
                 return GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
             }
         }
-       
-        static extern void ClipCursor(ref Rectangle rect);
 
         public static List<DelayedAction> DelayedActionList { get; private set; }
 
         public static Level CurrentLevel { get; private set; }
 
-        private static Rectangle mouseClipRect = new Rectangle();
+        //private static Rectangle mouseClipRect = new Rectangle();
 
         public Game1()
         {
@@ -106,13 +104,17 @@ namespace Ballgame
         /// </summary>
         protected override void LoadContent()
         {
-
+            string path;
             // Create a new SpriteBatch, which can be used to draw textures.
             SpriteBatch = new SpriteBatch(GraphicsDevice);
-           
+
             //labda képének megadása
-            
-            
+            //for (int i = 0; i < collectibleTypeCount; i++)
+            //{
+                path = String.Format("Images/ball");
+                collectibleSprites[0] = this.Content.Load<Texture2D>(path);
+            //}
+
 
             // TODO: use this.Content to load your game content here
         }
@@ -124,9 +126,7 @@ namespace Ballgame
 
             //javítani
             // Clip mouse coordinates
-            mouseClipRect.X = CurrentLevel.Player.Body.Width / 2;
-            mouseClipRect.Y = 0;
-            mouseClipRect.Size = new Point(Resolution.Width - CurrentLevel.Player.Body.Width / 2, Resolution.Height);
+            
             //ClipCursor(ref mouseClipRect);
         }
         

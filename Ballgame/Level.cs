@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Ballgame.Entities
 {
-    class Level
+    public class Level
     {
         public List<Entity> EntityList { get; private set; }
 

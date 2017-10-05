@@ -2,7 +2,7 @@
 
 namespace Ballgame
 {
-    class DelayedAction
+    public class DelayedAction
     {
         public Action Action
         {

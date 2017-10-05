@@ -21,16 +21,28 @@ namespace Ballgame.Entities
         public override void Update(GameTime gameTime)
         {
             // Moving the player's racket with the mouse
-            MouseState mouseState = Mouse.GetState();
+            KeyboardState keyboardState = Keyboard.GetState();
+            if (keyboardState.IsKeyDown(Keys.Left))
+            {
+                this.Body.X -= 20;
+            }
+            if (keyboardState.IsKeyDown(Keys.Right))
+            {
+                this.Body.X += 20;
+            }
+            if(this.Body.X+this.Body.Width>Game1.Graphics.PreferredBackBufferWidth)
+            {
+                this.Body.X = Game1.Graphics.PreferredBackBufferWidth - this.Body.Width;
+            }
             if (!this.IsInputInverted)
             {
                 // Normally
-                this.Body.X = mouseState.X - this.Body.Width / 2;
+                this.Body.X = this.Body.X - this.Body.Width / 2;
             }
             else
             {
                 // For when an input inverting collectible is picked up (e.g Trollface)
-                this.Body.X = Game1.Resolution.Width - mouseState.X - this.Body.Width / 2;
+                this.Body.X = Game1.Resolution.Width - this.Body.X - this.Body.Width / 2;
             }
 
             // If the player has no lives left, kill it
