@@ -22,16 +22,16 @@ namespace Ballgame.Entities
 
         private void Initialize()
         {
-            // Initialize the player's racket
-            Player = this.CreatePlayer(new Point(Game1.Resolution.Width / 2, Game1.Resolution.Height - 100), RacketType.BlueGray);
+            // A játékos létrehozása
+            this.Player = this.CreatePlayer(new Point(Main.Graphics.PreferredBackBufferWidth / 2, Main.Graphics.PreferredBackBufferHeight - 25), RacketType.BlueGray);
 
-            // Spawn the first ball
+            // Az első labda
             this.CreateBall(new Point(this.Player.Body.X, this.Player.Body.Y - 100), BallType.Bowling);
         }
 
         public void Update(GameTime gameTime)
         {
-            // Update entities
+            // Frissítünk mindent a pályán
             for (int i = this.EntityList.Count - 1; i >= 0; i--)
             {
                 this.EntityList[i].Update(gameTime);
@@ -45,7 +45,7 @@ namespace Ballgame.Entities
 
         public void Draw(GameTime gameTime)
         {
-            // Draw all entities on this level
+            // A pályán lévő Entityk rajzolása
             foreach (Entity e in this.EntityList)
             {
                 e.Draw(gameTime);
@@ -53,13 +53,13 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Fills the level with bricks.
+        /// Feltölti a pályát téglákkal
         /// </summary>
         public void GenerateBricks()
         {
-            for (int x = 0; x < Game1.Resolution.Width; x += Brick.defaultBrickSize.X)
+            for (int x = 0; x < Main.Resolution.X; x += Brick.defaultBrickSize.X)
             {
-                for (int y = 0; y < Game1.Resolution.Height / 2; y += Brick.defaultBrickSize.Y)
+                for (int y = 0; y < Main.Resolution.Y / 3; y += Brick.defaultBrickSize.Y)
                 {
                     this.CreateBrick(new Point(x, y), BrickType.DefaultBrick);
                 }
@@ -67,20 +67,16 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Spawns a collectible.
+        /// Spawnol egy collectible-t.
         /// </summary>
-        /// <param name="type">The type of the collectible.</param>
-        /// <param name="position">The position where the collectible should spawn to.</param>
-        /// <param name="speed">The default fall speed of the collectible.</param>
         public void SpawnCollectible(CollectibleType type, Point position, float speed)
         {
             this.EntityList.Add(new Collectible(position.X, position.Y, type, speed));
         }
 
         /// <summary>
-        /// Removes an entity from the entity list.
+        /// Eltöröl egy Entity-t
         /// </summary>
-        /// <param name="entity">The entity to remove.</param>
         public void DestroyEntity(Entity entity)
         {
             if (entity != null && this.EntityList.Contains(entity))
@@ -94,26 +90,19 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Spawns a new ball.
+        /// Spawnol egy labdát.
         /// </summary>
-        /// <param name="position">The position where the ball should be created.</param>
-        /// <returns>The created ball.</returns>
         public Ball CreateBall(Point position, BallType type)
         {
             Ball ball = new Ball(position.X, position.Y, type);
-            ball.Speed = new Vector2(Game1.baseBallSpeed, Game1.baseBallSpeed);
+            ball.Speed = new Vector2(Main.baseBallSpeed, Main.baseBallSpeed);
             this.EntityList.Add(ball);
             return ball;
         }
 
         /// <summary>
-        /// Instantiates a brick.
+        /// Spawnol egy téglát.
         /// </summary>
-        /// <param name="position">The position of the brick.</param>
-        /// <param name="type">The type of the brick.</param>
-        /// <param name="particleType">The particle type of the brick.</param>
-        /// <param name="hitsNeeded">Hits needed for the brick to break.</param>
-        /// <returns>The created brick.</returns>
         public Brick CreateBrick(Point position, BrickType type, ParticleType particleType = ParticleType.DefaultBrick, byte hitsNeeded = 1)
         {
             Brick brick = new Brick(position.X, position.Y, type, particleType, hitsNeeded);
@@ -122,11 +111,8 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Instantiates a player.
+        /// Spawnol egy játékost.
         /// </summary>
-        /// <param name="position">The position of the player.</param>
-        /// <param name="racketType">The type of the racket for the player.</param>
-        /// <returns>The created player.</returns>
         public Player CreatePlayer(Point position, RacketType racketType)
         {
             Player player = new Player(position.X, position.Y, racketType);

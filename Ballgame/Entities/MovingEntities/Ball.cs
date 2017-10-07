@@ -7,7 +7,7 @@ namespace Ballgame.Entities
 {
     public class Ball:MovingEntity
     {
-        public Ball(int x, int y, BallType type) : base(x, y, Game1.GetBallSprite(type)) { }
+        public Ball(int x, int y, BallType type) : base(x, y, Main.GetBallSprite(type)) { }
 
         public override void Update(GameTime gameTime)
         {
@@ -16,7 +16,7 @@ namespace Ballgame.Entities
             this.HandleCollisions();
 
             // Check if the ball fell down
-            if (this.Body.Y >= Game1.Resolution.Height + this.Body.Height)
+            if (this.Body.Y >= Main.Resolution.Y + this.Body.Height)
             {
                 this.Destroy();
             }
@@ -25,24 +25,24 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Handles collisions with other entities.
+        /// Az ütközéseket kezeli más Entitykkel.
         /// </summary>
         private void HandleCollisions()
         {
             // Check for brick-ball collision
-            if (Game1.CurrentLevel.EntityList.Find(b => b is Brick && this.Body.Intersects(b.Body)) != null)
+            if (Main.CurrentLevel.EntityList.Find(b => b is Brick && this.Body.Intersects(b.Body)) != null)
             {
                 this.Speed.Y *= -1;
             }
 
             // Check for racket-ball collision
-            if (Game1.CurrentLevel.Player.Body.Intersects(this.Body))
+            if (Main.CurrentLevel.Player.Body.Intersects(this.Body))
             {
                 this.Speed.Y *= -1;
             }
 
             // Prevent ball from going out of the screen
-            if (this.Body.X <= 0 || this.Body.X + this.Body.Width >= Game1.Resolution.Width)
+            if (this.Body.X <= 0 || this.Body.X + this.Body.Width >= Main.Resolution.X)
             {
                 this.Speed.X *= -1;
             }

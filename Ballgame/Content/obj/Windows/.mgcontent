@@ -4,19 +4,20 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGame.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCredits.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCreditsclick.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExitclick.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGameclick.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/backg1.jpg</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/dislike.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/gameover.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/like.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/racket.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/rectangle.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/trollface.png</File>
-    <File>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Images/ball.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGame.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCredits.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCreditsclick.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExitclick.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGameclick.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/backg1.jpg</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/gameover.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_0.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_1.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_2.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_0.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Balls/ball_0.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Particles/particle_0.png</File>
+    <File>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_0.png</File>
   </SourceFiles>
 </SourceFileCollection>

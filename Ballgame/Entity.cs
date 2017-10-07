@@ -8,12 +8,12 @@ namespace Ballgame
     public abstract class Entity
     {
         /// <summary>
-        /// The sprite of the entity.
+        /// Az entity textúrája.
         /// </summary>
         public Texture2D Sprite { get; private set; }
 
         /// <summary>
-        /// The body rectangle of the entity, which holds it's position and is used as a collision box.
+        /// Az entity teste, amiben a pozíciója van eltárolva, valamint az ütközéshez kell.
         /// </summary>
         public Rectangle Body;
 
@@ -25,21 +25,18 @@ namespace Ballgame
 
         public virtual void Draw(GameTime gameTime)
         {
-            Game1.SpriteBatch.Draw(this.Sprite, this.Body, Color.White);
+            Main.SpriteBatch.Draw(this.Sprite, this.Body, Color.White);
         }
 
-        /// <summary>
-        /// Called when the game updates itself and if this entity is also part of the main entity pool.
-        /// </summary>
-        /// <param name="gameTime"></param>
         public abstract void Update(GameTime gameTime);
 
+        
         /// <summary>
-        /// Removes the entity from the level's entity pool.
+        /// Eltünteti az adott entity-t.
         /// </summary>
-        protected virtual void Destroy()
+        public virtual void Destroy()
         {
-            Game1.CurrentLevel.DestroyEntity(this);
+            Main.CurrentLevel.DestroyEntity(this);
         }
     }
 }

@@ -5,11 +5,11 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Ballgame.Entities
 {
-    public class Collectible:MovingEntity
+    public class Collectible : MovingEntity
     {
         public CollectibleType Type { get; private set; }
 
-        public Collectible(int x, int y, CollectibleType type, float speed) : base(x, y, Game1.GetCollectibleSprite(type))
+        public Collectible(int x, int y, CollectibleType type, float speed) : base(x, y, Main.GetCollectibleSprite(type))
         {
             this.Type = type;
             this.Speed.X = 0;
@@ -20,14 +20,14 @@ namespace Ballgame.Entities
         {
             base.Update(gameTime);
 
-            // Check for pickup
-            if (Game1.CurrentLevel.Player.Body.Intersects(this.Body))
+            // Megnézzük, hogy a player felvette-e
+            if (Main.CurrentLevel.Player.Body.Intersects(this.Body))
             {
                 this.OnPickup();
             }
 
-            // Remove the collectible if it's out of screen
-            if (this.Body.Y >= Game1.Resolution.Height + this.Body.Height)
+            // Töröljük, ha leesik
+            if (this.Body.Y >= Main.Resolution.Y + this.Body.Height)
             {
                 this.Destroy();
             }
@@ -35,30 +35,33 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Gets called when the collectible is picked up.
+        /// Akkor hívódik meg, ha felveszi a játékost.
         /// </summary>
         private void OnPickup()
         {
             switch (this.Type)
             {
                 case CollectibleType.Dislike:
-                    foreach (Ball b in Game1.CurrentLevel.EntityList.FindAll(x => x is Ball))
+                    foreach (Ball b in Main.CurrentLevel.EntityList.FindAll(x => x is Ball))
                     {
                         b.Speed *= 1.2f;
                     }
                     break;
 
                 case CollectibleType.Like:
-                    foreach (Ball b in Game1.CurrentLevel.EntityList.FindAll(x => x is Ball))
+                    foreach (Ball b in Main.CurrentLevel.EntityList.FindAll(x => x is Ball))
                     {
                         b.Speed *= 0.8f;
                     }
                     break;
 
                 case CollectibleType.Trollface:
-                    Game1.CurrentLevel.Player.IsInputInverted = true;
-                    Game1.QueueAction(new DelayedAction(
-                        () => Game1.CurrentLevel.Player.IsInputInverted = false,
+                    // Irányítás megfordítása
+                    Main.CurrentLevel.Player.IsInputInverted = true;
+
+                    // 4 másodperc múlva állítsa vissza
+                    Main.QueueAction(new DelayedAction(
+                        () => Main.CurrentLevel.Player.IsInputInverted = false,
                         4000,
                         false));
                     break;

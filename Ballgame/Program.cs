@@ -8,14 +8,14 @@ namespace Ballgame
     /// </summary>
     public static class Program
     {
-        public static Game1 game;
+        public static Main game;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            using (game = new Game1())
+            using (game = new Main())
                 game.Run();
         }
     }

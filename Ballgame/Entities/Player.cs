@@ -5,13 +5,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Ballgame.Entities
 {
-    public class Player:Entity
+    public class Player : MovingEntity
     {
         public int Lives;
         private bool isDead;
         public bool IsInputInverted;
 
-        public Player(int x, int y, RacketType racketType) : base(x, y, Game1.GetRacketSprite(racketType))
+        public Player(int x, int y, RacketType racketType) : base(x, y, Main.GetRacketSprite(racketType))
         {
             this.Lives = 3;
             this.isDead = false;
@@ -20,41 +20,42 @@ namespace Ballgame.Entities
 
         public override void Update(GameTime gameTime)
         {
-            // Moving the player's racket with the mouse
+            // Az ütő mozgatása billentyűzettel
             KeyboardState keyboardState = Keyboard.GetState();
-            if (keyboardState.IsKeyDown(Keys.Left))
+
+            // Arra az esetre, ha a player felvett egy trollface-t
+            int modifier = this.IsInputInverted ? -1 : 1;
+            if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X > 0)
             {
-                this.Body.X -= 20;
+                this.Speed.X = -20 * modifier;
             }
-            if (keyboardState.IsKeyDown(Keys.Right))
+            else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X + this.Body.Width < Main.Graphics.PreferredBackBufferWidth)
             {
-                this.Body.X += 20;
-            }
-            if(this.Body.X+this.Body.Width>Game1.Graphics.PreferredBackBufferWidth)
-            {
-                this.Body.X = Game1.Graphics.PreferredBackBufferWidth - this.Body.Width;
-            }
-            if (!this.IsInputInverted)
-            {
-                // Normally
-                this.Body.X = this.Body.X - this.Body.Width / 2;
+                this.Speed.X = 20 * modifier;
             }
             else
             {
-                // For when an input inverting collectible is picked up (e.g Trollface)
-                this.Body.X = Game1.Resolution.Width - this.Body.X - this.Body.Width / 2;
+                this.Speed.X = 0;
             }
 
-            // If the player has no lives left, kill it
+            // Ha a player-nek nincs több élete, akkor vége
             if (!this.isDead && this.Lives < 0)
             {
                 this.Kill();
             }
+
+            base.Update(gameTime);
         }
 
         private void Kill()
         {
             this.isDead = true;
+
+            // ELTŰNTET MINDENT, NEM BIZTONSÁGOS
+            for (int i = Main.CurrentLevel.EntityList.Count - 1; i >= 0; i--)
+            {
+                Main.CurrentLevel.EntityList[i].Destroy();
+            }
         }
     }
 }

@@ -3,36 +3,35 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 
-
 namespace Ballgame.Entities
 {
-    public class Brick:Entity
+    public class Brick : Entity
     {
         private static Random rnd = new Random();
 
         /// <summary>
-        /// Gets or sets the maximum number of particles that bricks can emit when broken.
+        /// Maximum ennyi részecskére robban szét a tégla.
         /// </summary>
         private static int maxParticles = 16;
 
         /// <summary>
-        /// Hits needed for the brick to break.
+        /// Ennyi ütés kell a téglának, hogy kitörjön.
         /// </summary>
         private byte hitsNeeded { get; set; }
 
         /// <summary>
-        /// Gets or sets how many times this brick has been hit.
+        /// Ennyiszer ütötte meg a labda a téglát.
         /// </summary>
         private byte hits { get; set; }
 
         /// <summary>
-        /// The type of the particle that the brick will emit when broken.
+        /// A részecske sorszáma, ami ebből a téglából jön széttöréskor. (Main.cs)
         /// </summary>
         private ParticleType ParticleType { get; set; }
 
         public static Point defaultBrickSize = new Point(60, 20);
 
-        public Brick(int x, int y, BrickType type, ParticleType particleType, byte hitsNeeded) : base(x, y, Game1.GetBrickSprite(type))
+        public Brick(int x, int y, BrickType type, ParticleType particleType, byte hitsNeeded) : base(x, y, Main.GetBrickSprite(type))
         {
             this.hitsNeeded = hitsNeeded;
             this.ParticleType = particleType;
@@ -40,9 +39,8 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Gets called when this brick is hit.
+        /// Akkor hívódik meg amikor a téglát megüti a labda.
         /// </summary>
-        /// <param name="ball">The ball which hit the brick.</param>
         private void OnHit(Ball ball)
         {
             this.hits++;
@@ -54,35 +52,37 @@ namespace Ballgame.Entities
         }
 
         /// <summary>
-        /// Gets called when this brick breaks.
+        /// Akkor fut le, amikor a tégla széttörik.
         /// </summary>
         private void OnBreak()
         {
-            // Spawning a collectible with a chance
+            // Az esélye annak, hogy egy collectible-t fog dobni
             int chance = rnd.Next(0, 101);
-            if (chance <= 30)
+
+            // chance <= 15: 15% esély
+            if (chance <= 15)
             {
-                Game1.CurrentLevel.SpawnCollectible((CollectibleType)rnd.Next(0, 3), new Point(this.Body.X, this.Body.Y), 4);
+                Main.CurrentLevel.SpawnCollectible((CollectibleType)rnd.Next(0, Enum.GetValues(typeof(CollectibleType)).Length), new Point(this.Body.X, this.Body.Y), 4);
             }
             this.Destroy();
         }
 
         public override void Update(GameTime gameTime)
         {
-            Entity ball = Game1.CurrentLevel.EntityList.Find(x => x is Ball && this.Body.Intersects(x.Body));
+            Entity ball = Main.CurrentLevel.EntityList.Find(x => x is Ball && this.Body.Intersects(x.Body));
             if (ball != null)
             {
                 this.OnHit(ball as Ball);
             }
         }
 
-        protected override void Destroy()
+        public override void Destroy()
         {
             base.Destroy();
 
-            for (int i = 0; i < Game1.rnd.Next(8, maxParticles + 1); i++)
+            for (int i = 0; i < Main.rnd.Next(maxParticles / 2, maxParticles + 1); i++)
             {
-                Game1.CurrentLevel.EntityList.Add(new BrickParticle(this.Body.X + this.Body.Width / 2, this.Body.Y + this.Body.Height / 2, Game1.GetParticleSprite(ParticleType)));
+                Main.CurrentLevel.EntityList.Add(new BrickParticle(this.Body.X + this.Body.Width / 2, this.Body.Y + this.Body.Height / 2, Main.GetParticleSprite(ParticleType)));
             }
         }
     }

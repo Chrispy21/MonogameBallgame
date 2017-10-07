@@ -5,30 +5,29 @@ using System;
 
 namespace Ballgame.Entities
 {
-   
-        public abstract class MovingEntity : Entity
+    public abstract class MovingEntity : Entity
+    {
+        /// <summary>
+        /// Az entity sebessége
+        /// </summary>
+        public Vector2 Speed;
+
+        protected MovingEntity(int x, int y, Texture2D sprite)
+            : base(x, y, sprite)
         {
-            /// <summary>
-            /// The speed of the entity.
-            /// </summary>
-            public Vector2 Speed;
+            this.Speed = new Vector2(0, 0);
+        }
 
-            protected MovingEntity(int x, int y, Texture2D sprite)
-                : base(x, y, sprite)
-            {
-                this.Speed = new Vector2(0, 0);
-            }
+        public override void Update(GameTime gameTime)
+        {
+            this.Move();
+        }
 
-            public override void Update(GameTime gameTime)
-            {
-                this.Move();
-            }
-
-            private void Move()
-            {
-                this.Body.X += (int)this.Speed.X;
-                this.Body.Y += (int)this.Speed.Y;
-            }
+        private void Move()
+        {
+            this.Body.X += (int)this.Speed.X;
+            this.Body.Y += (int)this.Speed.Y;
         }
     }
+}
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</SourceFile>
-  <SourceTime>2017-09-27T15:07:10.7478233+02:00</SourceTime>
-  <DestFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Controls/btnExit.xnb</DestFile>
-  <DestTime>2017-10-04T10:25:16.3240585+02:00</DestTime>
+  <SourceFile>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</SourceFile>
+  <SourceTime>2017-10-06T20:16:58.5450632+02:00</SourceTime>
+  <DestFile>C:/Users/Chris-PC/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Controls/btnExit.xnb</DestFile>
+  <DestTime>2017-10-06T20:19:56.9460676+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

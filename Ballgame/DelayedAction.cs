@@ -40,7 +40,7 @@ namespace Ballgame
             if (TimeRemaining <= 0)
             {
                 Action();
-                Game1.DelayedActionList.Remove(this);
+                Main.DelayedActionList.Remove(this);
                 return false;
             }
 

@@ -17,19 +17,19 @@ namespace Ballgame.Entities
 
         public BrickParticle(int x, int y, Texture2D sprite) : base(x, y, sprite)
         {
-            double angle = Game1.rnd.Next(361);
+            double angle = Main.rnd.Next(361);
             this.Speed = new Vector2(
                 baseParticleSpeed * (float)Math.Cos(angle),
                 baseParticleSpeed * (float)Math.Sin(angle));
 
-            this.rotation = Game1.rnd.Next(0, 360);
+            this.rotation = Main.rnd.Next(0, 360);
 
             this.Size = baseScale;
         }
 
         public override void Draw(GameTime gameTime)
         {
-            Game1.SpriteBatch.Draw(this.Sprite, new Vector2(this.Body.X, this.Body.Y), null, Color.White, this.rotation, Vector2.Zero, this.Size, SpriteEffects.None, 0f);
+            Main.SpriteBatch.Draw(this.Sprite, new Vector2(this.Body.X, this.Body.Y), null, Color.White, this.rotation, Vector2.Zero, this.Size, SpriteEffects.None, 0f);
             if (this.Size > 0f)
             {
                 this.Size -= 0.025f;
