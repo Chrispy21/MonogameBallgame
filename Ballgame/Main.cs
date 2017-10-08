@@ -82,7 +82,7 @@ namespace Ballgame
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
+            // Csinál egy új SpriteBatch-t, ami a textúrák kirajzolásához használható.
             SpriteBatch = new SpriteBatch(GraphicsDevice);
 
             collectibleSprites = new Texture2D[collectibleTypeCount];

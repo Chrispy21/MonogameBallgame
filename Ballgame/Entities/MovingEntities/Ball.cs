@@ -15,7 +15,7 @@ namespace Ballgame.Entities
 
             this.HandleCollisions();
 
-            // Check if the ball fell down
+            // Ellenőrzi, hogy leesett-e a labda
             if (this.Body.Y >= Main.Resolution.Y + this.Body.Height)
             {
                 this.Destroy();
@@ -29,19 +29,19 @@ namespace Ballgame.Entities
         /// </summary>
         private void HandleCollisions()
         {
-            // Check for brick-ball collision
+            // Ellenőrzi a tégla és a labda ütközését
             if (Main.CurrentLevel.EntityList.Find(b => b is Brick && this.Body.Intersects(b.Body)) != null)
             {
                 this.Speed.Y *= -1;
             }
 
-            // Check for racket-ball collision
+            // Ellenőrzi az ütő és a labda ütközését.
             if (Main.CurrentLevel.Player.Body.Intersects(this.Body))
             {
                 this.Speed.Y *= -1;
             }
 
-            // Prevent ball from going out of the screen
+            // Megakadályozza, hogy a labda kimenjen a képernyőről.
             if (this.Body.X <= 0 || this.Body.X + this.Body.Width >= Main.Resolution.X)
             {
                 this.Speed.X *= -1;
