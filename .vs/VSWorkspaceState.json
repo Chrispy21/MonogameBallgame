@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Ballgame",
+    "\\Ballgame\\Content"
   ],
-  "SelectedNode": "\\Ballgame.sln",
+  "SelectedNode": "\\Ballgame\\Content\\Content.mgcb",
   "PreviewInSolutionExplorer": false
 }
