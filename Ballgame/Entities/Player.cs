@@ -2,19 +2,20 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Ballgame.Entities;
 
 namespace Ballgame.Entities
 {
     public class Player : MovingEntity
     {
-        public int Lives;
-        private bool isDead;
+        public enum BallType { Bowling };
         public bool IsInputInverted;
+        public int Lives;
 
         public Player(int x, int y, RacketType racketType) : base(x, y, Main.GetRacketSprite(racketType))
         {
-            this.Lives = 3;
-            this.isDead = false;
             this.IsInputInverted = false;
         }
 
@@ -24,6 +25,7 @@ namespace Ballgame.Entities
             KeyboardState keyboardState = Keyboard.GetState();
 
             // Arra az esetre, ha a player felvett egy trollface-t
+            //Javítani
             int modifier = this.IsInputInverted ? -1 : 1;
             if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X > 0)
             {
@@ -37,25 +39,8 @@ namespace Ballgame.Entities
             {
                 this.Speed.X = 0;
             }
-
-            // Ha a player-nek nincs több élete, akkor vége
-            if (!this.isDead && this.Lives < 0)
-            {
-                this.Kill();
-            }
-
+            
             base.Update(gameTime);
-        }
-
-        private void Kill()
-        {
-            this.isDead = true;
-
-            // ELTŰNTET MINDENT, NEM BIZTONSÁGOS
-            for (int i = Main.CurrentLevel.EntityList.Count - 1; i >= 0; i--)
-            {
-                Main.CurrentLevel.EntityList[i].Destroy();
-            }
         }
     }
 }

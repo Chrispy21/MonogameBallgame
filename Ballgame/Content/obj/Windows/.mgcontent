@@ -4,20 +4,20 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGame.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCredits.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnCreditsclick.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExitclick.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnNewGameclick.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/gameover.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_0.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_1.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_2.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_0.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Balls/ball_0.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Particles/particle_0.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_0.png</File>
-    <File>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/backg1.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnNewGame.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnCredits.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnCreditsclick.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnExitclick.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnNewGameclick.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/gameover.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_0.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_1.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_2.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_0.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Balls/ball_0.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Particles/particle_0.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_0.png</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/backg1.png</File>
   </SourceFiles>
 </SourceFileCollection>
