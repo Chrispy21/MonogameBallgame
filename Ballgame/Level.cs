@@ -37,10 +37,7 @@ namespace Ballgame.Entities
                 this.EntityList[i].Update(gameTime);
             }
 
-            if (this.EntityList.Count(x => x is Ball) <= 0)
-            {
-                this.Player.Lives--;
-            }
+            
         }
 
         public void Draw(GameTime gameTime)

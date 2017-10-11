@@ -212,3 +212,12 @@ C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\obj\x86\Debug\Ballgame.csprojResolveAssemblyReference.cache
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\backg1.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\gameover.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Balls\ball_0.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Bricks\brick_0.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_0.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_1.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_2.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Particles\particle_0.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\racket_0.xnb

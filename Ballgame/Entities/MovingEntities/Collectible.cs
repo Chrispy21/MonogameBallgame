@@ -58,7 +58,7 @@ namespace Ballgame.Entities
                 case CollectibleType.Trollface:
                     // Irányítás megfordítása
                     Main.CurrentLevel.Player.IsInputInverted = true;
-
+                    
                     // 4 másodperc múlva állítsa vissza
                     Main.QueueAction(new DelayedAction(
                         () => Main.CurrentLevel.Player.IsInputInverted = false,

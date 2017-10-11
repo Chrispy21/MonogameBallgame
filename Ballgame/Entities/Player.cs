@@ -12,9 +12,10 @@ namespace Ballgame.Entities
     {
         public enum BallType { Bowling };
         public bool IsInputInverted;
-        public int Lives;
 
-        public Player(int x, int y, RacketType racketType) : base(x, y, Main.GetRacketSprite(racketType))
+
+        public Player(int x, int y, RacketType racketType)
+            : base(x, y, Main.GetRacketSprite(racketType))
         {
             this.IsInputInverted = false;
         }
@@ -26,20 +27,44 @@ namespace Ballgame.Entities
 
             // Arra az esetre, ha a player felvett egy trollface-t
             //Javítani
-            int modifier = this.IsInputInverted ? -1 : 1;
-            if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X > 0)
+            if (this.IsInputInverted)
             {
-                this.Speed.X = -20 * modifier;
-            }
-            else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X + this.Body.Width < Main.Graphics.PreferredBackBufferWidth)
-            {
-                this.Speed.X = 20 * modifier;
+                if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X + this.Body.Width < Main.Resolution.X)
+                {
+                    this.Speed.X = 20;
+
+                }
+                else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X > 0)
+                {
+                    this.Speed.X = -20;
+                }
+                else
+                {
+                    this.Speed.X = 0;
+                }
             }
             else
             {
-                this.Speed.X = 0;
+                if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X > 0)
+                {
+                    this.Speed.X = -20;
+
+                }
+                else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X + this.Body.Width < Main.Resolution.X)
+                {
+                    this.Speed.X = 20;
+                }
+                else
+                {
+                    this.Speed.X = 0;
+                }
             }
-            
+
+
+
+
+
+
             base.Update(gameTime);
         }
     }

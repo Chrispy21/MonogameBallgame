@@ -157,6 +157,7 @@ namespace Ballgame
                 Exit();
 
         }
+        
 
         /// <summary>
         /// Kirajzol mindent.
