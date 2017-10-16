@@ -34,7 +34,8 @@ namespace Ballgame
         private static Texture2D[] racketSprites;
         private static Texture2D[] brickSprites;
         private static Texture2D[] particleSprites;
-        
+        private Texture2D background;
+
 
         public static Vector2 Resolution
         {
@@ -122,7 +123,7 @@ namespace Ballgame
                 path = String.Format("Sprites/Particles/particle_{0}", i);
                 particleSprites[i] = this.Content.Load<Texture2D>(path);
             }
-
+            background = Content.Load<Texture2D>("Sprites/Background/backg_0");
             this.StartGame();
             // TODO: this.Content.Load <- betöltés
         }
@@ -164,9 +165,8 @@ namespace Ballgame
         /// </summary>
         protected override void Draw(GameTime gameTime)
         {
-            this.GraphicsDevice.Clear(Color.LightGray);
-
             SpriteBatch.Begin();
+            SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
             CurrentLevel.Draw(gameTime);
             SpriteBatch.End();
 
