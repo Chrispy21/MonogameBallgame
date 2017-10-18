@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Ballgame.Entities;
+using Ballgame.Controls;
 
 namespace Ballgame
 {
@@ -18,6 +19,7 @@ namespace Ballgame
    {
         public static GraphicsDeviceManager Graphics { get; private set; }
         public static SpriteBatch SpriteBatch { get; private set; }
+
 
         public const float baseBallSpeed = -5;
 
@@ -36,6 +38,10 @@ namespace Ballgame
         private static Texture2D[] particleSprites;
         private Texture2D background;
 
+        bool paused = false;
+        Texture2D pausedTexture;
+        Rectangle pausedRectangle;
+        Button btnPlay, btnQuit;
 
         public static Vector2 Resolution
         {
@@ -92,6 +98,14 @@ namespace Ballgame
             brickSprites = new Texture2D[brickTypeCount];
             particleSprites = new Texture2D[particleTypeCount];
 
+            IsMouseVisible = true;
+            pausedTexture = Content.Load<Texture2D>("Sprites/Background/PauseMenu");
+            pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
+            btnPlay = new Button();
+            btnPlay.Load(Content.Load<Texture2D>("Controls/btnResume"), new Vector2(523, 260));
+            btnQuit = new Button();
+            btnQuit.Load(Content.Load<Texture2D>("Controls/btnExit"), new Vector2(523, 360));
+
             string path;
 
             for (int i = 0; i < collectibleTypeCount; i++)
@@ -136,7 +150,7 @@ namespace Ballgame
 
         protected override void Update(GameTime gameTime)
         {         
-            CheckInput();
+            //CheckInput();
 
             CurrentLevel.Update(gameTime);
 
@@ -145,20 +159,38 @@ namespace Ballgame
             {
                 DelayedActionList[i].Update(gameTime.ElapsedGameTime.Milliseconds);
             }
-           
+
+            MouseState mouse = Mouse.GetState();
+            if (!paused)
+            {
+                if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                {
+                    paused = true;
+                    btnPlay.isClicked = false;
+                }
+
+
+                //játék megállítása pause menu meghívása esetén
+                //player.Update();
+            }
+            else if (paused)
+            {
+                if (btnPlay.isClicked)
+                {
+                    paused = false;
+                }
+                if (btnQuit.isClicked)
+                {
+                    Exit();
+                }
+
+                btnPlay.Update(mouse);
+                btnQuit.Update(mouse);
+
+            }
 
             base.Update(gameTime);
         }
-        private void CheckInput()
-        {
-            KeyboardState keyboardState = Keyboard.GetState();
-
-            // Játék bezárása
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || keyboardState.IsKeyDown(Keys.Escape))
-                Exit();
-
-        }
-        
 
         /// <summary>
         /// Kirajzol mindent.
@@ -168,6 +200,14 @@ namespace Ballgame
             SpriteBatch.Begin();
             SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
             CurrentLevel.Draw(gameTime);
+
+            if (paused)
+            {
+                SpriteBatch.Draw(pausedTexture, pausedRectangle, Color.White);
+                btnPlay.Draw(SpriteBatch);
+                btnQuit.Draw(SpriteBatch);
+            }
+
             SpriteBatch.End();
 
             base.Draw(gameTime);           

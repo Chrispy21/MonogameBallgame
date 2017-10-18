@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controls\Button.cs" />
     <Compile Include="Entities\MovingEntities\Ball.cs" />
     <Compile Include="Entities\Brick.cs" />
     <Compile Include="Entities\MovingEntities\BrickParticle.cs" />
