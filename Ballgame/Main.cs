@@ -75,7 +75,7 @@ namespace Ballgame
 
             Graphics.IsFullScreen = false;
             Graphics.PreferredBackBufferWidth = 1280;
-            Graphics.PreferredBackBufferHeight = 768;
+            Graphics.PreferredBackBufferHeight = 680;
             Graphics.SynchronizeWithVerticalRetrace = false;
             Graphics.ApplyChanges();
 
