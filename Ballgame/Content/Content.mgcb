@@ -193,7 +193,7 @@
 /processorParam:TextureFormat=Color
 /build:Controls/button_0.png
 
-#begin Sprites/Background/backg_0.jpg
+#begin Sprites/Background/backg_0.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -203,5 +203,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/Background/backg_0.jpg
+/build:Sprites/Background/backg_0.png
 
