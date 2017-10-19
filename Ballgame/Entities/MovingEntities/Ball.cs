@@ -9,11 +9,16 @@ namespace Ballgame.Entities
     {
         public static int touch;
         public Ball(int x, int y, BallType type) : base(x, y, Main.GetBallSprite(type)) { }
+
+        public static bool IsDestroy = true;
         public static void Kill()
         {
             for (int i = Main.CurrentLevel.EntityList.Count - 1; i >= 0; i--)
             {
-                Main.CurrentLevel.EntityList[i].Destroy();
+                if (IsDestroy)
+                {
+                    Main.CurrentLevel.EntityList[i].Destroy();
+                }
             }
         }
 

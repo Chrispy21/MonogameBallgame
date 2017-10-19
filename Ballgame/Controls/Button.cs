@@ -14,7 +14,12 @@ namespace Ballgame.Controls
         Texture2D texture_pause;
         Vector2 position_pause;
         Rectangle rectangle_pause;
-
+        
+       // Texture2D texture_restart;
+        //Vector2 position_restart;
+        
+        Rectangle rectangle_restart;
+        
         Color colour = new Color(255, 255, 255, 255);
 
         bool down;
@@ -29,6 +34,7 @@ namespace Ballgame.Controls
         {
             texture_pause = newTexture;
             position_pause = newPosition;
+           
         }
 
         public void Update(MouseState mouse)
@@ -36,7 +42,8 @@ namespace Ballgame.Controls
             mouse = Mouse.GetState();
 
             rectangle_pause = new Rectangle((int)position_pause.X, (int)position_pause.Y, texture_pause.Width, texture_pause.Height);
-
+            //rectangle_restart = new Rectangle((int)position_restart.X, (int)position_restart.Y, texture_restart.Width, texture_restart.Height);
+           
             Rectangle mouseRectangle = new Rectangle(mouse.X, mouse.Y, 1, 1);
 
             if (mouseRectangle.Intersects(rectangle_pause))
@@ -67,11 +74,44 @@ namespace Ballgame.Controls
             {
                 colour.A += 3;
             }
+        
+           
+        
+            else if(mouseRectangle.Intersects(rectangle_restart))
+            {
+                if (colour.A == 255)
+                {
+                    down = false;
+                }
+                if (colour.A == 0)
+                {
+                    down = true;
+                }
+                if (down)
+                {
+                    colour.A += 3;
+                }
+                else
+                {
+                    colour.A -= 3;
+                }
+                if (mouse.LeftButton == ButtonState.Pressed)
+                {
+                    isClicked = true;
+                    colour.A = 255;
+                }
+            }
+            else if (colour.A < 255)
+            {
+                colour.A += 3;
+            }
         }
-
+        
         public void Draw(SpriteBatch spriteBatch_pause)
         {
             spriteBatch_pause.Draw(texture_pause, rectangle_pause, colour);
+           // spriteBatch_pause.Draw(texture_restart, rectangle_restart, colour);
+            
         }
     }
 }

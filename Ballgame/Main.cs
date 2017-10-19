@@ -45,8 +45,8 @@ namespace Ballgame
 
         private static Texture2D[] particleSprites;
 
-
-        public int hp = 3;
+        
+        public int hp = 0;
         private Texture2D background;
 
         bool paused = false;
@@ -222,34 +222,46 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
-
-            if (Ball.touch > 2)
+            ///innen
+            if (Ball.touch > hp)
             {
                 Ball.Kill();
-                quit = true;
-                btnRestart.isClicked = false;
-            }
-            else if (!quit)
-            {
-                if (btnRestart.isClicked)
+            
+                if (!quit)
                 {
-                    quit = false;
-                   
+                    quit = true;
+                    btnRestart.isClicked = false;
+                    Ball.IsDestroy = false;
+
                 }
-                if (btnQuit.isClicked)
+                
+                 if (quit)
                 {
-                    Exit();
+
+                    if (btnRestart.isClicked)
+                    {
+                        quit = false;
+                        StartGame();
+                        btnRestart.isClicked = false;
+                        btnQuit.isClicked = false;
+
+                    }
+                  
+                    
+                    
+                    if (btnQuit.isClicked)
+                    {
+                        Exit();
+                        quit = false;
+                    }
+
+                    btnRestart.Update(mouse);
+                    btnQuit.Update(mouse);
+
                 }
-
-                btnRestart.Update(mouse);
-                btnQuit.Update(mouse);
-
-
 
             }
-
-
-
+            
 
 
             base.Update(gameTime);

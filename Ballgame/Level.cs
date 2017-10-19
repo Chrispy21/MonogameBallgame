@@ -85,7 +85,7 @@ namespace Ballgame.Entities
                 throw new Exception("Entity can't be destroyed, it doesn't exist.");
             }
         }
-
+        
         /// <summary>
         /// Spawnol egy labdát.
         /// </summary>
@@ -112,7 +112,7 @@ namespace Ballgame.Entities
         /// </summary>
         public Player CreatePlayer(Point position, RacketType racketType)
         {
-            Player player = new Player(position.X, position.Y, racketType);
+            Player player = new Player(position.X-60, position.Y, racketType);
             this.EntityList.Add(player);
             return player;
         }
