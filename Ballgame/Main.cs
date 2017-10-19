@@ -16,7 +16,7 @@ namespace Ballgame
     public enum ParticleType { DefaultBrick };
 
     public class Main : Game
-   {
+    {
         public static GraphicsDeviceManager Graphics { get; private set; }
         public static SpriteBatch SpriteBatch { get; private set; }
 
@@ -26,22 +26,45 @@ namespace Ballgame
         public static Random rnd = new Random();
 
         private static int collectibleTypeCount = 3;
+
         private static int ballTypeCount = 1;
+
         private static int racketTypeCount = 1;
+
         private static int brickTypeCount = 1;
+
         private static int particleTypeCount = 1;
 
         private static Texture2D[] collectibleSprites;
+
         private static Texture2D[] ballSprites;
+
         private static Texture2D[] racketSprites;
+
         private static Texture2D[] brickSprites;
+
         private static Texture2D[] particleSprites;
+
+
+        public int hp = 3;
         private Texture2D background;
 
         bool paused = false;
+
+        bool quit = false;
         Texture2D pausedTexture;
+
         Rectangle pausedRectangle;
-        Button btnPlay, btnQuit;
+
+        Button btnPlay;
+
+        Button btnQuit;
+
+        Button btnRestart;
+
+        Texture2D quitTexture;
+
+        Rectangle quitRectangle;
 
         public static Vector2 Resolution
         {
@@ -63,7 +86,7 @@ namespace Ballgame
             Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
-        
+
         public static Texture2D GetParticleSprite(ParticleType type)
         {
             return particleSprites[(int)type];
@@ -99,12 +122,23 @@ namespace Ballgame
             particleSprites = new Texture2D[particleTypeCount];
 
             IsMouseVisible = true;
+
             pausedTexture = Content.Load<Texture2D>("Sprites/Background/PauseMenu");
             pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
             btnPlay = new Button();
             btnPlay.Load(Content.Load<Texture2D>("Controls/btnResume"), new Vector2(523, 260));
             btnQuit = new Button();
             btnQuit.Load(Content.Load<Texture2D>("Controls/btnExit"), new Vector2(523, 360));
+
+            quitTexture = Content.Load<Texture2D>("Sprites/Background/over");
+            quitRectangle = new Rectangle(0, 0, quitTexture.Width, quitTexture.Height);
+            btnRestart = new Button();
+            btnRestart.Load(Content.Load<Texture2D>("Controls/btnRestart"), new Vector2(523, 260));
+
+
+
+
+
 
             string path;
 
@@ -141,7 +175,7 @@ namespace Ballgame
             this.StartGame();
             // TODO: this.Content.Load <- betöltés
         }
-        
+
         private void StartGame()
         {
             CurrentLevel = new Level();
@@ -149,7 +183,7 @@ namespace Ballgame
         }
 
         protected override void Update(GameTime gameTime)
-        {         
+        {
             //CheckInput();
 
             CurrentLevel.Update(gameTime);
@@ -189,6 +223,35 @@ namespace Ballgame
 
             }
 
+            if (Ball.touch > 2)
+            {
+                Ball.Kill();
+                quit = true;
+                btnRestart.isClicked = false;
+            }
+            else if (!quit)
+            {
+                if (btnRestart.isClicked)
+                {
+                    quit = false;
+                   
+                }
+                if (btnQuit.isClicked)
+                {
+                    Exit();
+                }
+
+                btnRestart.Update(mouse);
+                btnQuit.Update(mouse);
+
+
+
+            }
+
+
+
+
+
             base.Update(gameTime);
         }
 
@@ -201,6 +264,14 @@ namespace Ballgame
             SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
             CurrentLevel.Draw(gameTime);
 
+
+            if (quit)
+            {
+                SpriteBatch.Draw(quitTexture, quitRectangle, Color.White);
+                btnRestart.Draw(SpriteBatch);
+                btnQuit.Draw(SpriteBatch);
+            }
+
             if (paused)
             {
                 SpriteBatch.Draw(pausedTexture, pausedRectangle, Color.White);
@@ -210,7 +281,7 @@ namespace Ballgame
 
             SpriteBatch.End();
 
-            base.Draw(gameTime);           
+            base.Draw(gameTime);
         }
         public static void QueueAction(DelayedAction action)
         {
@@ -237,5 +308,5 @@ namespace Ballgame
             return collectibleSprites[(int)type];
         }
     }
-   
+
 }

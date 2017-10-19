@@ -7,9 +7,9 @@ namespace Ballgame.Entities
 {
     public class Ball:MovingEntity
     {
-        public int touch;
+        public static int touch;
         public Ball(int x, int y, BallType type) : base(x, y, Main.GetBallSprite(type)) { }
-        public void Kill()
+        public static void Kill()
         {
             for (int i = Main.CurrentLevel.EntityList.Count - 1; i >= 0; i--)
             {
@@ -24,16 +24,13 @@ namespace Ballgame.Entities
 
             // Ellenőrzi, hogy háromszor leesett a labda
             // a "labda" játkos élete 
-            int a = 3;
+            
             if (this.Body.Y >= Main.Resolution.Y-60 + this.Body.Height)
             {
                 this.Speed.Y *= -1;
                     touch++;
             }
-           if(touch>=a)
-            {
-                this.Kill();
-            }
+           
         
             this.Speed *= 1.0001f;
         }
