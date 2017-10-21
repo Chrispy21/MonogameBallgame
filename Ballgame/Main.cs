@@ -46,7 +46,7 @@ namespace Ballgame
         private static Texture2D[] particleSprites;
 
         
-        public int hp = 0;
+        public int hp = 2;
         private Texture2D background;
 
         bool paused = false;
@@ -79,8 +79,7 @@ namespace Ballgame
         public static Level CurrentLevel { get; private set; }
 
 
-        //private static Rectangle mouseClipRect = new Rectangle();
-
+        
         public Main()
         {
             Graphics = new GraphicsDeviceManager(this);
@@ -209,6 +208,7 @@ namespace Ballgame
             }
             else if (paused)
             {
+                
                 if (btnPlay.isClicked)
                 {
                     paused = false;
@@ -222,47 +222,45 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
-            ///innen
-            if (Ball.touch > hp)
+
+
+
+            //Restart menü
+           
+            if (!quit && Ball.touch>2)
             {
-                Ball.Kill();
-            
-                if (!quit)
-                {
+               
                     quit = true;
                     btnRestart.isClicked = false;
-                    Ball.IsDestroy = false;
+                    Ball.Kill();
+               
 
-                }
-                
-                 if (quit)
+
+                //játék megállítása pause menu meghívása esetén
+                //player.Update();
+            }
+            else if (quit)
+            {
+
+                if (btnRestart.isClicked)
                 {
-
-                    if (btnRestart.isClicked)
-                    {
-                        quit = false;
-                        StartGame();
-                        btnRestart.isClicked = false;
-                        btnQuit.isClicked = false;
-
-                    }
-                  
-                    
-                    
-                    if (btnQuit.isClicked)
-                    {
-                        Exit();
-                        quit = false;
-                    }
-
-                    btnRestart.Update(mouse);
-                    btnQuit.Update(mouse);
+                    quit = false;
+                    StartGame();
+                    Ball.touch = 0;
 
                 }
+                if (btnQuit.isClicked)
+                {
+                    Exit();
+                }
+
+                btnRestart.Update(mouse);
+                btnQuit.Update(mouse);
 
             }
             
 
+          
 
             base.Update(gameTime);
         }

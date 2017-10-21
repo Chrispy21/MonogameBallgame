@@ -13,10 +13,17 @@ namespace Ballgame.Entities
         public List<Entity> EntityList { get; private set; }
 
         public Player Player { get; private set; }
+        public List<Ball> Balls { get; private set; }
+
+
+
+    
+
 
         public Level()
         {
             this.EntityList = new List<Entity>();
+            this.Balls = new List<Ball>();
             this.Initialize();
         }
 
@@ -26,7 +33,7 @@ namespace Ballgame.Entities
             this.Player = this.CreatePlayer(new Point(Main.Graphics.PreferredBackBufferWidth / 2, Main.Graphics.PreferredBackBufferHeight - 25), RacketType.BlueGray);
 
             // Az első labda
-            this.CreateBall(new Point(this.Player.Body.X, this.Player.Body.Y - 100), BallType.Bowling);
+            this.Balls.Add(this.CreateBall(new Point(this.Player.Body.X, this.Player.Body.Y - 100), BallType.Bowling));
         }
 
         public void Update(GameTime gameTime)
@@ -36,6 +43,19 @@ namespace Ballgame.Entities
             {
                 this.EntityList[i].Update(gameTime);
             }
+            /*
+            if (this.Balls.Count > 1)
+            {
+                for (int i = this.Balls.Count - 1; i >= 0; i--)
+                {
+                    Ball Ball = this.Balls[i];
+                    
+                    
+                }
+            }*/
+
+
+            
 
             
         }
@@ -116,6 +136,11 @@ namespace Ballgame.Entities
             this.EntityList.Add(player);
             return player;
         }
+
+        
+
+
+
     }
 
 }

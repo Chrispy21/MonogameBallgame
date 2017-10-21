@@ -23,26 +23,23 @@ namespace Ballgame.Controls
         Color colour = new Color(255, 255, 255, 255);
 
         bool down;
-        public bool isClicked;
+        public bool isClicked=false;
 
         public Button()
         {
 
         }
-
         public void Load(Texture2D newTexture, Vector2 newPosition)
         {
             texture_pause = newTexture;
             position_pause = newPosition;
-           
         }
-
+           
         public void Update(MouseState mouse)
         {
             mouse = Mouse.GetState();
 
             rectangle_pause = new Rectangle((int)position_pause.X, (int)position_pause.Y, texture_pause.Width, texture_pause.Height);
-            //rectangle_restart = new Rectangle((int)position_restart.X, (int)position_restart.Y, texture_restart.Width, texture_restart.Height);
            
             Rectangle mouseRectangle = new Rectangle(mouse.X, mouse.Y, 1, 1);
 
