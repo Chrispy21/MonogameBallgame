@@ -265,3 +265,15 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Background/over.png
 
+#begin hp.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:hp.spritefont
+
+#begin Sprites/Background/menu_0.mp4
+/importer:H264Importer
+/processor:VideoProcessor
+/build:Sprites/Background/menu_0.mp4
+

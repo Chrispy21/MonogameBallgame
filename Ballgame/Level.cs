@@ -30,7 +30,7 @@ namespace Ballgame.Entities
         private void Initialize()
         {
             // A játékos létrehozása
-            this.Player = this.CreatePlayer(new Point(Main.Graphics.PreferredBackBufferWidth / 2, Main.Graphics.PreferredBackBufferHeight - 25), RacketType.BlueGray);
+            this.Player = this.CreatePlayer(new Point(Main.Graphics.PreferredBackBufferWidth / 2, Main.Graphics.PreferredBackBufferHeight - 50), RacketType.BlueGray);
 
             // Az első labda
             this.Balls.Add(this.CreateBall(new Point(this.Player.Body.X, this.Player.Body.Y - 100), BallType.Bowling));

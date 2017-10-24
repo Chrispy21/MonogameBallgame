@@ -19,7 +19,7 @@ namespace Ballgame
     {
         public static GraphicsDeviceManager Graphics { get; private set; }
         public static SpriteBatch SpriteBatch { get; private set; }
-
+        private SpriteFont Healt;
 
         public const float baseBallSpeed = -5;
 
@@ -46,7 +46,7 @@ namespace Ballgame
         private static Texture2D[] particleSprites;
 
         
-        public int hp = 2;
+        public static int hp =3;
         private Texture2D background;
 
         bool paused = false;
@@ -65,6 +65,8 @@ namespace Ballgame
         Texture2D quitTexture;
 
         Rectangle quitRectangle;
+
+        Rectangle hpRectangle;
 
         public static Vector2 Resolution
         {
@@ -133,12 +135,8 @@ namespace Ballgame
             quitRectangle = new Rectangle(0, 0, quitTexture.Width, quitTexture.Height);
             btnRestart = new Button();
             btnRestart.Load(Content.Load<Texture2D>("Controls/btnRestart"), new Vector2(523, 260));
-
-
-
-
-
-
+            Healt = Content.Load<SpriteFont>("hp");
+            hpRectangle = new Rectangle(0, 0, Healt.Texture.Width, Healt.Texture.Height);
             string path;
 
             for (int i = 0; i < collectibleTypeCount; i++)
@@ -224,16 +222,16 @@ namespace Ballgame
             }
 
 
-
+            
             //Restart menü
            
             if (!quit && Ball.touch>2)
             {
-               
+                    
                     quit = true;
                     btnRestart.isClicked = false;
                     Ball.Kill();
-               
+                    
 
 
                 //játék megállítása pause menu meghívása esetén
@@ -244,6 +242,8 @@ namespace Ballgame
 
                 if (btnRestart.isClicked)
                 {
+                    
+                    hp = 3;
                     quit = false;
                     StartGame();
                     Ball.touch = 0;
@@ -258,9 +258,6 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
-            
-
-          
 
             base.Update(gameTime);
         }
@@ -272,9 +269,8 @@ namespace Ballgame
         {
             SpriteBatch.Begin();
             SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
+            SpriteBatch.DrawString(Healt, "HP: " + hp, new Vector2(10, 650), Color.Aqua);
             CurrentLevel.Draw(gameTime);
-
-
             if (quit)
             {
                 SpriteBatch.Draw(quitTexture, quitRectangle, Color.White);

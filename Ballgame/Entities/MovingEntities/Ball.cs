@@ -30,13 +30,15 @@ namespace Ballgame.Entities
             // Ellenőrzi, hogy háromszor leesett a labda
             // a "labda" játkos élete 
             
-            if (this.Body.Y >= Main.Resolution.Y-60 + this.Body.Height)
+            if (this.Body.Y >= Main.Resolution.Y-80 + this.Body.Height)
             {
                 this.Speed.Y *= -1;
-                    touch++;
+                Main.hp--;
+                touch++;
+                    
             }
-           
-        
+
+
             this.Speed *= 1.0001f;
         }
 
@@ -49,12 +51,14 @@ namespace Ballgame.Entities
             if (Main.CurrentLevel.EntityList.Find(b => b is Brick && this.Body.Intersects(b.Body)) != null)
             {
                 this.Speed.Y *= -1;
+                //this.Speed.X *= -1;
             }
 
             // Ellenőrzi az ütő és a labda ütközését.
             if (Main.CurrentLevel.Player.Body.Intersects(this.Body))
             {
                 this.Speed.Y *= -1;
+                //this.Speed.X *= 1;
             }
 
             // Megakadályozza, hogy a labda kimenjen a képernyőről.

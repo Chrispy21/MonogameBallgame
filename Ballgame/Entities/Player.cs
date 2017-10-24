@@ -26,7 +26,6 @@ namespace Ballgame.Entities
             KeyboardState keyboardState = Keyboard.GetState();
 
             // Arra az esetre, ha a player felvett egy trollface-t
-            //Javítani
             if (this.IsInputInverted)
             {
                 if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X + this.Body.Width < Main.Resolution.X)
@@ -59,11 +58,6 @@ namespace Ballgame.Entities
                     this.Speed.X = 0;
                 }
             }
-
-
-
-
-
 
             base.Update(gameTime);
         }
