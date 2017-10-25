@@ -71,6 +71,7 @@ namespace Ballgame
 
         Rectangle hpRectangle;
 
+        Rectangle racket;
         public static Vector2 Resolution
         {
             get

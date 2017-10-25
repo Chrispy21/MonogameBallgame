@@ -14,12 +14,6 @@ namespace Ballgame.Entities
 
         public Player Player { get; private set; }
         public List<Ball> Balls { get; private set; }
-
-
-
-    
-
-
         public Level()
         {
             this.EntityList = new List<Entity>();
