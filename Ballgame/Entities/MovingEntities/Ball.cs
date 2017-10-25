@@ -50,6 +50,9 @@ namespace Ballgame.Entities
             // Ellenőrzi a tégla és a labda ütközését
             if (Main.CurrentLevel.EntityList.Find(b => b is Brick && this.Body.Intersects(b.Body)) != null)
             {
+                
+                
+                Main.score += 10;
                 this.Speed.Y *= -1;
                 //this.Speed.X *= -1;
             }

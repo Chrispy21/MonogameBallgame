@@ -27,5 +27,7 @@
     <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Background/over.png</File>
     <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/hp.spritefont</File>
     <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Background/menu_0.mp4</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/score.spritefont</File>
+    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/targets.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

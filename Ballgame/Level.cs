@@ -76,9 +76,11 @@ namespace Ballgame.Entities
         {
             for (int x = 10; x < Main.Resolution.X -10; x += Brick.defaultBrickSize.X)
             {
-                for (int y = 0; y < Main.Resolution.Y / 3; y += Brick.defaultBrickSize.Y)
+                for (int y = 0; y < Main.Resolution.Y / 6; y += Brick.defaultBrickSize.Y)
                 {
                     this.CreateBrick(new Point(x, y), BrickType.DefaultBrick);
+                    Main.target++;
+
                 }
             }
         }

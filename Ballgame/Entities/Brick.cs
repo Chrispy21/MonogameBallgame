@@ -47,6 +47,7 @@ namespace Ballgame.Entities
 
             if (this.hits >= this.hitsNeeded)
             {
+                Main.target--;
                 this.OnBreak();
             }
         }

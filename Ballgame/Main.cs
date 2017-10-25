@@ -20,7 +20,8 @@ namespace Ballgame
         public static GraphicsDeviceManager Graphics { get; private set; }
         public static SpriteBatch SpriteBatch { get; private set; }
         private SpriteFont Healt;
-
+        private SpriteFont Score;
+        private SpriteFont targets;
         public const float baseBallSpeed = -5;
 
         public static Random rnd = new Random();
@@ -46,6 +47,8 @@ namespace Ballgame
         private static Texture2D[] particleSprites;
 
         
+        public static int score = 0;
+        public static int target =0;
         public static int hp =3;
         private Texture2D background;
 
@@ -137,6 +140,8 @@ namespace Ballgame
             btnRestart.Load(Content.Load<Texture2D>("Controls/btnRestart"), new Vector2(523, 260));
             Healt = Content.Load<SpriteFont>("hp");
             hpRectangle = new Rectangle(0, 0, Healt.Texture.Width, Healt.Texture.Height);
+            Score = Content.Load<SpriteFont>("score");
+            targets = Content.Load<SpriteFont>("targets");
             string path;
 
             for (int i = 0; i < collectibleTypeCount; i++)
@@ -242,7 +247,8 @@ namespace Ballgame
 
                 if (btnRestart.isClicked)
                 {
-                    
+                    target = 0;
+                    score *= 0;
                     hp = 3;
                     quit = false;
                     StartGame();
@@ -270,6 +276,8 @@ namespace Ballgame
             SpriteBatch.Begin();
             SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
             SpriteBatch.DrawString(Healt, "HP: " + hp, new Vector2(10, 650), Color.Aqua);
+            SpriteBatch.DrawString(Score, "Score: " +score, new Vector2(1000, 650), Color.DarkOliveGreen);
+            SpriteBatch.DrawString(targets, "Targets: " +target, new Vector2(500, 650), Color.WhiteSmoke);
             CurrentLevel.Draw(gameTime);
             if (quit)
             {
