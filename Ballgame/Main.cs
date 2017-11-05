@@ -9,7 +9,7 @@ using Ballgame.Controls;
 
 namespace Ballgame
 {
-    public enum CollectibleType { Dislike, Like, Trollface };
+    public enum CollectibleType { Dislike, Like, Trollface, Iceball };
     public enum BallType { Bowling };
     public enum RacketType { BlueGray };
     public enum BrickType { DefaultBrick };
@@ -26,7 +26,7 @@ namespace Ballgame
 
         public static Random rnd = new Random();
 
-        private static int collectibleTypeCount = 3;
+        private static int collectibleTypeCount = 4;
 
         private static int ballTypeCount = 1;
 

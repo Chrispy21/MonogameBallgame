@@ -4,29 +4,30 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/gameover.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_0.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_1.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_2.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_0.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Balls/ball_0.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/button_0.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Background/backg_0.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnResume.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Background/PauseMenu.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_0.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_1.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Particles/particle_0.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Particles/particle_1.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_1.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_2.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_3.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_4.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Controls/btnRestart.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Background/over.png</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/hp.spritefont</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/score.spritefont</File>
-    <File>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/targets.spritefont</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/gameover.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_0.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_1.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_2.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_0.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Balls/ball_0.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/button_0.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Background/backg_0.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnExit.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnResume.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Background/PauseMenu.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_0.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_1.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Particles/particle_0.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Particles/particle_1.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_1.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_2.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_3.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racket_4.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Controls/btnRestart.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Background/over.png</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/hp.spritefont</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/score.spritefont</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/targets.spritefont</File>
+    <File>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_3.png</File>
   </SourceFiles>
 </SourceFileCollection>

@@ -62,21 +62,117 @@ namespace Ballgame.Entities
                 e.Draw(gameTime);
             }
         }
-
+       //public static Random rnd = new Random();
+      
         /// <summary>
         /// Feltölti a pályát téglákkal
         /// </summary>
         public void GenerateBricks()
         {
-            for (int x = 10; x < Main.Resolution.X -10; x += Brick.defaultBrickSize.X)
+            //piramis csúcs
+            /*
+            for (float x = (Main.Resolution.X/3); x < (Main.Resolution.X /3)*2; x += Brick.defaultBrickSize.X+10)
             {
-                for (int y = 0; y < Main.Resolution.Y / 6; y += Brick.defaultBrickSize.Y)
+                for (float y2 =10; y2 < (Main.Resolution.Y /4)-90; y2 += Brick.defaultBrickSize.Y+10)
                 {
-                    this.CreateBrick(new Point(x, y), BrickType.DefaultBrick);
+                    this.CreateBrick(new Point((int)x,(int) y2), BrickType.DefaultBrick);
+                    Main.target++;
+                }
+            }
+            //bal oldal 2. szint
+
+           for (float x = 340; x < (Main.Resolution.X / 2)*2-350; x += Brick.defaultBrickSize.X + 10)
+           {
+               for (float y2 = 100; y2 < (Main.Resolution.Y / 4) + 10; y2 += Brick.defaultBrickSize.Y + 10)
+               {
+                   this.CreateBrick(new Point((int)x, (int)y2), BrickType.DefaultBrick);
+                   Main.target++;
+
+               }
+           }
+
+            //jobb oldal 2. szint
+           for (float x = (Main.Resolution.X / 2)+50 ; x < (Main.Resolution.X /2)*2 - 350; x += Brick.defaultBrickSize.X + 10)
+           {
+               for (float y2 = 100; y2 < (Main.Resolution.Y / 4) + 10; y2 += Brick.defaultBrickSize.Y + 10)
+               {
+                   this.CreateBrick(new Point((int)x, (int)y2), BrickType.DefaultBrick);
+                   Main.target++;
+
+               }
+           }
+
+            //bal oldal 3. szint
+           for (float x = 175; x < (Main.Resolution.X / 2) - 200; x += Brick.defaultBrickSize.X + 10)
+           {
+               for (float y2 = 190; y2 < (Main.Resolution.Y / 4) + 110; y2 += Brick.defaultBrickSize.Y + 10)
+               {
+                   this.CreateBrick(new Point((int)x, (int)y2), BrickType.DefaultBrick);
+                   Main.target++;
+
+               }
+           }
+            //jobb oldali 3. szint
+           for (float x = 165+Main.Resolution.X/2; x < ((Main.Resolution.X / 2) - 200)+Main.Resolution.X/2; x += Brick.defaultBrickSize.X + 10)
+           {
+               for (float y2 = 190; y2 < (Main.Resolution.Y / 4) + 110; y2 += Brick.defaultBrickSize.Y + 10)
+               {
+                   this.CreateBrick(new Point((int)x, (int)y2), BrickType.DefaultBrick);
+                   Main.target++;
+
+               }
+           }
+            //piramis alja
+           for (float x = 175; x <((Main.Resolution.X / 2) - 200)+Main.Resolution.X/2; x += Brick.defaultBrickSize.X + 10)
+           {
+               for (float y2 = 280; y2 < (Main.Resolution.Y / 4) + 180; y2 += Brick.defaultBrickSize.Y + 10)
+               {
+                   this.CreateBrick(new Point((int)x, (int)y2), BrickType.DefaultBrick);
+                   Main.target++;
+
+               }
+           }
+            
+            */
+            for (float x = (Main.Resolution.X / 5) * 2; x < (Main.Resolution.X / 5) * 3; x += Brick.defaultBrickSize.X + 10)
+            {
+                for (int y = 0; y < (Main.Resolution.Y / 4) - 100; y += Brick.defaultBrickSize.Y + 10)
+                {
+                    this.CreateBrick(new Point((int)x, y), BrickType.DefaultBrick);
                     Main.target++;
 
                 }
             }
+
+            for (float x = (Main.Resolution.X / 5); x < (Main.Resolution.X / 5) * 2; x += Brick.defaultBrickSize.X + 10)
+            {
+                for (float y = (Main.Resolution.Y / 4); y < (Main.Resolution.Y / 4) * 2 - 100; y += Brick.defaultBrickSize.Y + 10)
+                {
+                    this.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
+                    Main.target++;
+                }
+            }
+
+
+            for (float x = (Main.Resolution.X / 5) * 3; x < (Main.Resolution.X / 5) * 4; x += Brick.defaultBrickSize.X + 10)
+            {
+                for (float y = (Main.Resolution.Y / 4); y < (Main.Resolution.Y / 4) * 2 - 100; y += Brick.defaultBrickSize.Y + 10)
+                {
+                    this.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
+                    Main.target++;
+                }
+            }
+
+            for (float x = (Main.Resolution.X / 5) * 2; x < (Main.Resolution.X / 5) * 3; x += Brick.defaultBrickSize.X + 10)
+            {
+                for (float y = (Main.Resolution.Y / 4) * 2; y < (Main.Resolution.Y / 4) * 3 - 100; y += Brick.defaultBrickSize.Y + 10)
+                {
+                    this.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
+                    Main.target++;
+
+                }
+            }
+       
         }
 
         /// <summary>

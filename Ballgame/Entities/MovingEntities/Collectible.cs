@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -48,6 +49,20 @@ namespace Ballgame.Entities
                     }
                     break;
 
+                case CollectibleType.Iceball:
+
+                    Main.CurrentLevel.Player.isFrozen = true;
+                    
+                    // 4 másodperc múlva állítsa vissza
+                    Main.QueueAction(new DelayedAction(
+                        () =>
+                        {
+                            Main.CurrentLevel.Player.isFrozen = false;
+                        },
+                        2000,
+                        false));
+                    
+                    break;
                 case CollectibleType.Like:
                     foreach (Ball b in Main.CurrentLevel.EntityList.FindAll(x => x is Ball))
                     {
