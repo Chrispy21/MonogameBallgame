@@ -14,6 +14,7 @@ namespace Ballgame.Entities
 
         public Player Player { get; private set; }
         public List<Ball> Balls { get; private set; }
+        public static Ball ball;
         public Level()
         {
             this.EntityList = new List<Entity>();
@@ -37,21 +38,11 @@ namespace Ballgame.Entities
             {
                 this.EntityList[i].Update(gameTime);
             }
-            /*
-            if (this.Balls.Count > 1)
-            {
-                for (int i = this.Balls.Count - 1; i >= 0; i--)
-                {
-                    Ball Ball = this.Balls[i];
-                    
-                    
-                }
-            }*/
 
 
-            
 
-            
+
+
         }
 
         public void Draw(GameTime gameTime)
@@ -203,8 +194,10 @@ namespace Ballgame.Entities
         /// </summary>
         public Ball CreateBall(Point position, BallType type)
         {
-            Ball ball = new Ball(position.X, position.Y, type);
-            ball.Speed = new Vector2(Main.baseBallSpeed, Main.baseBallSpeed);
+
+
+            ball= new Ball(position.X, position.Y, type);
+            ball.Speed = new Vector2(0);
             this.EntityList.Add(ball);
             return ball;
         }

@@ -198,8 +198,12 @@ namespace Ballgame
                 DelayedActionList[i].Update(gameTime.ElapsedGameTime.Milliseconds);
             }
 
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            {
+                Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+            }
 
-            
+
 
             MouseState mouse = Mouse.GetState();
             if (!paused)
@@ -208,6 +212,7 @@ namespace Ballgame
                 {
                     paused = true;
                     btnPlay.isClicked = false;
+                    Level.ball.Speed = new Vector2(0);
                 }
 
 
@@ -219,6 +224,7 @@ namespace Ballgame
                 
                 if (btnPlay.isClicked)
                 {
+                    Level.ball.Speed = new Vector2(Main.baseBallSpeed);
                     paused = false;
                 }
                 if (btnQuit.isClicked)

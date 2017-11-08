@@ -26,7 +26,8 @@ namespace Ballgame.Entities
         {
             base.Update(gameTime);
             this.HandleCollisions();
-
+            
+            
             // Ellenőrzi, hogy háromszor leesett a labda
             // a "labda" játkos élete 
 

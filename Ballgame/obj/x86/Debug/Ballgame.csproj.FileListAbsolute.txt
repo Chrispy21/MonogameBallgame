@@ -316,8 +316,6 @@ C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\racket_3.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\racket_4.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\hp.xnb
-C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\menu_0.mp4
-C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\menu_0.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\score.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\targets.xnb
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\hp.xnb
@@ -327,3 +325,7 @@ C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\D
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_4.xnb
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_5.xnb
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\longracket.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_3.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_4.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_5.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\longracket.xnb
