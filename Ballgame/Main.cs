@@ -9,9 +9,9 @@ using Ballgame.Controls;
 
 namespace Ballgame
 {
-    public enum CollectibleType { Dislike, Like, Trollface, Iceball };
+    public enum CollectibleType { Dislike, Like, Trollface, Iceball ,Hp,Racket};
     public enum BallType { Bowling };
-    public enum RacketType { BlueGray };
+    public enum RacketType { BlueGray,LongRacket};
     public enum BrickType { DefaultBrick };
     public enum ParticleType { DefaultBrick };
 
@@ -26,11 +26,11 @@ namespace Ballgame
 
         public static Random rnd = new Random();
 
-        private static int collectibleTypeCount = 4;
+        private static int collectibleTypeCount = 6;
 
         private static int ballTypeCount = 1;
 
-        private static int racketTypeCount = 1;
+        private static int racketTypeCount = 2;
 
         private static int brickTypeCount = 1;
 
@@ -46,7 +46,7 @@ namespace Ballgame
 
         private static Texture2D[] particleSprites;
 
-        
+       
         public static int score = 0;
         public static int target =0;
         public static int hp =3;
@@ -71,7 +71,7 @@ namespace Ballgame
 
         Rectangle hpRectangle;
 
-        Rectangle racket;
+       Rectangle racket;
         public static Vector2 Resolution
         {
             get
@@ -156,11 +156,12 @@ namespace Ballgame
                 path = String.Format("Sprites/Balls/ball_{0}", i);
                 ballSprites[i] = this.Content.Load<Texture2D>(path);
             }
-
+            
             for (int i = 0; i < racketTypeCount; i++)
             {
-                path = String.Format("Sprites/Rackets/racket_{0}", i);
-                racketSprites[i] = this.Content.Load<Texture2D>(path);
+                    path = String.Format("Sprites/Rackets/racket_{0}", i);
+                    racketSprites[i] = this.Content.Load<Texture2D>(path);
+
             }
 
             for (int i = 0; i < brickTypeCount; i++)
@@ -197,6 +198,9 @@ namespace Ballgame
                 DelayedActionList[i].Update(gameTime.ElapsedGameTime.Milliseconds);
             }
 
+
+            
+
             MouseState mouse = Mouse.GetState();
             if (!paused)
             {
@@ -231,7 +235,7 @@ namespace Ballgame
             
             //Restart menü
            
-            if (!quit && Ball.touch>2)
+            if (!quit && hp<=0)
             {
                     
                     quit = true;
@@ -253,7 +257,7 @@ namespace Ballgame
                     hp = 3;
                     quit = false;
                     StartGame();
-                    Ball.touch = 0;
+                    //Ball.touch = 0;
 
                 }
                 if (btnQuit.isClicked)

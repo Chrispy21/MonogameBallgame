@@ -11,8 +11,11 @@ namespace Ballgame.Entities
     public class Player : MovingEntity
     {
         public enum BallType { Bowling };
+       
         public bool IsInputInverted;
         public bool isFrozen;
+    
+        
 
 
         public Player(int x, int y, RacketType racketType)
@@ -64,8 +67,12 @@ namespace Ballgame.Entities
                     }
                 }
             }
-
+            else
+            {
+                this.Speed.X = 0;
+            }
             base.Update(gameTime);
         }
+       
     }
 }

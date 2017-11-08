@@ -7,7 +7,7 @@ namespace Ballgame.Entities
 {
     public class Ball : MovingEntity
     {
-        public static int touch;
+        //public static int touch;
         public Ball(int x, int y, BallType type) : base(x, y, Main.GetBallSprite(type)) { }
 
         public static bool IsDestroy = true;
@@ -34,7 +34,7 @@ namespace Ballgame.Entities
             {
                 this.Speed.Y *= -1;
                 Main.hp--;
-                touch++;
+                
 
             }
 

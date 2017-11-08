@@ -53,7 +53,7 @@ namespace Ballgame.Entities
 
                     Main.CurrentLevel.Player.isFrozen = true;
                     
-                    // 4 másodperc múlva állítsa vissza
+                    // 2 másodperc múlva állítsa vissza
                     Main.QueueAction(new DelayedAction(
                         () =>
                         {
@@ -80,6 +80,17 @@ namespace Ballgame.Entities
                         4000,
                         false));
                     break;
+                case CollectibleType.Hp:
+
+                    Main.hp++;
+                    break;
+
+                case CollectibleType.Racket:  /// <--- az ütő meghosszabítása
+                   
+                    
+
+                    break;
+
             }
 
             this.Destroy();
