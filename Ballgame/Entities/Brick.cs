@@ -61,7 +61,7 @@ namespace Ballgame.Entities
             int chance = rnd.Next(0, 101);
 
             // chance <= 15: 15% esély
-            if (chance <= 60)
+            if (chance <= 30)
             {
                 Main.CurrentLevel.SpawnCollectible((CollectibleType)rnd.Next(0, Enum.GetValues(typeof(CollectibleType)).Length), new Point(this.Body.X, this.Body.Y), 4);
             }
