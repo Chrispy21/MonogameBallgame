@@ -85,10 +85,15 @@ namespace Ballgame.Entities
                     Main.hp++;
                     break;
 
-                case CollectibleType.Racket:  /// <--- az ütő meghosszabítása
-                   
-                    
 
+                case CollectibleType.Racket:  /// <--- az ütő meghosszabítása
+                    Main.CurrentLevel.Player.scaleEffect = true;
+
+                    // 10 másodperc múlva állítsa vissza
+                    Main.QueueAction(new DelayedAction(
+                    () => Main.CurrentLevel.Player.scaleEffect = false,
+                    2000,
+                    false));
                     break;
 
             }
