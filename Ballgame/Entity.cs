@@ -29,8 +29,7 @@ namespace Ballgame
         }
 
         public abstract void Update(GameTime gameTime);
-
-        
+       
         /// <summary>
         /// Eltünteti az adott entity-t.
         /// </summary>

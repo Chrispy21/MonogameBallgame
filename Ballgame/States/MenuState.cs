@@ -1,0 +1,116 @@
+﻿using Ballgame.Controls;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ballgame.States
+{
+    public class MenuState : State
+    {
+        private List<Component> _components;
+
+        public MenuState(Main game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
+        {
+            var buttonTexture = _content.Load<Texture2D>("Controls/button_0");
+            var buttonFont = _content.Load<SpriteFont>("MenuFont");
+
+            var newGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(465, 260),
+                Text = "New Game",
+            };
+
+            newGameButton.Click += newGameButton_Click;
+
+            var selectLevelGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(465, 320),
+                Text = "Select Level",
+            };
+
+            selectLevelGameButton.Click += selectLevelGameButton_Click;
+
+            var quitGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(465, 380),
+                Text = "Quit Game",
+            };
+
+            quitGameButton.Click += quitGameButton_Click;
+
+            var descriptionGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(465, 440),
+                Text = "Description",
+            };
+
+            descriptionGameButton.Click += DescriptionGameButton_Click;
+
+            var optionsGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(465, 500),
+                Text = "Options",
+            };
+
+            optionsGameButton.Click += OptionsGameButton_Click;
+
+            _components = new List<Component>()
+            {
+                newGameButton,
+                selectLevelGameButton,
+                quitGameButton,
+                descriptionGameButton,
+                optionsGameButton,
+            };
+        }
+
+        public override void Draw(GameTime gameTime, SpriteBatch SpriteBatch)
+        {
+
+            foreach (var component in _components)
+                component.Draw(gameTime, SpriteBatch);
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            foreach (var component in _components)
+                component.Update(gameTime);
+        }
+
+        public override void PostUpdate(GameTime gameTime)
+        {
+            //Sprite-ok eltüntetése, ha nem kell nekünk
+        }
+
+        private void newGameButton_Click(object sender, EventArgs e)
+        {
+            _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
+        }
+
+        private void selectLevelGameButton_Click(object sender, EventArgs e)
+        {
+            //Select Level
+            Console.WriteLine("Level selected");
+        }
+
+        private void quitGameButton_Click(object sender, EventArgs e)
+        {
+            _game.Exit();
+        }
+
+        private void DescriptionGameButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Description");
+        }
+
+        private void OptionsGameButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Options");
+        }
+    }
+}

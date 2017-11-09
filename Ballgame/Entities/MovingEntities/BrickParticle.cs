@@ -8,11 +8,8 @@ namespace Ballgame.Entities
     public class BrickParticle:MovingEntity
     {
         public float Size { get; private set; }
-
         private float rotation;
-
         public static float baseParticleSpeed = 8;
-
         private static float baseScale = 0.8f;
 
         public BrickParticle(int x, int y, Texture2D sprite) : base(x, y, sprite)

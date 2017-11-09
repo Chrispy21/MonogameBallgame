@@ -26,20 +26,15 @@ namespace Ballgame.Entities
         {
             base.Update(gameTime);
             this.HandleCollisions();
-            
-            
+                       
             // Ellenőrzi, hogy háromszor leesett a labda
             // a "labda" játkos élete 
 
             if (this.Body.Y >= Main.Resolution.Y - 80 + this.Body.Height)
             {
                 this.Speed.Y *= -1;
-                Main.hp--;
-                
-
+                Main.hp--;             
             }
-
-
             this.Speed *= 1.0001f;
         }
 
@@ -51,8 +46,6 @@ namespace Ballgame.Entities
             // Ellenőrzi a tégla és a labda ütközését
             if (Main.CurrentLevel.EntityList.Find(b => b is Brick && this.Body.Intersects(b.Body)) != null)
             {
-
-
                 Main.score += 10;
                 this.Speed.Y *= -1;
                 //this.Speed.X *= -1;

@@ -6,72 +6,71 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Ballgame.Entities;
 using Ballgame.Controls;
+using Ballgame.States;
 
 namespace Ballgame
 {
-    public enum CollectibleType { Dislike, Like, Trollface, Iceball ,Hp,Racket};
+    public enum CollectibleType { Dislike, Like, Trollface, Iceball, Hp, Racket };
     public enum BallType { Bowling };
-    public enum RacketType { BlueGray,LongRacket};
+    public enum RacketType { BlueGray, LongRacket };
     public enum BrickType { DefaultBrick };
     public enum ParticleType { DefaultBrick };
 
     public class Main : Game
     {
+        public static Random rnd = new Random();
         public static GraphicsDeviceManager Graphics { get; private set; }
         public static SpriteBatch SpriteBatch { get; private set; }
+        public static List<DelayedAction> DelayedActionList { get; private set; }
+        public static Level CurrentLevel { get; private set; }
+
         private SpriteFont Healt;
         private SpriteFont Score;
         private SpriteFont targets;
+
         public const float baseBallSpeed = -5;
-
-        public static Random rnd = new Random();
-
         private static int collectibleTypeCount = 6;
-
         private static int ballTypeCount = 1;
-
         private static int racketTypeCount = 2;
-
         private static int brickTypeCount = 1;
-
         private static int particleTypeCount = 1;
 
         private static Texture2D[] collectibleSprites;
-
         private static Texture2D[] ballSprites;
-
         private static Texture2D[] racketSprites;
-
         private static Texture2D[] brickSprites;
-
         private static Texture2D[] particleSprites;
-
-       
-        public static int score = 0;
-        public static int target =0;
-        public static int hp =3;
         private Texture2D background;
 
+        public static int score = 0;
+        public static int target = 0;
+        public static int hp = 3;
+
+        private State _currentState;
+        private State _nextState;
+
         bool paused = false;
-
         bool quit = false;
+
         Texture2D pausedTexture;
-
-        Rectangle pausedRectangle;
-
-        Button btnPlay;
-
-        Button btnQuit;
-
-        Button btnRestart;
-
         Texture2D quitTexture;
 
+        Button btnPlay;
+        Button btnQuit;
+        Button btnRestart;
+
+        Rectangle pausedRectangle;
         Rectangle quitRectangle;
-
         Rectangle hpRectangle;
+        Rectangle racket;
 
-       Rectangle racket;
+        //Player player;
+
+        public void ChangeState(State state)
+        {
+            _nextState = state;
+        }
+
         public static Vector2 Resolution
         {
             get
@@ -80,12 +79,6 @@ namespace Ballgame
             }
         }
 
-        public static List<DelayedAction> DelayedActionList { get; private set; }
-
-        public static Level CurrentLevel { get; private set; }
-
-
-        
         public Main()
         {
             Graphics = new GraphicsDeviceManager(this);
@@ -107,7 +100,7 @@ namespace Ballgame
             Graphics.SynchronizeWithVerticalRetrace = false;
             Graphics.ApplyChanges();
 
-            this.IsMouseVisible = false;
+            this.IsMouseVisible = true;
 
             base.Initialize();
         }
@@ -145,6 +138,8 @@ namespace Ballgame
             targets = Content.Load<SpriteFont>("targets");
             string path;
 
+            _currentState = new MenuState(this, Graphics.GraphicsDevice, Content);
+
             for (int i = 0; i < collectibleTypeCount; i++)
             {
                 path = String.Format("Sprites/Collectibles/collectible_{0}", i);
@@ -156,11 +151,11 @@ namespace Ballgame
                 path = String.Format("Sprites/Balls/ball_{0}", i);
                 ballSprites[i] = this.Content.Load<Texture2D>(path);
             }
-            
+
             for (int i = 0; i < racketTypeCount; i++)
             {
-                    path = String.Format("Sprites/Rackets/racket_{0}", i);
-                    racketSprites[i] = this.Content.Load<Texture2D>(path);
+                path = String.Format("Sprites/Rackets/racket_{0}", i);
+                racketSprites[i] = this.Content.Load<Texture2D>(path);
 
             }
 
@@ -188,19 +183,30 @@ namespace Ballgame
 
         protected override void Update(GameTime gameTime)
         {
-            //CheckInput();
 
+            if (_nextState != null)
+            {
+                _currentState = _nextState;
+
+                _nextState = null;
+            }
+
+            _currentState.Update(gameTime);
+            _currentState.PostUpdate(gameTime);
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            {
+                Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+            }
+
+            //CheckInput();
+            //áthelyezni ha menu háttérben fut
             CurrentLevel.Update(gameTime);
 
             // Timerek frissítése (ne nyúlj hozzá)
             for (int i = DelayedActionList.Count - 1; i >= 0; i--)
             {
                 DelayedActionList[i].Update(gameTime.ElapsedGameTime.Milliseconds);
-            }
-
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
-            {
-                Level.ball.Speed = new Vector2(Main.baseBallSpeed);
             }
 
 
@@ -213,6 +219,7 @@ namespace Ballgame
                     paused = true;
                     btnPlay.isClicked = false;
                     Level.ball.Speed = new Vector2(0);
+                    CurrentLevel.Player.isFrozen = true;
                 }
 
 
@@ -221,10 +228,11 @@ namespace Ballgame
             }
             else if (paused)
             {
-                
+
                 if (btnPlay.isClicked)
                 {
                     Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                    CurrentLevel.Player.isFrozen = false;
                     paused = false;
                 }
                 if (btnQuit.isClicked)
@@ -238,17 +246,15 @@ namespace Ballgame
             }
 
 
-            
-            //Restart menü
-           
-            if (!quit && hp<=0)
-            {
-                    
-                    quit = true;
-                    btnRestart.isClicked = false;
-                    Ball.Kill();
-                    
 
+            //Restart menü
+
+            if (!quit && hp <= 0)
+            {
+
+                quit = true;
+                btnRestart.isClicked = false;
+                Ball.Kill();
 
                 //játék megállítása pause menu meghívása esetén
                 //player.Update();
@@ -285,11 +291,17 @@ namespace Ballgame
         protected override void Draw(GameTime gameTime)
         {
             SpriteBatch.Begin();
+
+            _currentState.Draw(gameTime, SpriteBatch);
+
             SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
             SpriteBatch.DrawString(Healt, "HP: " + hp, new Vector2(10, 650), Color.Aqua);
-            SpriteBatch.DrawString(Score, "Score: " +score, new Vector2(1000, 650), Color.DarkOliveGreen);
-            SpriteBatch.DrawString(targets, "Targets: " +target, new Vector2(500, 650), Color.WhiteSmoke);
+            SpriteBatch.DrawString(Score, "Score: " + score, new Vector2(1000, 650), Color.DarkOliveGreen);
+            SpriteBatch.DrawString(targets, "Targets: " + target, new Vector2(500, 650), Color.WhiteSmoke);
+
+            //áthelyezni ha menu háttérben fut
             CurrentLevel.Draw(gameTime);
+
             if (quit)
             {
                 SpriteBatch.Draw(quitTexture, quitRectangle, Color.White);

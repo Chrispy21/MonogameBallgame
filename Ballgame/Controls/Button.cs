@@ -13,11 +13,7 @@ namespace Ballgame.Controls
     {
         Texture2D texture_pause;
         Vector2 position_pause;
-        Rectangle rectangle_pause;
-        
-       // Texture2D texture_restart;
-        //Vector2 position_restart;
-        
+        Rectangle rectangle_pause;       
         Rectangle rectangle_restart;
         
         Color colour = new Color(255, 255, 255, 255);
@@ -71,9 +67,7 @@ namespace Ballgame.Controls
             {
                 colour.A += 3;
             }
-        
-           
-        
+                         
             else if(mouseRectangle.Intersects(rectangle_restart))
             {
                 if (colour.A == 255)
@@ -106,9 +100,7 @@ namespace Ballgame.Controls
         
         public void Draw(SpriteBatch spriteBatch_pause)
         {
-            spriteBatch_pause.Draw(texture_pause, rectangle_pause, colour);
-           // spriteBatch_pause.Draw(texture_restart, rectangle_restart, colour);
-            
+            spriteBatch_pause.Draw(texture_pause, rectangle_pause, colour);            
         }
     }
 }

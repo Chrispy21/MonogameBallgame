@@ -11,12 +11,10 @@ namespace Ballgame.Entities
     public class Player : MovingEntity
     {
         public enum BallType { Bowling };
-       
+
         public bool IsInputInverted;
         public bool isFrozen;
         public bool scaleEffect;
-        
-
 
         public Player(int x, int y, RacketType racketType)
             : base(x, y, Main.GetRacketSprite(racketType))
@@ -41,15 +39,18 @@ namespace Ballgame.Entities
                         this.Speed.X = 20;
 
                     }
+
                     else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X > 0)
                     {
                         this.Speed.X = -20;
                     }
+
                     else
                     {
                         this.Speed.X = 0;
                     }
                 }
+
                 else
                 {
                     if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X > 0)
@@ -57,16 +58,19 @@ namespace Ballgame.Entities
                         this.Speed.X = -20;
 
                     }
+
                     else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X + this.Body.Width < Main.Resolution.X)
                     {
                         this.Speed.X = 20;
                     }
+
                     else
                     {
                         this.Speed.X = 0;
                     }
                 }
             }
+
             else
             {
                 this.Speed.X = 0;
@@ -78,8 +82,6 @@ namespace Ballgame.Entities
         {
             if (!scaleEffect)
             {
-
-
                 Main.SpriteBatch.Draw(this.Sprite,
                      new Vector2(this.Body.X, this.Body.Y),
                      null,
@@ -90,6 +92,7 @@ namespace Ballgame.Entities
                      SpriteEffects.None,
                      0);
             }
+
             else
             {
                 Main.SpriteBatch.Draw(this.Sprite,
@@ -97,8 +100,6 @@ namespace Ballgame.Entities
                     null, Color.White, 0, Vector2.Zero, 1.2f,  /// Ez az 1,2 x nagyobbítja arányosan az ütőt 
                     SpriteEffects.None, 0);
             }
-
-
         }
     }
 }

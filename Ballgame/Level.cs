@@ -11,10 +11,11 @@ namespace Ballgame.Entities
     public class Level
     {
         public List<Entity> EntityList { get; private set; }
-
-        public Player Player { get; private set; }
         public List<Ball> Balls { get; private set; }
+        public Player Player { get; private set; }
+
         public static Ball ball;
+
         public Level()
         {
             this.EntityList = new List<Entity>();
@@ -38,11 +39,6 @@ namespace Ballgame.Entities
             {
                 this.EntityList[i].Update(gameTime);
             }
-
-
-
-
-
         }
 
         public void Draw(GameTime gameTime)
@@ -53,8 +49,8 @@ namespace Ballgame.Entities
                 e.Draw(gameTime);
             }
         }
-       //public static Random rnd = new Random();
-      
+        //public static Random rnd = new Random();
+
         /// <summary>
         /// Feltölti a pályát téglákkal
         /// </summary>
@@ -163,7 +159,7 @@ namespace Ballgame.Entities
 
                 }
             }
-       
+
         }
 
         /// <summary>
@@ -188,7 +184,7 @@ namespace Ballgame.Entities
                 throw new Exception("Entity can't be destroyed, it doesn't exist.");
             }
         }
-        
+
         /// <summary>
         /// Spawnol egy labdát.
         /// </summary>
@@ -196,7 +192,7 @@ namespace Ballgame.Entities
         {
 
 
-            ball= new Ball(position.X, position.Y, type);
+            ball = new Ball(position.X, position.Y, type);
             ball.Speed = new Vector2(0);
             this.EntityList.Add(ball);
             return ball;
@@ -217,15 +213,10 @@ namespace Ballgame.Entities
         /// </summary>
         public Player CreatePlayer(Point position, RacketType racketType)
         {
-            Player player = new Player(position.X-60, position.Y, racketType);
+            Player player = new Player(position.X - 60, position.Y, racketType);
             this.EntityList.Add(player);
             return player;
         }
-
-        
-
-
-
     }
 
 }

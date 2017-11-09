@@ -52,7 +52,7 @@ namespace Ballgame.Entities
                 case CollectibleType.Iceball:
 
                     Main.CurrentLevel.Player.isFrozen = true;
-                    
+
                     // 2 másodperc múlva állítsa vissza
                     Main.QueueAction(new DelayedAction(
                         () =>
@@ -61,7 +61,7 @@ namespace Ballgame.Entities
                         },
                         2000,
                         false));
-                    
+
                     break;
                 case CollectibleType.Like:
                     foreach (Ball b in Main.CurrentLevel.EntityList.FindAll(x => x is Ball))
@@ -73,7 +73,7 @@ namespace Ballgame.Entities
                 case CollectibleType.Trollface:
                     // Irányítás megfordítása
                     Main.CurrentLevel.Player.IsInputInverted = true;
-                    
+
                     // 4 másodperc múlva állítsa vissza
                     Main.QueueAction(new DelayedAction(
                         () => Main.CurrentLevel.Player.IsInputInverted = false,
@@ -85,7 +85,6 @@ namespace Ballgame.Entities
                     Main.hp++;
                     break;
 
-
                 case CollectibleType.Racket:  /// <--- az ütő meghosszabítása
                     Main.CurrentLevel.Player.scaleEffect = true;
 
@@ -95,9 +94,7 @@ namespace Ballgame.Entities
                     2000,
                     false));
                     break;
-
             }
-
             this.Destroy();
         }
     }
