@@ -10,7 +10,7 @@ using Ballgame.States;
 
 namespace Ballgame
 {
-    public enum CollectibleType { Dislike, Like, Trollface, Iceball, Hp, Racket };
+    public enum CollectibleType { Dislike, Like, Trollface, Iceball, Hp, Racket, Ball };
     public enum BallType { Bowling };
     public enum RacketType { BlueGray, LongRacket };
     public enum BrickType { DefaultBrick };
@@ -24,12 +24,13 @@ namespace Ballgame
         public static List<DelayedAction> DelayedActionList { get; private set; }
         public static Level CurrentLevel { get; private set; }
 
-        private SpriteFont Healt;
-        private SpriteFont Score;
-        private SpriteFont targets;
+        public static SpriteFont Healt;
+        public static SpriteFont Score;
+        public static SpriteFont targets;
+        public static SpriteFont Start;
 
         public const float baseBallSpeed = -5;
-        private static int collectibleTypeCount = 6;
+        private static int collectibleTypeCount = 7;
         private static int ballTypeCount = 1;
         private static int racketTypeCount = 2;
         private static int brickTypeCount = 1;
@@ -45,12 +46,14 @@ namespace Ballgame
         public static int score = 0;
         public static int target = 0;
         public static int hp = 3;
+        private int spaceClick = 0;
 
         private State _currentState;
         private State _nextState;
 
         bool paused = false;
         bool quit = false;
+        public static bool space = true;
 
         Texture2D pausedTexture;
         Texture2D quitTexture;
@@ -136,6 +139,7 @@ namespace Ballgame
             hpRectangle = new Rectangle(0, 0, Healt.Texture.Width, Healt.Texture.Height);
             Score = Content.Load<SpriteFont>("score");
             targets = Content.Load<SpriteFont>("targets");
+            Start = Content.Load<SpriteFont>("start");
             string path;
 
             _currentState = new MenuState(this, Graphics.GraphicsDevice, Content);
@@ -194,15 +198,17 @@ namespace Ballgame
             _currentState.Update(gameTime);
             _currentState.PostUpdate(gameTime);
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            if(spaceClick<=0)
             {
-                Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                if (Keyboard.GetState().IsKeyDown(Keys.Space))
+                {
+                    Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                    space = false;
+                    spaceClick++;
+
+                }
             }
-
             //CheckInput();
-            //áthelyezni ha menu háttérben fut
-            CurrentLevel.Update(gameTime);
-
             // Timerek frissítése (ne nyúlj hozzá)
             for (int i = DelayedActionList.Count - 1; i >= 0; i--)
             {
@@ -229,8 +235,9 @@ namespace Ballgame
             else if (paused)
             {
 
-                if (btnPlay.isClicked)
+                if (btnPlay.isClicked /*|| Keyboard.GetState().IsKeyDown(Keys.Escape)*/)
                 {
+
                     Level.ball.Speed = new Vector2(Main.baseBallSpeed);
                     CurrentLevel.Player.isFrozen = false;
                     paused = false;
@@ -244,9 +251,6 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
-
-
-
             //Restart menü
 
             if (!quit && hp <= 0)
@@ -264,9 +268,11 @@ namespace Ballgame
 
                 if (btnRestart.isClicked)
                 {
+                    spaceClick = 0;
                     target = 0;
                     score *= 0;
                     hp = 3;
+                    space = true;
                     quit = false;
                     StartGame();
                     //Ball.touch = 0;
@@ -291,23 +297,23 @@ namespace Ballgame
         protected override void Draw(GameTime gameTime)
         {
             SpriteBatch.Begin();
-
-            _currentState.Draw(gameTime, SpriteBatch);
-
             SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
+            /*
             SpriteBatch.DrawString(Healt, "HP: " + hp, new Vector2(10, 650), Color.Aqua);
             SpriteBatch.DrawString(Score, "Score: " + score, new Vector2(1000, 650), Color.DarkOliveGreen);
-            SpriteBatch.DrawString(targets, "Targets: " + target, new Vector2(500, 650), Color.WhiteSmoke);
+            SpriteBatch.DrawString(targets, "Targets: " + target, new Vector2(500, 650),  Color.WhiteSmoke );
+            */
+            //Nem mind1 a sorrend!
+            //if-be elindul a játék végtelen élettel ütő nélkül.
 
-            //áthelyezni ha menu háttérben fut
-            CurrentLevel.Draw(gameTime);
-
+            _currentState.Draw(gameTime, SpriteBatch);
             if (quit)
             {
                 SpriteBatch.Draw(quitTexture, quitRectangle, Color.White);
                 btnRestart.Draw(SpriteBatch);
                 btnQuit.Draw(SpriteBatch);
             }
+            
 
             if (paused)
             {
@@ -315,7 +321,7 @@ namespace Ballgame
                 btnPlay.Draw(SpriteBatch);
                 btnQuit.Draw(SpriteBatch);
             }
-
+            
             SpriteBatch.End();
 
             base.Draw(gameTime);
@@ -344,6 +350,7 @@ namespace Ballgame
         {
             return collectibleSprites[(int)type];
         }
+
     }
 
 }

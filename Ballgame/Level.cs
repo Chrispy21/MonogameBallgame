@@ -13,7 +13,7 @@ namespace Ballgame.Entities
         public List<Entity> EntityList { get; private set; }
         public List<Ball> Balls { get; private set; }
         public Player Player { get; private set; }
-
+        public static bool addBall = false;
         public static Ball ball;
 
         public Level()
@@ -30,6 +30,10 @@ namespace Ballgame.Entities
 
             // Az első labda
             this.Balls.Add(this.CreateBall(new Point(this.Player.Body.X, this.Player.Body.Y - 100), BallType.Bowling));
+            /*if(!addBall)
+            {
+                this.Balls.Add(this.CreateBall(new Point(this.Player.Body.X, this.Player.Body.Y - 100), BallType.Bowling));
+            }*/
         }
 
         public void Update(GameTime gameTime)
@@ -48,6 +52,14 @@ namespace Ballgame.Entities
             {
                 e.Draw(gameTime);
             }
+            /*if (!addBall)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    this.Balls.Add(this.CreateBall(new Point(this.Player.Body.X, this.Player.Body.Y), BallType.Bowling));
+                }
+            }*/
+            
         }
         //public static Random rnd = new Random();
 
@@ -190,7 +202,6 @@ namespace Ballgame.Entities
         /// </summary>
         public Ball CreateBall(Point position, BallType type)
         {
-
 
             ball = new Ball(position.X, position.Y, type);
             ball.Speed = new Vector2(0);

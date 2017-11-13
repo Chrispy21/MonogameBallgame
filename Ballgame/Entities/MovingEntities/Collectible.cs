@@ -80,9 +80,8 @@ namespace Ballgame.Entities
                         4000,
                         false));
                     break;
-                case CollectibleType.Hp:
 
-                    Main.hp++;
+                case CollectibleType.Hp: Main.hp++;
                     break;
 
                 case CollectibleType.Racket:  /// <--- az ütő meghosszabítása
@@ -91,8 +90,15 @@ namespace Ballgame.Entities
                     // 10 másodperc múlva állítsa vissza
                     Main.QueueAction(new DelayedAction(
                     () => Main.CurrentLevel.Player.scaleEffect = false,
-                    2000,
+                    10000,
                     false));
+                    break;
+
+                case CollectibleType.Ball:
+                    foreach (Ball b in Main.CurrentLevel.EntityList.FindAll(x => x is Ball))
+                    {
+                        Level.addBall = true;
+                    }
                     break;
             }
             this.Destroy();

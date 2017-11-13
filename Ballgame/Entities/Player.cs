@@ -97,7 +97,7 @@ namespace Ballgame.Entities
             {
                 Main.SpriteBatch.Draw(this.Sprite,
                     new Vector2(this.Body.X, this.Body.Y),
-                    null, Color.White, 0, Vector2.Zero, 1.2f,  /// Ez az 1,2 x nagyobbítja arányosan az ütőt 
+                    null, Color.White, 0, Vector2.Zero, 1.7f,  /// Ez az 1,2 x nagyobbítja arányosan az ütőt 
                     SpriteEffects.None, 0);
             }
         }

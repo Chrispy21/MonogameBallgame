@@ -9,7 +9,7 @@ namespace Ballgame.Entities
     {
         //public static int touch;
         public Ball(int x, int y, BallType type) : base(x, y, Main.GetBallSprite(type)) { }
-
+        public bool pluszBall = false;
         public static bool IsDestroy = true;
         public static void Kill()
         {
