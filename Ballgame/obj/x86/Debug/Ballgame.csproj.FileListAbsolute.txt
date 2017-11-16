@@ -366,3 +366,8 @@ C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\racketgun_0.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\start.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_6.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\MenuFont.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\start.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_6.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\longracketgun_0.xnb
+C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\racketgun_0.xnb

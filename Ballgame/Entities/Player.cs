@@ -28,6 +28,10 @@ namespace Ballgame.Entities
             // Az ütő mozgatása billentyűzettel
             KeyboardState keyboardState = Keyboard.GetState();
 
+
+
+
+
             // Ha nincs lefagyva a player
             if (!this.isFrozen)
             {

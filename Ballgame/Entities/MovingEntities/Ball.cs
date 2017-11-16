@@ -38,26 +38,29 @@ namespace Ballgame.Entities
             this.Speed *= 1.0001f;
         }
 
+       
+
         /// <summary>
         /// Az ütközéseket kezeli más Entitykkel.
         /// </summary>
         private void HandleCollisions()
         {
+            
             // Ellenőrzi a tégla és a labda ütközését
             if (Main.CurrentLevel.EntityList.Find(b => b is Brick && this.Body.Intersects(b.Body)) != null)
             {
                 Main.score += 10;
-                this.Speed.Y *= -1;
+                this.Speed.Y *=-1;
                 //this.Speed.X *= -1;
             }
-
-            // Ellenőrzi az ütő és a labda ütközését.
-            if (Main.CurrentLevel.Player.Body.Intersects(this.Body))
-            {
-                this.Speed.Y *= -1;
-                //this.Speed.X *= 1;
-            }
-
+          
+                // Ellenőrzi az ütő és a labda ütközését.
+                if (Main.CurrentLevel.Player.Body.Intersects(this.Body))
+                {
+                    this.Speed.Y *= -1;
+                   
+                }
+            
             // Megakadályozza, hogy a labda kimenjen a képernyőről.
             if (this.Body.X <= 0 || this.Body.X + this.Body.Width >= Main.Resolution.X)
             {

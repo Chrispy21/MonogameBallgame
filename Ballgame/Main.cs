@@ -2,12 +2,13 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Ballgame.Entities;
 using Ballgame.Controls;
 using Ballgame.States;
-
+using Ballgame.Levels;
 namespace Ballgame
 {
     public enum CollectibleType { Dislike, Like, Trollface, Iceball, Hp, Racket, Ball };
@@ -15,7 +16,7 @@ namespace Ballgame
     public enum RacketType { BlueGray, LongRacket };
     public enum BrickType { DefaultBrick };
     public enum ParticleType { DefaultBrick };
-
+   
     public class Main : Game
     {
         public static Random rnd = new Random();
@@ -31,6 +32,8 @@ namespace Ballgame
 
         public const float baseBallSpeed = -5;
         private static int collectibleTypeCount = 7;
+
+
         private static int ballTypeCount = 1;
         private static int racketTypeCount = 2;
         private static int brickTypeCount = 1;
@@ -45,7 +48,7 @@ namespace Ballgame
 
         public static int score = 0;
         public static int target = 0;
-        public static int hp = 3;
+        public static int hp = 3000;
         private int spaceClick = 0;
 
         private State _currentState;
@@ -65,7 +68,25 @@ namespace Ballgame
         Rectangle pausedRectangle;
         Rectangle quitRectangle;
         Rectangle hpRectangle;
-        Rectangle racket;
+
+
+        // Pályák sorrendje
+
+            /// <summary>
+            /// //HA CSINÁLTÁL EGY LEVELX SZÁMÚ PÁLYÁT AKKOR IDE KELL BEÍRNOD AHOGY A MINTA MUTATJA typeof(LevelX)
+            /// </summary>
+        public static List<Type> LevelList = new List<Type>
+        {
+            typeof(Level1),
+            typeof(Level2),
+            typeof(Level3)
+            
+            
+
+        };
+
+        public static int CurrentLevelIndex = 0;
+
 
         //Player player;
 
@@ -181,10 +202,11 @@ namespace Ballgame
 
         private void StartGame()
         {
-            CurrentLevel = new Level();
+            this.SetLevel(typeof(Level1)); // mindig így állítsátok be a level-t
             CurrentLevel.GenerateBricks();
         }
 
+        
         protected override void Update(GameTime gameTime)
         {
 
@@ -287,6 +309,25 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
+            
+            // Ha nincs több tégla, ugrás a következő pályára (ha nincs következő, akkor a legelsőre)
+            if(CurrentLevel.EntityList.Count(x => x is Brick) <= 0)
+            {
+                if(CurrentLevelIndex + 1 < LevelList.Count)
+                {
+                   
+                    this.SetLevel(LevelList[CurrentLevelIndex + 1]);
+                    Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                    
+                }
+                else
+                {
+                    this.SetLevel(LevelList[0]);
+                }
+                
+                
+
+            }
 
             base.Update(gameTime);
         }
@@ -326,6 +367,21 @@ namespace Ballgame
 
             base.Draw(gameTime);
         }
+
+        private void SetLevel(Type levelType)
+        {
+            if(levelType.BaseType == typeof(Level))
+            {
+                CurrentLevel = (Level)Activator.CreateInstance(levelType);
+                CurrentLevel.GenerateBricks();
+                CurrentLevelIndex = LevelList.IndexOf(levelType);
+            }
+            else
+            {
+                throw new ArgumentException("SetLevel: Egy level típust kell megadni.");
+            }
+        }
+
         public static void QueueAction(DelayedAction action)
         {
             DelayedActionList.Add(action);

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racketgun_0.png</SourceFile>
-  <SourceTime>2017-11-11T22:27:53.5912158+01:00</SourceTime>
-  <DestFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Rackets/racketgun_0.xnb</DestFile>
-  <DestTime>2017-11-12T21:15:00.2992737+01:00</DestTime>
+  <SourceFile>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Rackets/racketgun_0.png</SourceFile>
+  <SourceTime>2017-11-14T10:20:22.6992585+01:00</SourceTime>
+  <DestFile>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Rackets/racketgun_0.xnb</DestFile>
+  <DestTime>2017-11-14T10:21:07.5388232+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
