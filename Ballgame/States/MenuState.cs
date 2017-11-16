@@ -13,6 +13,7 @@ namespace Ballgame.States
     public class MenuState : State
     {
         private List<Component> _components;
+        public List<Component> _backbutton;
 
         public MenuState(Main game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
@@ -35,17 +36,9 @@ namespace Ballgame.States
 
             selectLevelGameButton.Click += selectLevelGameButton_Click;
 
-            var quitGameButton = new ButtonMenu(buttonTexture, buttonFont)
-            {
-                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, Main.Graphics.PreferredBackBufferHeight/2),
-                Text = "Quit Game",
-            };
-
-            quitGameButton.Click += quitGameButton_Click;
-
             var descriptionGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
-                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+60),
+                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, Main.Graphics.PreferredBackBufferHeight / 2),
                 Text = "Description",
             };
 
@@ -53,11 +46,19 @@ namespace Ballgame.States
 
             var optionsGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
-                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+120),
+                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+60),
                 Text = "Options",
             };
 
             optionsGameButton.Click += OptionsGameButton_Click;
+
+            var quitGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            {
+                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+120),
+                Text = "Quit Game",
+            };
+
+            quitGameButton.Click += quitGameButton_Click;
 
             _components = new List<Component>()
             {
@@ -66,12 +67,11 @@ namespace Ballgame.States
                 quitGameButton,
                 descriptionGameButton,
                 optionsGameButton,
-            };
+            };            
         }
-
+        
         public override void Draw(GameTime gameTime, SpriteBatch SpriteBatch)
         {
-
             foreach (var component in _components)
                 component.Draw(gameTime, SpriteBatch);
         }
@@ -94,8 +94,7 @@ namespace Ballgame.States
 
         private void selectLevelGameButton_Click(object sender, EventArgs e)
         {
-            //Select Level
-            Console.WriteLine("Level selected");
+            _game.ChangeState(new SelectLevelState(_game, _graphicsDevice, _content));
         }
 
         private void quitGameButton_Click(object sender, EventArgs e)
@@ -105,12 +104,12 @@ namespace Ballgame.States
 
         private void DescriptionGameButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Description");
+            _game.ChangeState(new DescriptionState(_game, _graphicsDevice, _content));
         }
 
         private void OptionsGameButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Options");
+            _game.ChangeState(new OptionsState(_game, _graphicsDevice, _content));
         }
     }
 }

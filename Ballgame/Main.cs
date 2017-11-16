@@ -33,7 +33,6 @@ namespace Ballgame
         public const float baseBallSpeed = -5;
         private static int collectibleTypeCount = 7;
 
-
         private static int ballTypeCount = 1;
         private static int racketTypeCount = 2;
         private static int brickTypeCount = 1;
@@ -44,7 +43,9 @@ namespace Ballgame
         private static Texture2D[] racketSprites;
         private static Texture2D[] brickSprites;
         private static Texture2D[] particleSprites;
-        private Texture2D background;
+        public static Texture2D background;
+        public static Texture2D backgroundmenu;
+        public static Texture2D descriptionText;
 
         public static int score = 0;
         public static int target = 0;
@@ -52,7 +53,7 @@ namespace Ballgame
         private int spaceClick = 0;
 
         private State _currentState;
-        private State _nextState;
+        public State _nextState;
 
         bool paused = false;
         bool quit = false;
@@ -161,6 +162,7 @@ namespace Ballgame
             Score = Content.Load<SpriteFont>("score");
             targets = Content.Load<SpriteFont>("targets");
             Start = Content.Load<SpriteFont>("start");
+            
             string path;
 
             _currentState = new MenuState(this, Graphics.GraphicsDevice, Content);
@@ -196,6 +198,8 @@ namespace Ballgame
                 particleSprites[i] = this.Content.Load<Texture2D>(path);
             }
             background = Content.Load<Texture2D>("Sprites/Background/backg_0");
+            backgroundmenu = Content.Load<Texture2D>("Sprites/Background/backg_1");
+            descriptionText = Content.Load<Texture2D>("Sprites/Background/Description");
             this.StartGame();
             // TODO: this.Content.Load <- betöltés
         }
@@ -338,7 +342,7 @@ namespace Ballgame
         protected override void Draw(GameTime gameTime)
         {
             SpriteBatch.Begin();
-            SpriteBatch.Draw(background, new Rectangle(0, 0, 1280, 768), Color.White);
+            SpriteBatch.Draw(backgroundmenu, new Rectangle(0, 0, 1280, 768), Color.White);
             /*
             SpriteBatch.DrawString(Healt, "HP: " + hp, new Vector2(10, 650), Color.Aqua);
             SpriteBatch.DrawString(Score, "Score: " + score, new Vector2(1000, 650), Color.DarkOliveGreen);

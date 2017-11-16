@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_0.png</SourceFile>
-  <SourceTime>2017-11-14T10:20:22.6882579+01:00</SourceTime>
-  <DestFile>C:/Users/Mark Raven/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Bricks/brick_0.xnb</DestFile>
-  <DestTime>2017-11-14T10:21:05.2606929+01:00</DestTime>
+  <SourceFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Bricks/brick_0.png</SourceFile>
+  <SourceTime>2017-10-18T13:15:19.4703348+02:00</SourceTime>
+  <DestFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Bricks/brick_0.xnb</DestFile>
+  <DestTime>2017-11-16T12:02:32.4342296+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
