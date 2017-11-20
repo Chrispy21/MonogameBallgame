@@ -38,13 +38,13 @@ namespace Ballgame.Entities
                 // Arra az esetre, ha a player felvett egy trollface-t
                 if (this.IsInputInverted)
                 {
-                    if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X + this.Body.Width < Main.Resolution.X)
+                    if (keyboardState.IsKeyDown(Main.moveLeft) && this.Body.X + this.Body.Width < Main.Resolution.X)
                     {
                         this.Speed.X = 20;
 
                     }
 
-                    else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X > 0)
+                    else if (keyboardState.IsKeyDown(Main.moveRight) && this.Body.X > 0)
                     {
                         this.Speed.X = -20;
                     }
@@ -57,13 +57,13 @@ namespace Ballgame.Entities
 
                 else
                 {
-                    if (keyboardState.IsKeyDown(Keys.Left) && this.Body.X > 0)
+                    if (keyboardState.IsKeyDown(Main.moveLeft) && this.Body.X > 0)
                     {
                         this.Speed.X = -20;
 
                     }
 
-                    else if (keyboardState.IsKeyDown(Keys.Right) && this.Body.X + this.Body.Width < Main.Resolution.X)
+                    else if (keyboardState.IsKeyDown(Main.moveRight) && this.Body.X + this.Body.Width < Main.Resolution.X)
                     {
                         this.Speed.X = 20;
                     }

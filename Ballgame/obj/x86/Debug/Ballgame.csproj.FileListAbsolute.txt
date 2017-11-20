@@ -393,3 +393,4 @@ C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\racket_4.xnb
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\backg_1.xnb
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\Description.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\menusprite.xnb

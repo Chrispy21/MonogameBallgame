@@ -27,6 +27,7 @@ namespace Ballgame.States
                 Position = new Vector2(30, 600),
                 Text = "Back",
             };
+
             backButton.Click += BackButton_Click;
         }
 
@@ -34,7 +35,11 @@ namespace Ballgame.States
         {
 
             backButton.Draw(gameTime, SpriteBatch);
+            //Kép betöltése (jelenleg anonymous szöveg DE az kép)
             SpriteBatch.Draw(Main.descriptionText, new Rectangle(0, 0, 1280, 768), Color.White);
+            //Description kiíratása betűméret változtatásával 
+            SpriteBatch.DrawString(Main.MenuSprite, "Description", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 30, 40), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+
         }
 
         public override void PostUpdate(GameTime gameTime)
@@ -44,12 +49,12 @@ namespace Ballgame.States
 
         public override void Update(GameTime gameTime)
         {
-
+            backButton.Update(gameTime);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            _game.Exit();
+            _game._nextState = _game.menuState;
         }
     }
 }

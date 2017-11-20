@@ -29,6 +29,7 @@ namespace Ballgame
         public static SpriteFont Score;
         public static SpriteFont targets;
         public static SpriteFont Start;
+        public static SpriteFont MenuSprite;
 
         public const float baseBallSpeed = -5;
         private static int collectibleTypeCount = 7;
@@ -54,6 +55,13 @@ namespace Ballgame
 
         private State _currentState;
         public State _nextState;
+
+        public MenuState menuState;
+
+        //billentyűk
+        public static Keys moveLeft = Keys.Left;
+        public static Keys moveRight = Keys.Right;
+        public static Keys startBall = Keys.Space;
 
         bool paused = false;
         bool quit = false;
@@ -162,10 +170,12 @@ namespace Ballgame
             Score = Content.Load<SpriteFont>("score");
             targets = Content.Load<SpriteFont>("targets");
             Start = Content.Load<SpriteFont>("start");
+            MenuSprite = Content.Load<SpriteFont>("menusprite");
             
             string path;
 
             _currentState = new MenuState(this, Graphics.GraphicsDevice, Content);
+            this.menuState = _currentState as MenuState;
 
             for (int i = 0; i < collectibleTypeCount; i++)
             {
@@ -226,7 +236,7 @@ namespace Ballgame
 
             if(spaceClick<=0)
             {
-                if (Keyboard.GetState().IsKeyDown(Keys.Space))
+                if (Keyboard.GetState().IsKeyDown(Main.startBall))
                 {
                     Level.ball.Speed = new Vector2(Main.baseBallSpeed);
                     space = false;
@@ -244,40 +254,44 @@ namespace Ballgame
 
 
             MouseState mouse = Mouse.GetState();
-            if (!paused)
+            if(this._currentState is GameState)
             {
-                if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                if (!paused)
                 {
-                    paused = true;
-                    btnPlay.isClicked = false;
-                    Level.ball.Speed = new Vector2(0);
-                    CurrentLevel.Player.isFrozen = true;
+                    if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                    {
+                        paused = true;
+                        btnPlay.isClicked = false;
+                        Level.ball.Speed = new Vector2(0);
+                        CurrentLevel.Player.isFrozen = true;
+                    }
+
+
+                    //játék megállítása pause menu meghívása esetén
+                    //player.Update();
                 }
+                else if (paused)
+                {
 
+                    if (btnPlay.isClicked /*|| Keyboard.GetState().IsKeyDown(Keys.Escape)*/)
+                    {
 
-                //játék megállítása pause menu meghívása esetén
-                //player.Update();
+                        Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                        CurrentLevel.Player.isFrozen = false;
+                        paused = false;
+                    }
+                    if (btnQuit.isClicked)
+                    {
+                        Exit();
+                    }
+
+                    btnPlay.Update(mouse);
+                    btnQuit.Update(mouse);
+
+                }
+                //Restart menü
             }
-            else if (paused)
-            {
 
-                if (btnPlay.isClicked /*|| Keyboard.GetState().IsKeyDown(Keys.Escape)*/)
-                {
-
-                    Level.ball.Speed = new Vector2(Main.baseBallSpeed);
-                    CurrentLevel.Player.isFrozen = false;
-                    paused = false;
-                }
-                if (btnQuit.isClicked)
-                {
-                    Exit();
-                }
-
-                btnPlay.Update(mouse);
-                btnQuit.Update(mouse);
-
-            }
-            //Restart menü
 
             if (!quit && hp <= 0)
             {

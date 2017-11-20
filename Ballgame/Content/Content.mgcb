@@ -408,3 +408,10 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Background/Description.png
 
+#begin menusprite.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:menusprite.spritefont
+

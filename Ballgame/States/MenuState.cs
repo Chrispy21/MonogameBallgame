@@ -13,14 +13,20 @@ namespace Ballgame.States
     public class MenuState : State
     {
         private List<Component> _components;
-        public List<Component> _backbutton;
+        Texture2D buttonTexture;
+        SpriteFont buttonFont;
+        ButtonMenu newGameButton;
+        ButtonMenu selectLevelGameButton;
+        ButtonMenu descriptionGameButton;
+        ButtonMenu optionsGameButton;
+        ButtonMenu quitGameButton;
 
         public MenuState(Main game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
-            var buttonTexture = _content.Load<Texture2D>("Controls/button_0");
-            var buttonFont = _content.Load<SpriteFont>("MenuFont");
+            buttonTexture = _content.Load<Texture2D>("Controls/button_0");
+            buttonFont = _content.Load<SpriteFont>("MenuFont");
 
-            var newGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            newGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)-120),
                 Text = "New Game",
@@ -28,7 +34,7 @@ namespace Ballgame.States
 
             newGameButton.Click += newGameButton_Click;
 
-            var selectLevelGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            selectLevelGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth/2)-118, (Main.Graphics.PreferredBackBufferHeight / 2)-60),
                 Text = "Select Level",
@@ -36,7 +42,7 @@ namespace Ballgame.States
 
             selectLevelGameButton.Click += selectLevelGameButton_Click;
 
-            var descriptionGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            descriptionGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, Main.Graphics.PreferredBackBufferHeight / 2),
                 Text = "Description",
@@ -44,7 +50,7 @@ namespace Ballgame.States
 
             descriptionGameButton.Click += DescriptionGameButton_Click;
 
-            var optionsGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            optionsGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+60),
                 Text = "Options",
@@ -52,7 +58,7 @@ namespace Ballgame.States
 
             optionsGameButton.Click += OptionsGameButton_Click;
 
-            var quitGameButton = new ButtonMenu(buttonTexture, buttonFont)
+            quitGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+120),
                 Text = "Quit Game",
