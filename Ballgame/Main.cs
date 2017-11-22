@@ -273,7 +273,7 @@ namespace Ballgame
                 else if (paused)
                 {
 
-                    if (btnPlay.isClicked /*|| Keyboard.GetState().IsKeyDown(Keys.Escape)*/)
+                    if (btnPlay.isClicked || Keyboard.GetState().IsKeyDown(Keys.Enter))
                     {
 
                         Level.ball.Speed = new Vector2(Main.baseBallSpeed);
