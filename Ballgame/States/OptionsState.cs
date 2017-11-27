@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,9 @@ namespace Ballgame.States
         ButtonMenu RightButton;
         ButtonMenu StartButton;
 
+        private bool assigning = false;
+        private ButtonMenu clickedKey;
+
         public OptionsState(Main game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
             buttonTexture = content.Load<Texture2D>("Controls/button_0");
@@ -35,21 +39,21 @@ namespace Ballgame.States
             LeftButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 18, 200),
-                Text = "Back",
+                Text = Main.moveLeft.ToString(),
             };
             LeftButton.Click += LeftButton_Click;
 
             RightButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 18, 300),
-                Text = "Back",
+                Text = Main.moveRight.ToString(),
             };
             RightButton.Click += RightButton_Click;
 
             StartButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 18, 400),
-                Text = "Back",
+                Text = Main.startBall.ToString(),
             };
             StartButton.Click += StartButton_Click;
         }
@@ -62,9 +66,9 @@ namespace Ballgame.States
             StartButton.Draw(gameTime, SpriteBatch);
             //Options kiíratása betűméret változtatásával 
             SpriteBatch.DrawString(Main.MenuSprite, "Options", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 30, 40), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
-            SpriteBatch.DrawString(Main.MenuSprite, "Left", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 110, 200), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
-            SpriteBatch.DrawString(Main.MenuSprite, "Right", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 110, 300), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
-            SpriteBatch.DrawString(Main.MenuSprite, "Start", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 110, 400), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            SpriteBatch.DrawString(Main.MenuSprite, "Left", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 190, 200), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            SpriteBatch.DrawString(Main.MenuSprite, "Right", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 190, 300), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            SpriteBatch.DrawString(Main.MenuSprite, "Start", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 190, 400), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
         }
 
         public override void PostUpdate(GameTime gameTime)
@@ -78,6 +82,33 @@ namespace Ballgame.States
             LeftButton.Update(gameTime);
             RightButton.Update(gameTime);
             StartButton.Update(gameTime);
+
+            KeyboardState ks = Keyboard.GetState();
+            Keys[] pressedKeys = ks.GetPressedKeys();
+            if(pressedKeys.Length > 0)
+            {
+                if (clickedKey == LeftButton)
+                {
+                    Main.moveLeft = pressedKeys[0];
+                    LeftButton.Text = Main.moveLeft.ToString();
+                }
+                else if (clickedKey == RightButton)
+                {
+                    Main.moveRight = pressedKeys[0];
+                    RightButton.Text = Main.moveRight.ToString();
+                }
+                else if (clickedKey == StartButton)
+                {
+                    Main.startBall = pressedKeys[0];
+                    StartButton.Text = Main.startBall.ToString();
+                }
+                assigning = false;
+            }
+            if(!assigning)
+            {
+                clickedKey = null;
+            }
+
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -89,19 +120,27 @@ namespace Ballgame.States
         {
             //Keybindings beállítása balra
             //Mainben kell létrehozni
-            
+            clickedKey = LeftButton;
+            assigning = true;
+            LeftButton.Text = "Press a key";
         }
 
         private void RightButton_Click(object sender, EventArgs e)
         {
             //Keybindings beállítása jobbra
             //Mainben kell létrehozni
+            clickedKey = RightButton;
+            assigning = true;
+            RightButton.Text = "Press a key";
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
             //Keybindings beállítása elindításhoz
             //Mainben kell létrehozni
+            clickedKey = StartButton;
+            assigning = true;
+            StartButton.Text = "Press a key";
         }       
     }
 }

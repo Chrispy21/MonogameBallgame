@@ -78,7 +78,6 @@ namespace Ballgame
         Rectangle quitRectangle;
         Rectangle hpRectangle;
 
-
         // Pályák sorrendje
 
             /// <summary>
@@ -282,9 +281,22 @@ namespace Ballgame
                     }
                     if (btnQuit.isClicked)
                     {
-                        Exit();
+                        
+                        Level.ball.Speed = new Vector2(0);
+                        CurrentLevel.Player.isFrozen = false;
+                        this._nextState = this.menuState;
+                        paused = false;
+                        Ball.Kill();
                     }
-
+                    /*else if (paused)
+                    {
+                        paused = true;
+                        Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                        CurrentLevel.Player.isFrozen = false;
+                    }
+                    Level.ball.Speed = new Vector2(0);
+                    //CurrentLevel.Player.isFrozen = false;*/
+                    
                     btnPlay.Update(mouse);
                     btnQuit.Update(mouse);
 
