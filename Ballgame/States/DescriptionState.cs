@@ -38,7 +38,7 @@ namespace Ballgame.States
             //Kép betöltése (jelenleg anonymous szöveg DE az kép)
             SpriteBatch.Draw(Main.descriptionText, new Rectangle(0, 0, 1280, 768), Color.White);
             //Description kiíratása betűméret változtatásával 
-            SpriteBatch.DrawString(Main.MenuSprite, "Description", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 30, 40), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            SpriteBatch.Draw(Main.description, new Rectangle(500, 0, 280, 50), Color.White);
 
         }
 

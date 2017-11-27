@@ -35,7 +35,7 @@ namespace Ballgame.States
         {
             backButton.Draw(gameTime, SpriteBatch);
             //Select Level kiíratása betűméret változtatásával
-            SpriteBatch.DrawString(Main.MenuSprite, "Select Level", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 30, 40), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            SpriteBatch.Draw(Main.selectLevel, new Rectangle(500, 0, 280, 50), Color.White);
         }
 
         public override void PostUpdate(GameTime gameTime)

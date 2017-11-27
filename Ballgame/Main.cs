@@ -47,6 +47,14 @@ namespace Ballgame
         public static Texture2D background;
         public static Texture2D backgroundmenu;
         public static Texture2D descriptionText;
+        public static Texture2D bottomBar;
+        public static Texture2D options;
+        public static Texture2D description;
+        public static Texture2D selectLevel;
+        public static Texture2D spacestart;
+        public static Texture2D leftText;
+        public static Texture2D rightText;
+        public static Texture2D startText;
 
         public static int score = 0;
         public static int target = 0;
@@ -67,7 +75,7 @@ namespace Ballgame
         bool quit = false;
         public static bool space = true;
 
-        Texture2D pausedTexture;
+        public static Texture2D pausedTexture;
         Texture2D quitTexture;
 
         Button btnPlay;
@@ -152,16 +160,24 @@ namespace Ballgame
             particleSprites = new Texture2D[particleTypeCount];
 
             IsMouseVisible = true;
-
-            pausedTexture = Content.Load<Texture2D>("Sprites/Background/PauseMenu");
+            
+            pausedTexture = Content.Load<Texture2D>("Sprites/Background/pausemenu");
             pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
             btnPlay = new Button();
             btnPlay.Load(Content.Load<Texture2D>("Controls/btnResume"), new Vector2(523, 260));
             btnQuit = new Button();
             btnQuit.Load(Content.Load<Texture2D>("Controls/btnExit"), new Vector2(523, 360));
+            options = Content.Load<Texture2D>("PngTexts/options");
+            description = Content.Load<Texture2D>("PngTexts/description");
+            selectLevel = Content.Load<Texture2D>("PngTexts/selectlevel");
+            bottomBar = Content.Load<Texture2D>("Sprites/Background/Bottombar");
+            spacestart = Content.Load<Texture2D>("PngTexts/Spacethingy");
+            leftText = Content.Load<Texture2D>("PngTexts/left");
+            rightText = Content.Load<Texture2D>("PngTexts/right");
+            startText = Content.Load<Texture2D>("PngTexts/start");
 
-            quitTexture = Content.Load<Texture2D>("Sprites/Background/over");
-            quitRectangle = new Rectangle(0, 0, quitTexture.Width, quitTexture.Height);
+            //quitTexture = Content.Load<Texture2D>("Sprites/Background/gameover");
+            //quitRectangle = new Rectangle(0, 0, quitTexture.Width, quitTexture.Height);
             btnRestart = new Button();
             btnRestart.Load(Content.Load<Texture2D>("Controls/btnRestart"), new Vector2(523, 260));
             Healt = Content.Load<SpriteFont>("hp");

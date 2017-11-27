@@ -24,13 +24,14 @@ namespace Ballgame.States
         public override void Draw(GameTime gameTime, SpriteBatch SpriteBatch)
         {
             SpriteBatch.Draw(Main.background, new Rectangle(0, 0, 1280, 768), Color.White);
+            SpriteBatch.Draw(Main.bottomBar, new Rectangle(0, 642, 1280, 35), Color.White);
             Main.CurrentLevel.Draw(gameTime);
-            SpriteBatch.DrawString(Main.Healt, "Health Points: " + Main.hp, new Vector2(10, 650), Color.Aqua);
-            SpriteBatch.DrawString(Main.Score, "Score: " + Main.score, new Vector2(1000, 650), Color.DarkOliveGreen);
-            SpriteBatch.DrawString(Main.targets, "Targets: " + Main.target, new Vector2(500, 650), Color.WhiteSmoke);
+            SpriteBatch.DrawString(Main.Healt, Main.hp.ToString(), new Vector2(210, 654), Color.Red);
+            SpriteBatch.DrawString(Main.Score,  Main.score.ToString(), new Vector2(1245, 654), Color.Yellow);
+            SpriteBatch.DrawString(Main.targets,  Main.target.ToString(), new Vector2(685, 654), Color.Brown);
             if (Main.space)
             {
-                SpriteBatch.DrawString(Main.Start, "Press Space to Start", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2)-240, Main.Graphics.PreferredBackBufferHeight / 2), Color.White);
+                SpriteBatch.Draw(Main.spacestart, new Rectangle(0, 0, 1280, 768), Color.White);
             }
         }
 

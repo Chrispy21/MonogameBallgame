@@ -65,10 +65,10 @@ namespace Ballgame.States
             RightButton.Draw(gameTime, SpriteBatch);
             StartButton.Draw(gameTime, SpriteBatch);
             //Options kiíratása betűméret változtatásával 
-            SpriteBatch.DrawString(Main.MenuSprite, "Options", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 30, 40), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
-            SpriteBatch.DrawString(Main.MenuSprite, "Left", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 190, 200), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
-            SpriteBatch.DrawString(Main.MenuSprite, "Right", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 190, 300), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
-            SpriteBatch.DrawString(Main.MenuSprite, "Start", new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 190, 400), Color.WhiteSmoke, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            SpriteBatch.Draw(Main.options, new Rectangle(515, 0, 250, 40), Color.White);
+            SpriteBatch.Draw(Main.leftText, new Rectangle(455, 210, 110, 35), Color.White);
+            SpriteBatch.Draw(Main.rightText, new Rectangle(455, 310, 110, 35), Color.White);
+            SpriteBatch.Draw(Main.startText, new Rectangle(455, 410, 110, 35), Color.White);
         }
 
         public override void PostUpdate(GameTime gameTime)
