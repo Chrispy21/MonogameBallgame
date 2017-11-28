@@ -28,7 +28,7 @@ namespace Ballgame.States
 
             newGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
-                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)-180),
+                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)-120),
                 Text = "New Game",
             };
 
@@ -36,7 +36,7 @@ namespace Ballgame.States
 
             selectLevelGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
-                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth/2)-118, (Main.Graphics.PreferredBackBufferHeight / 2)-90),
+                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth/2)-118, (Main.Graphics.PreferredBackBufferHeight / 2)-60),
                 Text = "Select Level",
             };
 
@@ -52,7 +52,7 @@ namespace Ballgame.States
 
             optionsGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
-                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+90),
+                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+60),
                 Text = "Options",
             };
 
@@ -60,7 +60,7 @@ namespace Ballgame.States
 
             quitGameButton = new ButtonMenu(buttonTexture, buttonFont)
             {
-                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+180),
+                Position = new Vector2((Main.Graphics.PreferredBackBufferWidth / 2) - 118, (Main.Graphics.PreferredBackBufferHeight / 2)+120),
                 Text = "Quit Game",
             };
 
