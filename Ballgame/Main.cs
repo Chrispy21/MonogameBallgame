@@ -16,7 +16,7 @@ namespace Ballgame
     public enum RacketType { BlueGray, LongRacket };
     public enum BrickType { DefaultBrick };
     public enum ParticleType { DefaultBrick };
-   
+
     public class Main : Game
     {
         public static Random rnd = new Random();
@@ -55,10 +55,11 @@ namespace Ballgame
         public static Texture2D leftText;
         public static Texture2D rightText;
         public static Texture2D startText;
+        public static Texture2D gameoverTexture;
 
         public static int score = 0;
         public static int target = 0;
-        public static int hp = 3000;
+        public static int hp = 3;
         private int spaceClick = 0;
 
         private State _currentState;
@@ -76,28 +77,27 @@ namespace Ballgame
         public static bool space = true;
 
         public static Texture2D pausedTexture;
-        Texture2D quitTexture;
 
         Button btnPlay;
         Button btnQuit;
         Button btnRestart;
 
         Rectangle pausedRectangle;
-        Rectangle quitRectangle;
+        Rectangle gameoverRectangle;
         Rectangle hpRectangle;
 
         // Pályák sorrendje
 
-            /// <summary>
-            /// //HA CSINÁLTÁL EGY LEVELX SZÁMÚ PÁLYÁT AKKOR IDE KELL BEÍRNOD AHOGY A MINTA MUTATJA typeof(LevelX)
-            /// </summary>
+        /// <summary>
+        /// //HA CSINÁLTÁL EGY LEVELX SZÁMÚ PÁLYÁT AKKOR IDE KELL BEÍRNOD AHOGY A MINTA MUTATJA typeof(LevelX)
+        /// </summary>
         public static List<Type> LevelList = new List<Type>
         {
             typeof(Level1),
             typeof(Level2),
             typeof(Level3)
-            
-            
+
+
 
         };
 
@@ -160,7 +160,8 @@ namespace Ballgame
             particleSprites = new Texture2D[particleTypeCount];
 
             IsMouseVisible = true;
-            
+
+            gameoverTexture = Content.Load<Texture2D>("Sprites/Background/gameovermenu");
             pausedTexture = Content.Load<Texture2D>("Sprites/Background/pausemenu");
             pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
             btnPlay = new Button();
@@ -177,7 +178,7 @@ namespace Ballgame
             startText = Content.Load<Texture2D>("PngTexts/start");
 
             //quitTexture = Content.Load<Texture2D>("Sprites/Background/gameover");
-            //quitRectangle = new Rectangle(0, 0, quitTexture.Width, quitTexture.Height);
+            gameoverRectangle = new Rectangle(0, 0, gameoverTexture.Width, gameoverTexture.Height);
             btnRestart = new Button();
             btnRestart.Load(Content.Load<Texture2D>("Controls/btnRestart"), new Vector2(523, 260));
             Healt = Content.Load<SpriteFont>("hp");
@@ -186,7 +187,7 @@ namespace Ballgame
             targets = Content.Load<SpriteFont>("targets");
             Start = Content.Load<SpriteFont>("start");
             MenuSprite = Content.Load<SpriteFont>("menusprite");
-            
+
             string path;
 
             _currentState = new MenuState(this, Graphics.GraphicsDevice, Content);
@@ -235,7 +236,7 @@ namespace Ballgame
             CurrentLevel.GenerateBricks();
         }
 
-        
+
         protected override void Update(GameTime gameTime)
         {
 
@@ -249,7 +250,7 @@ namespace Ballgame
             _currentState.Update(gameTime);
             _currentState.PostUpdate(gameTime);
 
-            if(spaceClick<=0)
+            if (spaceClick <= 0)
             {
                 if (Keyboard.GetState().IsKeyDown(Main.startBall))
                 {
@@ -269,7 +270,7 @@ namespace Ballgame
 
 
             MouseState mouse = Mouse.GetState();
-            if(this._currentState is GameState)
+            if (this._currentState is GameState)
             {
                 if (!paused)
                 {
@@ -297,7 +298,7 @@ namespace Ballgame
                     }
                     if (btnQuit.isClicked)
                     {
-                        
+
                         Level.ball.Speed = new Vector2(0);
                         CurrentLevel.Player.isFrozen = false;
                         this._nextState = this.menuState;
@@ -312,7 +313,7 @@ namespace Ballgame
                     }
                     Level.ball.Speed = new Vector2(0);
                     //CurrentLevel.Player.isFrozen = false;*/
-                    
+
                     btnPlay.Update(mouse);
                     btnQuit.Update(mouse);
 
@@ -327,7 +328,7 @@ namespace Ballgame
                 quit = true;
                 btnRestart.isClicked = false;
                 Ball.Kill();
-
+                Level.ball.Speed = new Vector2(0);
                 //játék megállítása pause menu meghívása esetén
                 //player.Update();
             }
@@ -355,26 +356,24 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
-            
+
             // Ha nincs több tégla, ugrás a következő pályára (ha nincs következő, akkor a legelsőre)
-            if(CurrentLevel.EntityList.Count(x => x is Brick) <= 0)
+            if (quit == false)
             {
-                if(CurrentLevelIndex + 1 < LevelList.Count)
+                if (CurrentLevel.EntityList.Count(x => x is Brick) <= 0)
                 {
-                   
-                    this.SetLevel(LevelList[CurrentLevelIndex + 1]);
-                    Level.ball.Speed = new Vector2(Main.baseBallSpeed);
-                    
-                }
-                else
-                {
-                    this.SetLevel(LevelList[0]);
-                }
-                
-                
+                    if (CurrentLevelIndex + 1 < LevelList.Count)
+                    {
 
+                        this.SetLevel(LevelList[CurrentLevelIndex + 1]);
+                        Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                    }
+                    else
+                    {
+                        this.SetLevel(LevelList[0]);
+                    }
+                }
             }
-
             base.Update(gameTime);
         }
 
@@ -396,11 +395,12 @@ namespace Ballgame
             _currentState.Draw(gameTime, SpriteBatch);
             if (quit)
             {
-                SpriteBatch.Draw(quitTexture, quitRectangle, Color.White);
+                SpriteBatch.Draw(gameoverTexture, gameoverRectangle, Color.White);
                 btnRestart.Draw(SpriteBatch);
                 btnQuit.Draw(SpriteBatch);
+
             }
-            
+
 
             if (paused)
             {
@@ -408,7 +408,7 @@ namespace Ballgame
                 btnPlay.Draw(SpriteBatch);
                 btnQuit.Draw(SpriteBatch);
             }
-            
+
             SpriteBatch.End();
 
             base.Draw(gameTime);
@@ -416,7 +416,7 @@ namespace Ballgame
 
         private void SetLevel(Type levelType)
         {
-            if(levelType.BaseType == typeof(Level))
+            if (levelType.BaseType == typeof(Level))
             {
                 CurrentLevel = (Level)Activator.CreateInstance(levelType);
                 CurrentLevel.GenerateBricks();

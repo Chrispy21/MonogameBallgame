@@ -306,7 +306,6 @@ C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\D
 C:\Users\Mark Raven\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Rackets\racket_4.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnRestart.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnResume.xnb
-C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\over.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\PauseMenu.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Bricks\brick_1.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Particles\particle_1.xnb
@@ -410,3 +409,17 @@ C:\Users\Chaos\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\
 C:\Users\Chaos\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\left.xnb
 C:\Users\Chaos\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\right.xnb
 C:\Users\Chaos\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\start.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\menusprite.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\description.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\left.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\options.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\right.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\selectlevel.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\Spacethingy.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\start.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\backg_1.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\Bottombar.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\Description.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\gameovermenu.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\oldgameover.xnb
+C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\OldPauseMenu.xnb

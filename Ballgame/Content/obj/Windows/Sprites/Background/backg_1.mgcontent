@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Background/backg_1.jpg</SourceFile>
-  <SourceTime>2017-11-27T21:25:36.2156376+01:00</SourceTime>
-  <DestFile>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Background/backg_1.xnb</DestFile>
-  <DestTime>2017-11-27T21:27:59.3624759+01:00</DestTime>
+  <SourceFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Background/backg_1.jpg</SourceFile>
+  <SourceTime>2017-11-28T12:04:38.7498178+01:00</SourceTime>
+  <DestFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Background/backg_1.xnb</DestFile>
+  <DestTime>2017-11-28T12:07:05.205163+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

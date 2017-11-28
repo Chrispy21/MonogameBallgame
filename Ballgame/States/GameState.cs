@@ -26,9 +26,9 @@ namespace Ballgame.States
             SpriteBatch.Draw(Main.background, new Rectangle(0, 0, 1280, 768), Color.White);
             SpriteBatch.Draw(Main.bottomBar, new Rectangle(0, 642, 1280, 35), Color.White);
             Main.CurrentLevel.Draw(gameTime);
-            SpriteBatch.DrawString(Main.Healt, Main.hp.ToString(), new Vector2(210, 654), Color.Red);
-            SpriteBatch.DrawString(Main.Score,  Main.score.ToString(), new Vector2(1245, 654), Color.Yellow);
-            SpriteBatch.DrawString(Main.targets,  Main.target.ToString(), new Vector2(685, 654), Color.Brown);
+            SpriteBatch.DrawString(Main.Healt, Main.hp.ToString(), new Vector2(210, 653), Color.Red);
+            SpriteBatch.DrawString(Main.Score,  Main.score.ToString(), new Vector2(1245, 653), Color.Yellow);
+            SpriteBatch.DrawString(Main.targets,  Main.target.ToString(), new Vector2(685, 653), Color.Brown);
             if (Main.space)
             {
                 SpriteBatch.Draw(Main.spacestart, new Rectangle(0, 0, 1280, 768), Color.White);
