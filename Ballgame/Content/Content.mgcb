@@ -535,3 +535,10 @@
 /processorParam:TextureFormat=Color
 /build:PngTexts/start.png
 
+#begin nextLevel.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:nextLevel.spritefont
+

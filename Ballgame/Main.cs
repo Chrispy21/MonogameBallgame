@@ -30,6 +30,7 @@ namespace Ballgame
         public static SpriteFont targets;
         public static SpriteFont Start;
         public static SpriteFont MenuSprite;
+        public static SpriteFont nextLevelSprite;
 
         public const float baseBallSpeed = -5;
         private static int collectibleTypeCount = 7;
@@ -56,10 +57,11 @@ namespace Ballgame
         public static Texture2D rightText;
         public static Texture2D startText;
         public static Texture2D gameoverTexture;
+        public static Texture2D nextlevelTexture;
 
         public static int score = 0;
         public static int target = 0;
-        public static int hp = 3;
+        public static int hp = 3000;
         private int spaceClick = 0;
 
         private State _currentState;
@@ -72,6 +74,7 @@ namespace Ballgame
         public static Keys moveRight = Keys.Right;
         public static Keys startBall = Keys.Space;
 
+        bool nextLevel = false;
         bool paused = false;
         bool quit = false;
         public static bool space = true;
@@ -85,6 +88,7 @@ namespace Ballgame
         Rectangle pausedRectangle;
         Rectangle gameoverRectangle;
         Rectangle hpRectangle;
+        Rectangle nextLevelRectangle;
 
         // Pályák sorrendje
 
@@ -176,8 +180,9 @@ namespace Ballgame
             leftText = Content.Load<Texture2D>("PngTexts/left");
             rightText = Content.Load<Texture2D>("PngTexts/right");
             startText = Content.Load<Texture2D>("PngTexts/start");
-
+            nextlevelTexture = Content.Load<Texture2D>("Sprites/Background/OldPauseMenu");
             //quitTexture = Content.Load<Texture2D>("Sprites/Background/gameover");
+            nextLevelRectangle = new Rectangle(0, 0, nextlevelTexture.Width, nextlevelTexture.Height);
             gameoverRectangle = new Rectangle(0, 0, gameoverTexture.Width, gameoverTexture.Height);
             btnRestart = new Button();
             btnRestart.Load(Content.Load<Texture2D>("Controls/btnRestart"), new Vector2(523, 260));
@@ -187,6 +192,7 @@ namespace Ballgame
             targets = Content.Load<SpriteFont>("targets");
             Start = Content.Load<SpriteFont>("start");
             MenuSprite = Content.Load<SpriteFont>("menusprite");
+            nextLevelSprite = Content.Load<SpriteFont>("nextLevel");
 
             string path;
 
@@ -356,24 +362,42 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
-
-            // Ha nincs több tégla, ugrás a következő pályára (ha nincs következő, akkor a legelsőre)
-            if (quit == false)
+            if(target==0&& hp!=0 && quit == false)
             {
-                if (CurrentLevel.EntityList.Count(x => x is Brick) <= 0)
-                {
-                    if (CurrentLevelIndex + 1 < LevelList.Count)
-                    {
+                Level.ball.Speed = new Vector2(0);
+                CurrentLevel.Player.isFrozen = false;
+                nextLevel = true;
 
-                        this.SetLevel(LevelList[CurrentLevelIndex + 1]);
-                        Level.ball.Speed = new Vector2(Main.baseBallSpeed);
-                    }
-                    else
+
+                if (Keyboard.GetState().IsKeyDown(Keys.N))
+                {
+                    spaceClick = 0;
+                    target = 0;
+                    score *= 0;
+                    hp = 3;
+                    space = true;
+                    nextLevel = false;
+                    if (CurrentLevel.EntityList.Count(x => x is Brick) <= 0)
                     {
-                        this.SetLevel(LevelList[0]);
+                        if (CurrentLevelIndex + 1 < LevelList.Count)
+                        {
+
+                            this.SetLevel(LevelList[CurrentLevelIndex + 1]);
+                            //Level.ball.Speed = new Vector2(Main.baseBallSpeed);
+                        }
+                        else
+                        {
+                            this.SetLevel(LevelList[0]);
+                        }
                     }
                 }
+
             }
+
+            // Ha nincs több tégla, ugrás a következő pályára (ha nincs következő, akkor a legelsőre)
+
+
+
             base.Update(gameTime);
         }
 
@@ -401,6 +425,11 @@ namespace Ballgame
 
             }
 
+            if(nextLevel)
+            {
+                SpriteBatch.Draw(nextlevelTexture, nextLevelRectangle, Color.White);
+                //SpriteBatch.DrawString(nextLevelSprite, "Nyomj egy N betűt", new Vector2(300, 450), Color.Aqua);
+            }
 
             if (paused)
             {
