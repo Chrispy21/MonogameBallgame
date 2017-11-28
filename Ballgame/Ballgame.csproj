@@ -53,6 +53,9 @@
     <Compile Include="Levels\Level1.cs" />
     <Compile Include="Levels\Level2.cs" />
     <Compile Include="Levels\Level3.cs" />
+    <Compile Include="Levels\Level4.cs" />
+    <Compile Include="Levels\Level5.cs" />
+    <Compile Include="Levels\Level6.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Levels\Level.cs" />
     <Compile Include="Entities\MovingEntity.cs" />

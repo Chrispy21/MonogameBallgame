@@ -99,7 +99,10 @@ namespace Ballgame
         {
             typeof(Level1),
             typeof(Level2),
-            typeof(Level3)
+            typeof(Level3),
+            typeof(Level4),
+            typeof(Level5),
+            typeof(Level6)
 
 
 
@@ -192,7 +195,7 @@ namespace Ballgame
             targets = Content.Load<SpriteFont>("targets");
             Start = Content.Load<SpriteFont>("start");
             MenuSprite = Content.Load<SpriteFont>("menusprite");
-            //nextLevelSprite = Content.Load<SpriteFont>("nextLevel");
+            nextLevelSprite = Content.Load<SpriteFont>("nextLevel");
 
             string path;
 
@@ -236,9 +239,9 @@ namespace Ballgame
             // TODO: this.Content.Load <- betöltés
         }
 
-        private void StartGame()
+        public void StartGame()
         {
-            this.SetLevel(typeof(Level1)); // mindig így állítsátok be a level-t
+            this.SetLevel(typeof(Level1)); //<-------------------------------------------mindig így állítsátok be a level-t
             CurrentLevel.GenerateBricks();
         }
 
@@ -362,7 +365,7 @@ namespace Ballgame
                 btnQuit.Update(mouse);
 
             }
-            if(target==0&& hp!=0 && quit == false)
+            if (target == 0 && hp != 0 && quit == false)
             {
                 Level.ball.Speed = new Vector2(0);
                 CurrentLevel.Player.isFrozen = false;
@@ -425,7 +428,7 @@ namespace Ballgame
 
             }
 
-            if(nextLevel)
+            if (nextLevel)
             {
                 SpriteBatch.Draw(nextlevelTexture, nextLevelRectangle, Color.White);
                 //SpriteBatch.DrawString(nextLevelSprite, "Nyomj egy N betűt", new Vector2(300, 450), Color.Aqua);
@@ -443,7 +446,7 @@ namespace Ballgame
             base.Draw(gameTime);
         }
 
-        private void SetLevel(Type levelType)
+        public void SetLevel(Type levelType)
         {
             if (levelType.BaseType == typeof(Level))
             {
