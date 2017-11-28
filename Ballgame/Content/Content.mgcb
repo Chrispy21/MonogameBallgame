@@ -535,6 +535,7 @@
 /processorParam:TextureFormat=Color
 /build:PngTexts/start.png
 
+<<<<<<< HEAD
 #begin Levels/level1.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -570,4 +571,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Levels/level3.png
+=======
+#begin nextLevel.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:nextLevel.spritefont
+>>>>>>> 6d914d8f2389fe16a4036e16e6755e36fd2400bb
 

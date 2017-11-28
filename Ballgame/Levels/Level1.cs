@@ -12,14 +12,12 @@ namespace Ballgame.Levels
     { // a setlevellel meg úgy is lehet majd állítani, de egyenlőre automatikusan ugrik a következőre
         //majd a Select Level menünél is a SetLevel-t kell használni akkor ezt innen ne töröld ki ,jó lesz infónak xddddoké
 
-      
 
         /// <summary>
         /// Feltölti a pályát téglákkal
         /// </summary>
         public override void GenerateBricks()
         {
-
 
             for (float x = (Main.Resolution.X / 5) * 2; x < (Main.Resolution.X / 5) * 3; x += Brick.defaultBrickSize.X + 10)
             {
@@ -56,7 +54,6 @@ namespace Ballgame.Levels
                     Main.target++;
                 }
             }
-
             for (float x = (Main.Resolution.X / 5) * 2; x < (Main.Resolution.X / 5) * 3; x += Brick.defaultBrickSize.X + 10)
             {
                 for (float y = (Main.Resolution.Y / 4) * 2; y < (Main.Resolution.Y / 4) * 3 - 100; y += Brick.defaultBrickSize.Y + 10)
