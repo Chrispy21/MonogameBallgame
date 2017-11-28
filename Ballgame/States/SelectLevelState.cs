@@ -25,9 +25,9 @@ namespace Ballgame.States
         ButtonMenu Level4Button;
         ButtonMenu Level5Button;
         ButtonMenu Level6Button;
-        // ButtonMenu RandomLevel;
+        ButtonMenu RandomLevelButton;
 
-        //Random rnd = new Random();
+        Random rnd = new Random();
 
         public SelectLevelState(Main game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
@@ -87,14 +87,14 @@ namespace Ballgame.States
             };
 
             backButton.Click += BackButton_Click;
-            /*
-            RandomLevel = new ButtonMenu(buttonTexture, buttonFont)
+            
+            RandomLevelButton = new ButtonMenu(buttonTexture, buttonFont)
             {
-                Position = new Vector2(60, 700),
-                Text = "Véletlen",
+                Position = new Vector2(1000, 600),
+                Text = "Rnd",
             };
-            RandomLevel.Click += RandomLevel_Click;
-            */
+            RandomLevelButton.Click += RandomLevel_Click;
+            
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch SpriteBatch)
@@ -106,7 +106,7 @@ namespace Ballgame.States
             Level4Button.Draw(gameTime, SpriteBatch);
             Level5Button.Draw(gameTime, SpriteBatch);
             Level6Button.Draw(gameTime, SpriteBatch);
-            //RandomLevel.Draw(gameTime, SpriteBatch);
+            RandomLevelButton.Draw(gameTime, SpriteBatch);
             //Select Level kiíratása betűméret változtatásával
             SpriteBatch.Draw(Main.selectLevel, new Rectangle(500, 0, 280, 50), Color.White);
         }
@@ -125,7 +125,7 @@ namespace Ballgame.States
             Level4Button.Update(gameTime);
             Level5Button.Update(gameTime);
             Level6Button.Update(gameTime);
-            // RandomLevel.Update(gameTime);
+            RandomLevelButton.Update(gameTime);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -171,12 +171,12 @@ namespace Ballgame.States
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
         }
 
-        /* private void RandomLevel_Click(object sender, EventArgs e)
+         private void RandomLevel_Click(object sender, EventArgs e)
          {
 
              _game.SetLevel(Main.LevelList[rnd.Next(0,5)]);
              _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
-         }*/
+         }
 
     }
 }
