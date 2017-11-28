@@ -375,7 +375,6 @@ C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\start.xnb
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\targets.xnb
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Controls\btnRestart.xnb
-C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\over.xnb
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Bricks\brick_1.xnb
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_3.xnb
 C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Collectibles\collectible_4.xnb
@@ -424,3 +423,14 @@ C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\oldgameover.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\OldPauseMenu.xnb
 C:\Users\sdavi\Desktop\BallGame\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\nextLevel.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\description.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\left.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\options.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\right.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\selectlevel.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\Spacethingy.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\PngTexts\start.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\Bottombar.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\gameovermenu.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\oldgameover.xnb
+C:\Users\Chris\Documents\GitHub\MonogameBallgame\Ballgame\bin\Windows\x86\Debug\Content\Sprites\Background\OldPauseMenu.xnb

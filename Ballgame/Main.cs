@@ -192,7 +192,7 @@ namespace Ballgame
             targets = Content.Load<SpriteFont>("targets");
             Start = Content.Load<SpriteFont>("start");
             MenuSprite = Content.Load<SpriteFont>("menusprite");
-            nextLevelSprite = Content.Load<SpriteFont>("nextLevel");
+            //nextLevelSprite = Content.Load<SpriteFont>("nextLevel");
 
             string path;
 

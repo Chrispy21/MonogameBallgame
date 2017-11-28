@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_4.png</SourceFile>
-  <SourceTime>2017-11-28T12:04:38.7833473+01:00</SourceTime>
-  <DestFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Collectibles/collectible_4.xnb</DestFile>
-  <DestTime>2017-11-28T12:07:04.3654106+01:00</DestTime>
+  <SourceFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Collectibles/collectible_4.png</SourceFile>
+  <SourceTime>2017-11-28T16:00:53.9193468+01:00</SourceTime>
+  <DestFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Collectibles/collectible_4.xnb</DestFile>
+  <DestTime>2017-11-28T16:09:42.4976737+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
