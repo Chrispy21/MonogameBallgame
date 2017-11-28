@@ -177,6 +177,7 @@ namespace Ballgame
             rightText = Content.Load<Texture2D>("PngTexts/right");
             startText = Content.Load<Texture2D>("PngTexts/start");
 
+
             //quitTexture = Content.Load<Texture2D>("Sprites/Background/gameover");
             gameoverRectangle = new Rectangle(0, 0, gameoverTexture.Width, gameoverTexture.Height);
             btnRestart = new Button();
@@ -226,13 +227,13 @@ namespace Ballgame
             background = Content.Load<Texture2D>("Sprites/Background/backg_0");
             backgroundmenu = Content.Load<Texture2D>("Sprites/Background/backg_1");
             descriptionText = Content.Load<Texture2D>("Sprites/Background/Description");
-            this.StartGame();
+            StartGame();
             // TODO: this.Content.Load <- betöltés
         }
 
-        private void StartGame()
+        public static void StartGame()
         {
-            this.SetLevel(typeof(Level1)); // mindig így állítsátok be a level-t
+            SetLevel(typeof(Level1)); // mindig így állítsátok be a level-t
             CurrentLevel.GenerateBricks();
         }
 
@@ -305,15 +306,7 @@ namespace Ballgame
                         paused = false;
                         Ball.Kill();
                     }
-                    /*else if (paused)
-                    {
-                        paused = true;
-                        Level.ball.Speed = new Vector2(Main.baseBallSpeed);
-                        CurrentLevel.Player.isFrozen = false;
-                    }
-                    Level.ball.Speed = new Vector2(0);
-                    //CurrentLevel.Player.isFrozen = false;*/
-
+                    
                     btnPlay.Update(mouse);
                     btnQuit.Update(mouse);
 
@@ -365,12 +358,12 @@ namespace Ballgame
                     if (CurrentLevelIndex + 1 < LevelList.Count)
                     {
 
-                        this.SetLevel(LevelList[CurrentLevelIndex + 1]);
+                        SetLevel(LevelList[CurrentLevelIndex + 1]);
                         Level.ball.Speed = new Vector2(Main.baseBallSpeed);
                     }
                     else
                     {
-                        this.SetLevel(LevelList[0]);
+                        SetLevel(LevelList[0]);
                     }
                 }
             }
@@ -414,7 +407,7 @@ namespace Ballgame
             base.Draw(gameTime);
         }
 
-        private void SetLevel(Type levelType)
+        public static void SetLevel(Type levelType)
         {
             if (levelType.BaseType == typeof(Level))
             {

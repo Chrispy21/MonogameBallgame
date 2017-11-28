@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/Sprites/Background/OldPauseMenu.png</SourceFile>
-  <SourceTime>2017-11-28T12:04:38.7262962+01:00</SourceTime>
-  <DestFile>C:/Users/sdavi/Desktop/BallGame/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Background/OldPauseMenu.xnb</DestFile>
-  <DestTime>2017-11-28T12:07:06.7420406+01:00</DestTime>
+  <SourceFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/Sprites/Background/OldPauseMenu.png</SourceFile>
+  <SourceTime>2017-11-28T13:44:51.5926694+01:00</SourceTime>
+  <DestFile>C:/Users/Chris/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/Sprites/Background/OldPauseMenu.xnb</DestFile>
+  <DestTime>2017-11-28T13:46:44.2713978+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
