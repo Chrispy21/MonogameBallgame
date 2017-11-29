@@ -19,7 +19,7 @@ namespace Ballgame.Levels
         /// </summary>
         public override void GenerateBricks()
         {
-/*
+
 
             for (float x = (Main.Resolution.X / 5) * 2; x < (Main.Resolution.X / 5) * 3; x += Brick.defaultBrickSize.X + 10)
             {
@@ -56,7 +56,7 @@ namespace Ballgame.Levels
                     Main.target++;
                 }
             }
-            */
+            
             for (float x = (Main.Resolution.X / 5) * 2; x < (Main.Resolution.X / 5) * 3; x += Brick.defaultBrickSize.X + 10)
             {
                 for (float y = (Main.Resolution.Y / 4) * 2; y < (Main.Resolution.Y / 4) * 3 - 100; y += Brick.defaultBrickSize.Y + 10)

@@ -61,7 +61,7 @@ namespace Ballgame
 
         public static int score = 0;
         public static int target = 0;
-        public static int hp = 3000;
+        public static int hp = 30;
         private int spaceClick = 0;
 
         private State _currentState;
@@ -241,7 +241,7 @@ namespace Ballgame
 
         public void StartGame()
         {
-            this.SetLevel(typeof(Level1)); //<-------------------------------------------mindig így állítsátok be a level-t
+            this.SetLevel(typeof(Level1)); //<----mindig így állítsátok be a level-t
             CurrentLevel.GenerateBricks();
         }
 
@@ -359,6 +359,8 @@ namespace Ballgame
                 if (btnQuit.isClicked)
                 {
                     Exit();
+                    
+
                 }
 
                 btnRestart.Update(mouse);
