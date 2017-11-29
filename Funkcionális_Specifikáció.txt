@@ -1,0 +1,34 @@
+﻿Funkcionális Specifikáció
+
+Ball Game játék funkcionális specifikáció
+
+A Ball Game nevű projekt egy fallabda játék, ami az emberek szórakozását elégíti ki.
+A játék rendelkezik főmenüvel, amelyben 5 gomb található. New Game gombbal új játékot lehet kezdeni az első pályáról.
+A Select Level gomb lenyomásával egy újabb menübe lépünk át, ahol választhat a felhasználó a 6 pálya közül, valamint 
+található még egy rnd gomb. Amit ha lenyomunk, akkor a hat pálya közül egyet random választ ki. A főmenübe visszalépést egy Back gomb segíti.
+
+Egy Description gomb található még a menüben ami a játék vezérlését mutatja meg. A főmenübe navigálást egy gomb elégíti ki.
+
+Az Options gomb lenyomással előhívjuk az option menüt, ahol a felhasználó képes testreszabni kedve szerint az irányítást. 
+Kezdetben a billentyűzet nyilaival lehet irányítani (Jobb és Bal) a játékot. Indítani pedig a Space gombbal lehet.
+Főmenübe navigálást az előzőekhez képest lehet.
+
+Egy Quit gomb található, ami a játék bezárását képezi.
+
+A New Game gombot lenyomjuk, akkor elindul a játék, de előtte vár egy Space gomb lenyomást, ez biztosítja hogy a játékos felkészülten tudja elkezdeni 
+a játékot. Ha lenyomtuk, akkor a labda elindul és az alapértelmezett vagy a beállított irányítással tudjuk mozgatni az ütőt. 
+Kezdetben 3 élettel rendelkezik a játékos és 0 score ponttal. A program futása közben megállíthatjuk a játékot az Esc gomb lenyomásával, amivel
+egy Pause menü jön elő a játékból. Ebben a menüben vissza léphetünk a főmenübe, vagy Resume gombbal a játékot folytathatjuk.
+ A téglák kiütése során felvehető tárgyakat kaphatunk, amik felvéve
+extra képességekkel ruháznak fel. 
+
+Hulló tárgy típusok:Like-lassítja a labdát,Dislike-gyorsítja a labdát,Trollface-megváltoztatja az ütő iránybéli sebességét 4 másodpercig,Szív-megnöveljük az aktuális életünket,
+Frozenball-megfagyasztja az ütőnket 10 másodpercig,Extraütő-skálázza az ütő méretét 10 másodpercig.Extraball-megnöveljük a labdák számát a játékban.
+
+Egy pálya akkor ér véget ha minden téglát(brick) kiütünk a labdával. Ezt a képernyő alsó sávjában "target" néven láthatjuk. 
+Ha véget ért a pálya, akkor autómatikusan ujra töltődik a játék egy új pályával, majd egy space lenyomással indul a játék
+az eddigi pontjaink megtartásával.
+Ha véget ér a játék, elfogy az életünk akkor egy Game Over Menü jön elő a játék ablakban, ami egy Restart gombot és egy Quit gombot tartalmaz. 
+Restart gombbal újra kezdhetjük a játékot az első pályáról, a Quit gombbal pedig a főmenübe léphetünk vissza.
+
+Készítők:Holló Márk,Tóth-Pál Márkó,Sípos Dávid,Horváth Krisztián
