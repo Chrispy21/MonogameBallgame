@@ -1,34 +1,38 @@
-﻿Funkcionális Specifikáció
+﻿
+Funkcionális Specifikáció
 
-Ball Game játék funkcionális specifikáció
+Rendszer célja: Egy olyan fallabda játékot létrehozni, amely a fiataloknak megmutatja milyen is egy igazi retro 2D-s, de modern designal rendelkező játék.
+Jelenlegi helyzet:A játék jelenleg minden funkciót tartalmaz, de esetleges bugog felléphetnek. A bugok fixelése után a játékos képes legyen a Főmenüben testreszabni, valamint pályát
+választani kedve szerint. A játékot pillanatmegállítóval meg lehessen állítani és szabadon a főmenübe lehessen lépni.A játékos képes legyen collectibleöket felvenni és 
+azok hatására folytatni a játékot. A játékos még rendelkezzen 3 élettel, ami ha elfogy vége a játéknak. 
 
-A Ball Game nevű projekt egy fallabda játék, ami az emberek szórakozását elégíti ki.
-A játék rendelkezik főmenüvel, amelyben 5 gomb található. New Game gombbal új játékot lehet kezdeni az első pályáról.
-A Select Level gomb lenyomásával egy újabb menübe lépünk át, ahol választhat a felhasználó a 6 pálya közül, valamint 
-található még egy rnd gomb. Amit ha lenyomunk, akkor a hat pálya közül egyet random választ ki. A főmenübe visszalépést egy Back gomb segíti.
+Vágyálom redszer: Egy átlátható könnyen navigálható platform.
+Menürendszer kialakítása, amely tartalmaz főmenüt és almenüket.
+Játék irányításának testreszabása.
+Pályarendszer kialakítása, a játékos tudjon választani a pályák közül.
+Collectible-ök létrehozása.
+A rendszer saját adatokkal készülnek így nem vonatkozik rá semmilyen pályázat, törvények, rendeletek, szabványok és
+ajánlások.
+Jelenlegi üzleti folyamatok modellje:
+Igényelt üzleti folyamatok modellje: 
 
-Egy Description gomb található még a menüben ami a játék vezérlését mutatja meg. A főmenübe navigálást egy gomb elégíti ki.
+Követelménylista:
+Kortól függetlenül bárkinek
+Átlátható rendszer
+Menürendszer 
+Modern design
+Testreszabhatóság
+Minimális erőforrás igényre való törekvés
+Hiba mentes futtatás
 
-Az Options gomb lenyomással előhívjuk az option menüt, ahol a felhasználó képes testreszabni kedve szerint az irányítást. 
-Kezdetben a billentyűzet nyilaival lehet irányítani (Jobb és Bal) a játékot. Indítani pedig a Space gombbal lehet.
-Főmenübe navigálást az előzőekhez képest lehet.
 
-Egy Quit gomb található, ami a játék bezárását képezi.
-
-A New Game gombot lenyomjuk, akkor elindul a játék, de előtte vár egy Space gomb lenyomást, ez biztosítja hogy a játékos felkészülten tudja elkezdeni 
-a játékot. Ha lenyomtuk, akkor a labda elindul és az alapértelmezett vagy a beállított irányítással tudjuk mozgatni az ütőt. 
-Kezdetben 3 élettel rendelkezik a játékos és 0 score ponttal. A program futása közben megállíthatjuk a játékot az Esc gomb lenyomásával, amivel
-egy Pause menü jön elő a játékból. Ebben a menüben vissza léphetünk a főmenübe, vagy Resume gombbal a játékot folytathatjuk.
- A téglák kiütése során felvehető tárgyakat kaphatunk, amik felvéve
-extra képességekkel ruháznak fel. 
-
-Hulló tárgy típusok:Like-lassítja a labdát,Dislike-gyorsítja a labdát,Trollface-megváltoztatja az ütő iránybéli sebességét 4 másodpercig,Szív-megnöveljük az aktuális életünket,
-Frozenball-megfagyasztja az ütőnket 10 másodpercig,Extraütő-skálázza az ütő méretét 10 másodpercig.Extraball-megnöveljük a labdák számát a játékban.
-
-Egy pálya akkor ér véget ha minden téglát(brick) kiütünk a labdával. Ezt a képernyő alsó sávjában "target" néven láthatjuk. 
-Ha véget ért a pálya, akkor autómatikusan ujra töltődik a játék egy új pályával, majd egy space lenyomással indul a játék
-az eddigi pontjaink megtartásával.
-Ha véget ér a játék, elfogy az életünk akkor egy Game Over Menü jön elő a játék ablakban, ami egy Restart gombot és egy Quit gombot tartalmaz. 
-Restart gombbal újra kezdhetjük a játékot az első pályáról, a Quit gombbal pedig a főmenübe léphetünk vissza.
-
-Készítők:Holló Márk,Tóth-Pál Márkó,Sípos Dávid,Horváth Krisztián
+Használati esetek[Use cases]:Szórakozás
+Megfeleltetés:A könnyen átlátható rendszer és a modern design könnyen megfogja a fiatalokat.
+Képernyő tervek: -
+Forgatókönyvek: -
+Fogalomszótár:
+retro - régi 
+2D- 2 dimenziós 
+bug-hiba
+platform - szoftverkörnyezet
+collectible - potyogó testek a játékban
