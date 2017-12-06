@@ -1,0 +1,36 @@
+Csoportgyûlés 
+.............
+
+Második csoportgyûlés:
+
+Jelenlévõk: Horváth Krisztián, Sípos Dávid, Holló Márk,Tóth - Pál Márkó
+Megbeszélés helye, ideje: 3300 Eger,Leányka Út C épület, 2017.09.27 9:30 – 12:00
+
+Megbeszéltek:
+-------------
+ 
+- 1, Õsosztályok és gyermekosztályok létrehozása
+	- Entity, MovingEntity osztályok
+- 2, Az ütõ és a labda mozgását lekezleni
+	- Player,Ball osztályok
+- 3, Ütközések érzékelését kidolgozni
+	- Collider
+- 4, Téglák kiütésének a logikáját implementálni
+- 5, Labda leesésekor legyen vége a játéknak
+
+Feladatok:
+----------
+3-5, 	Horváth Krisztián
+5, 	Tóth-Pál Márkó
+1, 	Holló Márk
+2, 	Sípos Dávid
+
+A feladatok határideje: Az elsõ sprint határideje: 2017.10.08.
+
+A csoportgyûlés tagjai elfogadták a feledatokat. 
+
+
+.................
+   Holló Márk 
+
+  2017.10.08.
