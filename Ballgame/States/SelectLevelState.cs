@@ -138,7 +138,7 @@ namespace Ballgame.States
 
             _game.SetLevel(Main.LevelList[0]);
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
-            _game.StartGame();
+          
         }
 
         private void Level2Button_Click(object sender, EventArgs e)
@@ -146,21 +146,21 @@ namespace Ballgame.States
 
             _game.SetLevel(Main.LevelList[1]);
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
-            _game.StartGame();
+            
         }
         private void Level3Button_Click(object sender, EventArgs e)
         {
 
             _game.SetLevel(Main.LevelList[2]);
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
-            _game.StartGame();
+            
         }
         private void Level4Button_Click(object sender, EventArgs e)
         {
 
             _game.SetLevel(Main.LevelList[3]);
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
-            _game.StartGame();
+        
         }
         private void Level5Button_Click(object sender, EventArgs e)
         {
@@ -174,7 +174,7 @@ namespace Ballgame.States
 
             _game.SetLevel(Main.LevelList[5]);
             _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
-            _game.StartGame();
+            
         }
 
          private void RandomLevel_Click(object sender, EventArgs e)
@@ -182,7 +182,7 @@ namespace Ballgame.States
 
              _game.SetLevel(Main.LevelList[rnd.Next(0,5)]);
              _game.ChangeState(new GameState(_game, _graphicsDevice, _content));
-            _game.StartGame();
+            
 
         }
 
