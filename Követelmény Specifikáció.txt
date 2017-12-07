@@ -55,3 +55,7 @@ Mérföldkövek:
 -A játékosnak legyen lehetősége ütőt és labdát választani, amiket az elért pontokból vásárolhat.
 
 
+-----------------------------------------------
+A játék jelenlegi helyzet leírása:
+- Jelenleg a rendszer alfa verzióját látjuk, körülbelül 80%-os.
+- Előfordulhatnak nem várt hibák a programmal kapcsolatban.
