@@ -1,0 +1,57 @@
+﻿-----------------------------------------------
+                  Ball Game 
+-----------------------------------------------
+
+Készítők:
+Horváth Krisztián, Tóth-Pál Márkó, Holló Márk, Sipos Dávid
+
+-----------------------------------------------
+
+A dokumentum bemutatása:
+
+-A dokumentum célja bemutatni a Ball Game játék specifikációit.
+-A dinamikus fejlesztés folyamata illeszkedni fog a sprintek végleges kidolgozásához.
+-A fejlesztés 6 sprintből fog állni. (2 hetes sprintekkel tervezve) 
+
+-----------------------------------------------
+Játék célja:
+ 
+- Egy könnyen kezelhető labdajáték, amit kortól függetlenül bárki használhat. 
+Fő motívuma a szórakozás és az időtöltés. 
+- Létrehozni egy olyan ingyenes játékot, 
+amit bárki elérhet bármilyen rendszeren és bármikor használhat.
+
+-----------------------------------------------
+Specifikáció / Leírás:
+
+-A játékos célja, hogy kiüsse az összes téglát a pályán. 
+-A pályák egymást követve váltakoznak. 
+-Az ügyességet egy pontozó rendszer fogja mérni.
+-A pontozást úgy nevezett szorzók módosítják majd,
+ amiket játék közben a felhasználónak lehetősége adódik “felvenni”, 
+ ezáltal megnövelve pontszámát.
+
+
+Mérföldkövek:
+-----------------------------------------------
+1, Játéklogika, és grafika:
+
+-A játékos képes legyen kiütni a téglákat a labdával és irányítani az ütőt. 
+-A játékos kezdetben 3 élettel rendelkezik, majd ha a labda leesik veszít az életéből. 
+ Ha ez háromszor megtörténik, akkor vége a játéknak. 
+-Játék bezárása és újrakezdése menü gomb lenyomásra. A játék tetszőleges megállítása szükség esetén.
+
+-----------------------------------------------
+2, Felvehető tárgyak, különböző téglák, ütők, labdák, pontozás:
+
+-A játékos képes felvenni tárgyakat, amik különböző bónuszokat adnak, 
+ esetleg hátráltatnak ez nehezíti vagy könnyíti a játékot. 
+-A különböző téglák, ütők, labdák grafikájának elkészítése. A pontozás elkészítése.
+
+-----------------------------------------------
+3, Pályák, effektek, választási lehetőségek:
+
+-Véletlenszerűen generált pályák. Egyéb grafikai effektek.
+-A játékosnak legyen lehetősége ütőt és labdát választani, amiket az elért pontokból vásárolhat.
+
+
