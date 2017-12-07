@@ -1,13 +1,39 @@
 ﻿
 Funkcionális Specifikáció
+.........................
 
-Rendszer célja: Egy olyan fallabda játékot létrehozni, amely a fiataloknak megmutatja milyen is egy igazi retro 2D-s, de modern designal rendelkező játék.
+Követelményelemzés:
+...................
+
+	Rendszer célja: Egy olyan fallabda játékot létrehozni, amely a fiataloknak megmutatja milyen is egy igazi retro 2D-s, de modern designal rendelkező játék.
 Jelenlegi helyzet:A játék jelenleg minden funkciót tartalmaz, de esetleges bugog felléphetnek. A bugok fixelése után a játékos képes legyen a Főmenüben testreszabni, valamint pályát
 választani kedve szerint. A játékot pillanatmegállítóval meg lehessen állítani és szabadon a főmenübe lehessen lépni.A játékos képes legyen collectibleöket felvenni és 
 azok hatására folytatni a játékot. A játékos még rendelkezzen 3 élettel, ami ha elfogy vége a játéknak. 
 
-Vágyálom redszer: Egy átlátható könnyen navigálható platform.
+	A megrendelő által megszabott feltétel alapján a rendszert 2 részre kell tagolni.Ezek a fő részek a főmenü (main menü) és a játéktér (main).
+Minden grafiaki elemnek egyedinek kell lennie, a fejlesztőket terheli ennek elkészítése.
+
+	A játéknak rendelkeznie kell egy főmenüvel, amelyben 5 gombnak kell szerepelnie. Egy "New Game" ("Új Játék") gomb, amely az egy új játok indít a felhasználónak.
+Szerepelnie kell a az előző gomb alatt egy "Select Level" ("Pálya Választás") gomb, amely lehetőseg ad a felhasználónak a rendszer pályáji közül választani.Egy "Options" (Beállítások)
+gombnak is helyet kell adni, ami a játék irányításának testreszabhatóságát teszi lehetővé, egy "Discription" ("Leírás") gomb, amiben a játék rövid leírása és használati útmutatójának kell szerepelnie.
+A főmenü utolsó gombjának az "Exit" ("Kilépés")-nek kell lennie, ami a játék bezárását teszi lehetővé.Az almenükből a főmenübe való visszajutást egy gombnak kell biztosítania ("Back").
+
+	A játéktérnek tartalmaznia kell a játék elindulása előtt egy "Press Space To Start" képet, ennek biztosítania kell, hogy a játékos felkészülten tudja kezdeni 
+a játék menetét. Szerepelnie kell egy racketnek és egy ballnak, valamint a kiütendő brickeknek . Téglák kiütésénél Collectible-öknek kell az ütő irányában esniük.
+A játéktér alján egy sávnak kell lennie, ami magába kell foglalnia a játékos életét "Health Points", a téglák számát "Bricks" és a szerzett pontokat "Score". 
+A játékosnak rendelkeznie kell 3 élettel kezdetben, és 0 ponttal. A program futása közben lehetősége legyen a felhasználónak megállítani a játékot az Esc gomb lenyomásával, amivel
+egy Pause menü előhívását kell lehetővé tennie. Ebben a menüben helyet kell kapnia egy Resume gomb, amivel a felhasználó folytatni tudja a játékot és egy Exit gombnak kell helyet adni, ami a játék bezárását végi.
+Szerepelnie kell egy Game over menünek, aminek akkor kell aktiválódnia, ha a játékos elveszíti az összes életét. 
+
+
+	A rendszer funkcionalitását tekintve fontos, hogy a pályarendszer a pályákat egymás után töltse be, valamint a Collectible-ök felvétele befolyásolja a játék folyamatát.A főmenü letisztul és könnyen áttekinthető legyen.
+Az options menüben a felhasználó be tudja állítani az ütő mozgatását egy könnyen kezelhető menü keretein belül. A Select Level menüben képes legyen a felhasználó pályát választani vagy egy random gomb lenyomással véletlen pályát kiválasztani a meglévők közül.
+A felhasználó képes legyen a játékfutása alatt a programot pillanatmegállítózni és ezzel egy pause menü jöjjön elő, ahol kiválaszthatja, hogy visszatér a játékba, vagy kilép belőle.
+
+
+Vágyálom redszer: Egy átlátható könnyen navigálható platform és a játék felhasználója fejlődni tudjunk a játékban (szintet lépni).
 Menürendszer kialakítása, amely tartalmaz főmenüt és almenüket.
+
 Játék irányításának testreszabása.
 Pályarendszer kialakítása, a játékos tudjon választani a pályák közül.
 Collectible-ök létrehozása.
@@ -26,13 +52,43 @@ Minimális erőforrás igényre való törekvés
 Hiba mentes futtatás
 
 
-Használati esetek[Use cases]:Szórakozás
-Megfeleltetés:A könnyen átlátható rendszer és a modern design könnyen megfogja a fiatalokat.
-Képernyő tervek: -
-Forgatókönyvek: -
+Használati esetek[Use cases]
+
+Rendszerhatár:
+..............
+stílusrész: lásd "Követelményelemzés"
+
+A rendszer fejlesztés közben figyelembe véve a megrendelő álltal megszabott platformok támogatását, 
+a szoftvernek támogatnia kell Windows 7 Home Premium, Windows 8 Home Premium, Windows 10 Home Premium rendszereken.
+A fejlesztőket nem terheli a felsoroltakon kívüli rendszereken való futtatás optimalizálása. 
+
+Actorok
+.......
+A rendszer futási idejében két actor van, ami egy közvetlen  és közvetett szereplője a rendszernek. A közvetlen actor maga a felhasználó, aki játsza a játékot és 
+a közvetett szereplője a rendszernek .NET keretrendszer.
+
+
+
+Jelenlegi helyzet leírása
+.........................
+
+- Jelenleg a program alfa verzióját látjuk, körülbelül 80 %-os. 
+Előfordulhatnak nem várt hibák a programmal kapcsolatban. 
+
 Fogalomszótár:
+..............
+actor - szereplő
+New Game -új játék indítása
+brick - tégla 
+score - a játékban gyűjtött pontok a téglák kiütése után
+healt pont - élet száma a játékban
+description - leírás
+main menü - főmenü
+exit - kilépés a játékból
+pause - pillanat megállítás
+back - vissza
 retro - régi 
-2D- 2 dimenziós 
-bug-hiba
+2D - 2 dimenziós 
+bug - hiba
 platform - szoftverkörnyezet
 collectible - potyogó testek a játékban
