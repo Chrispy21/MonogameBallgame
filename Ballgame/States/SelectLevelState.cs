@@ -39,28 +39,28 @@ namespace Ballgame.States
             Level1Button = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2(100, 250),
-                Text = "Level1",
+                Text = "Level 1",
             };
             Level1Button.Click += Level1Button_Click;
 
             Level2Button = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2(400, 250),
-                Text = "Level2",
+                Text = "Level 2",
             };
             Level2Button.Click += Level2Button_Click;
 
             Level3Button = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2(700, 250),
-                Text = "Level3",
+                Text = "Level 3",
             };
             Level3Button.Click += Level3Button_Click;
 
             Level4Button = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2(100, 500),
-                Text = "Level4",
+                Text = "Level 4",
             };
             Level4Button.Click += Level4Button_Click;
 
@@ -68,13 +68,13 @@ namespace Ballgame.States
             {
                 Position = new Vector2(400, 500),
 
-                Text = "Level5",
+                Text = "Level 5",
             };
             Level5Button.Click += Level5Button_Click;
             Level6Button = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2(700, 500),
-                Text = "Level6",
+                Text = "Level 6",
             };
             Level6Button.Click += Level6Button_Click;
 
@@ -91,7 +91,7 @@ namespace Ballgame.States
             RandomLevelButton = new ButtonMenu(buttonTexture, buttonFont)
             {
                 Position = new Vector2(1000, 600),
-                Text = "Rnd",
+                Text = "Random",
             };
             RandomLevelButton.Click += RandomLevel_Click;
             
