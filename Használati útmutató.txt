@@ -1,0 +1,37 @@
+﻿Használati Útmutató:
+
+Telepítés:
+	- A játék telepítés nélkül futtatható a ballgame.exe futtatásával.
+
+
+Fő menü:
+	- New game: új játék indítására van lehetőség, az első pályától indulva.
+	- Select level: új játékot indíthatunk a kiválasztott pályával kezdve, vagy véletlenszerű pályát is betölthetünk.
+	- Description: A játék rövid leírását találjuk meg itt, az alapértelmezett irányítási gombokkal.
+	- Options: Az irányító billentyűk személyre szabására van lehetőség.
+	- Exit: Kilépés a játékból.
+
+
+Irányítás:
+	- Alapértelmezett esetben a játékosunkat (az ütőt) a balra és jobbra gombokkal van lehetőségünk irányítani.
+	- A pálya betöltése után a labdát aalapértelmezetten a space gomb leütésével tudjuk elindítani.
+	- Minden alapértelmezett vezértő billentyűt személyre szabhatunk az Options menüben.
+
+
+New Game:
+	- A játékot a legelső pályától kezdhetjük, majd ha egy pályán az összes téglát (Bricks) kiütöttünk, ugorhatunk a következő pályára.
+	- A pálya betöltésekor megjelenik egy alsó sáv amin bal oldalt az életünket láthatjuk (HealtPoints), közében a fennmaradó télákat (Bricks),
+	  jobb oldalt pedig a kiütött téglák után járó pontunkat (Score) láthatjuk.
+
+
+Felvehető tárgyak (Collectibles):
+
+- A Collectible-ök felvételekor az alábbi "bónuszokat" kapjuk:
+	- Trollface: Megfordul az irányítás (balra irányításkor jobbra megy, jobbra irányításkor balra) 10 másodpercre.
+	- Like: A labda sebességégét le csökkenti.
+	- Dislike: A labda sebességét meg növeli.
+	- Heart: Plusz egy életet kapunk.
+	- IcebBall: Lefagy az ütőnk és 5 másodpercig és nem tudunk mozogni.
+	- LongBoard: Az ütőnk a másfélszeresére nő.
+
+A játék akkor ér véget ha minden pályát teljesítettünk a New game menüpontból indulva.
