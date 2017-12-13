@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/score.spritefont</SourceFile>
-  <SourceTime>2017-11-30T18:35:14.2407481+01:00</SourceTime>
-  <DestFile>C:/Users/Chaos/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/score.xnb</DestFile>
-  <DestTime>2017-12-07T16:15:54.2307625+01:00</DestTime>
+  <SourceFile>C:/Users/Mark/Documents/GitHub/MonogameBallgame/Ballgame/Content/score.spritefont</SourceFile>
+  <SourceTime>2017-11-28T15:58:31.4131402+01:00</SourceTime>
+  <DestFile>C:/Users/Mark/Documents/GitHub/MonogameBallgame/Ballgame/Content/bin/Windows/score.xnb</DestFile>
+  <DestTime>2017-12-13T19:15:29.5987997+01:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

@@ -352,7 +352,7 @@ namespace Ballgame
                     hp = 3;
                     space = true;
                     quit = false;
-                    _currentState = _nextState;
+               
                     StartGame();
                     //Ball.touch = 0;
 
