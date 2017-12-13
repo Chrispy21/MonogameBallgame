@@ -1,0 +1,62 @@
+﻿Tesztterv
+---------
+
+Funckcionális teszt
+...................
+
+A Rendszer Funkcionális Teszt a rendszer teljes a környezeti eljárásokkal együtt előre definiált tesztadatokkal, ahol lehetséges tesztelő eszközökkel kell végezni.
+A tesztelések célja a rendszer és komponensei funkcionalitásának teljes körű vizsgálata, ellenőrzése, a rendszer által megvalósított üzleti szolgáltatások verifikálása.
+
+Tesztelési eljárások
+....................
+
+Tesztelés azonosító: 01 - Alfa teszt 
+Időtartam: 5 nap
+Teszt kezdete: 2017/12/04
+Teszt vége: 2017/12/09
+A teszt elsődleges célja:Az eddig meglévő funkcióknak és különböző operációs rendszerekkel való kopmatibilitás működése. A tesztet a fejlesztők végzik.
+A tesztelés sikeres ha a funkciók működnek és kompatibilis a rendszer a különböző operációs rendszerekkel.
+
+Tesztelési azonosító: 02 - Béta teszt 
+Időtartam: 3 nap
+Teszt kezdete: 2017/12/10
+Teszt vége:2017/12/13
+Teszt célja: Minden meglévő funckiók vizsgálata és ellenőrzése. A tesztet harmadik személy végzi.
+A tesztelés sikeres ha minden funkció megfelelően működik a harmadik fél által is.
+
+Tesztterv
+.........
+
+Jelen dokumentum célja a BallGame megvalósítása projektben a rendszerek tesztelési elvárásait ismertesse.
+A projekt sikeres befejezésének eszköze a tesztelési terv és a tesztelési jegyzőkönyvek.
+Összefoglalásként kiemelhető, hogy akkor tekinthető egy adott részrendszer tesztelése sikeresnek, ha 
+  - a tesztelési jegyzőkönyvnek mezői 98%-ban MEGFELELT minősítésűek, azaz
+  - a specifikációban elfogadott funkciók működnek,
+  - a rendszerfunkciók specifikált paramétereinek mért értékei az elvárásoknak megfelelő teljesítmény - határértékek között vannak.
+A rendszertesztelési terv általánosan ismerteti a tesztelés folyamatát, valamint a tesztjegyzőknek minimálisan szükséges, részrendszer-specifikus adattartalmát. Mellékletekként jelennek meg a tesztjegyzőkönyvek.
+
+Tesztelés menete
+................
+1.2017/12/13
+Az rendszer tesztelésnek lezárása, az átadás-átvételi folyamat megkezdése.
+2.2017/12/14
+Az üzembe állításhoz szükséges dokumentációk a megrendelőnek történő átadása, éles üzembe állítás.
+
+Tesztelési folyamat
+...................
+Az alfa és béta teszt során a fejlesztők elkészítik a jegyzőkönyv sablonját, majd felteszik egy online felületre.
+
+A tesztelők megnyitják az alkalmazás .exe file-ját és elkezdik normál user-ként használni.
+A felmerülő hibákat, esetleg nem várt viselkedést feljegyzik a jegyzőkönyvbe. Ez a következőket tartalmazza:
+- Tesztelő neve
+- Rögzítés ideje
+- A hiba helye
+- A hiba leírása
+- Opcionális mellékletek
+- Operációs rendszer, amelyben a hiba fellépett
+
+A tesztek után a jegyzőkönyv véglegesítésre kerül, felkerül a verziókezelő rendszerbe. A rögzített
+hibákat a fejlesztők ellenőrzik, reprodukálják, majd létrehoznak hozzá egy feladatot és javítják.
+
+
+
