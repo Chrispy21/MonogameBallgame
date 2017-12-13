@@ -1,0 +1,19 @@
+Tesztelõ;Észrevétel helye (hol?);Dátum;Prioritás (1-10);Leírás;Melléklet (opcionális);Operációs rendszer
+Horváth Krisztián;játék közben;2017.12.4.;4;A labda néha beragad és több téglát üt ki egyszerre;;Windows 10 64 bit
+Horváth Krisztián;játék közben;2017.12.4.;10;A restart gomb megnyomásakor kifagy a játék;;Windows 10 64 bit
+Horváth Krisztián;játék közben;2017.12.4.;5;A pause menüben a menü gomb megnyomásakor másik menüpont is megnyílik;;Windows 10 64 bit
+Holló Márk;játék közben;2017.12.4;5;A pause menüben a menü gomb megnyomásakor másik menüpont is megnyílik;;Windows 7 64 bit
+Holló Márk;játék közben;2017.12.4;10;A restart gomb megnyomásakor kifagy a játék;;Windows 7 64 bit
+Horváth Krisztián;játék közben;2017.12.06.;9;A select level menüvel való induláskor nem lehet elindítani a játékot;;Windows 10 64 bit
+Holló Márk;játék közben;2017.12.5;8;Select level menüben indított játékból kilépve új játék indítása sikertelen;;Windows 7 64 bit
+Horváth Krisztián;játék közben;2017.12.06.;4;Játék közben a fennmaradó téglákat dublán számolja;;Windows 10 64 bit
+Holló Márk;játék közben;2017.12.06;5;A labda beragad az ütõbe;;Windows 7 64 bit
+Holló Márk;játék közben;2017.12.05;6;Pause menü bezárása esetén a labda azonos irányban indul el;;Windows 7 64 bit
+Horváth Krisztián;játék végénél;2017.12.06.;10;Ha vége a pályának és kiütöttük az összes téglát, nem tölt be új pályát;;Windows 10 64 bit
+Holló Márk;játék végénél;2017.12.06;10;A játék végén nem tölt be új pályát;;Windows 7 64 bit
+Tóth-Pál Márkó;Játék végén;2017.12.04.;10;Nem tölt be új pályát a játék;;Windows 10 Pro | 1703 | 64 bit 
+Tóth-Pál Márkó;Játék közben;2017.12.04.;5;A labda több téglát üt ki egyszerre;;Windows 10 Pro | 1703 | 64 bit 
+Tóth-Pál Márkó;Játék közben;2017.12.05.;3;"A pause menüben a menü gomb megnyomásakor megnyílik a ""Description"" menüpont";;Windows 10 Pro | 1703 | 64 bit 
+Tóth-Pál Márkó;Játék közben;2017.12.06.;6;A labda beleragad az ütõbe;;Windows 10 Pro | 1703 | 64 bit 
+Tóth-Pál Márkó;Játék közben;2017.12.06.;10;Restart gomb megnyomásakor kifagy a játék;;Windows 10 Pro | 1703 | 64 bit 
+;;;;;;

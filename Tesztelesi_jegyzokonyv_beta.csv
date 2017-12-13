@@ -1,0 +1,9 @@
+Tesztelõ;Észrevétel helye (hol?);Dátum;Prioritás (1-10);Leírás;Melléklet (opcionális);Operációs rendszer
+Zsolt;Restartnál;2017.12.13;10;Kifagy a játék;;Windows
+Zsolt;Labda pályáról való kiesésénél;2017.12.13;8;Beakad a vonalra és végig jön a rúd mozgásával;;Windows
+Zsolt;ESC nyomásnál;2017.12.13;8;"A ""buffok"" tovább esnek";;Windows
+Máté;Játék közben;2017.12.13;10;A paddle alá esik a golyó és kb instant halál;;Windows
+Máté;Pályaválasztásnál;2017.12.13;10;Mikor kilépek és új pályát választottam a labda egy helyben áll, és a space-re sem reagál;;Windows
+Balog Balázs;Játék közben;2017.12.13;8;Labda és ütõ érintkezésekor elõfordul ,hogy a labda beszorul az ütõ alá;Csak akkor fordul elõ mikor a szélét érinti;Windows 10 Home Premium
+Balog Balázs;Játék közben;2017.12.13;7;Néha a labda átesik az uõn majd visszapattan az ablak aljáról ;Egyszer tapasztaltam;Windows 10 Home Premium
+Baranyai István;Játék végén;2017.12.13;9;A játék végén a restart megnyomása után kifagy az egész ;;Windows 7
