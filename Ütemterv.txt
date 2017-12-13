@@ -1,0 +1,76 @@
+—————————-
+Sprint 1-1 [17/10/08]
+—————————-
+Osztályok megvalósítása :
+-Ősosztály (Entity, Moving Entity)
+-Ütő
+-Labda
+-Tégla
+-Pálya
+
+Az ütő mozgatásának megvalósítása.
+A labda mozgásának megvalósítása.
+Az ütközések érzékelése.
+A téglák kiütés logikájának implementálása.
+A labda leesésekor legyen vége a játéknak.
+
+—————————-
+Sprint 1-2 [17/10/22]
+—————————-
+Egyéb funkciók megvalósítása:
+-3 élet bevezetése
+-Játék vége utáni újrakezdési / kilépési lehetőség
+-Játék közbeni szünet
+
+A játékos 3 élettel rendelkezzen.
+A játék végén lehetőség legyen újrakezdeni vagy kilépni.
+Játék közben lehetőség legyen szünetet tartani és folytatni.
+—————————-
+Sprint 2-1 [17/11/05]
+—————————-
+Felszedhető tárgyak hozzáadása:
+-Életpont növelő
+-Több labda
+-Fegyverrel rendelkező ütő
+-Ütő meghosszabbítása
+
+Életpont növelő, hogy a felhasználónak lehetősége legyen életpontjainak növelésére.
+Több labda hozzáadása, a játék nehézségének növelése szempontjából.
+Fegyverrel rendelkező ütő hozzáadása, a játék nehézségének könnyítése szempontjából.
+Ütő meghosszabbító tárgy hozzáadása.
+—————————-
+Sprint 2-2 [17/11/19]
+—————————-
+Főmenü elemek hozzáadása:
+-Játék indítása
+-Beállítások menüpont
+-Kilépés gomb
+-Pálya kiválasztása
+-Billentyűzet kiosztás
+-Játék leírása
+
+Játék indító gomb hozzáadása.
+Beállítások menü és gomb hozzáadása.
+Kilépés gomb hozzáadása.
+Pálya kiválasztás menü es gomb hozzáadása.
+Változtatható billentyűzet kiosztás integrálása.
+Játék leírásának elkészítése es hozzadása a játékhoz.
+—————————-
+Sprint 3-1 [17/12/03]
+—————————-
+Különböző grafikai elemek hozzáadása:
+-Téglák textúrájának hozzáadása
+-Ütők textúrájának hozzáadása
+-Labdák textúrájának hozzáadása
+
+Több tégla grafikai elemeinek hozzáadása.
+Több ütő grafikai elemeinek hozzáadása.
+Több labda grafikai elemeinek hozzáadása.
+—————————-
+Sprint 3-2 [17/12/17]
+—————————-
+Pályák és választási lehetőségek hozzáadása:
+-Előre megírt pályák
+-Pályák kiválasztásának lehetősége
+
+Pályák kiválasztásának lehetősége, hogy a játékosnak lehetősége legyen a pályák közötti váltásra.
