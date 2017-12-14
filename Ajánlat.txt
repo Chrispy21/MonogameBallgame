@@ -1,27 +1,16 @@
 ﻿Ajánlat
 -------
 
-	Funkció
-  	.......
+Funkció:
 
-		A rendszert 2  fő részre kell tagolni, melyek a főmenü (main menü) és a játéktér (main).
-A játéknak rendelkeznie kell egy főmenüvel, amelyben 5 gombnak kell szerepelnie. Egy New Game gomb, amely lenyomására elindul a játék, szerepelnie 
-kell egy Select Level gombnak, amit ha lenyomunk egy pályaválasztási menübe lépünk be. Helyet kap egy Description gomb, ami a játék rövid leírását 
-tartalmazza. Egy "Options" (Beállítások) gombnak is helyet kell adni, ami a játék irányításának testreszabhatóságát teszi lehetővé.
-A főmenü utolsó gombjának az "Exit" ("Kilépés")-nek kell lennie, ami a játék bezárását teszi lehetővé.Az almenükből a főmenübe való visszajutást
-egy gombnak kell biztosítania ("Back").
+A rendszert 2  fő részre kell tagolni, melyek a főmenü (main menü) és a játéktér (main).
 
-		A játéktérben kell egy ütő és egy labda, valamint a kiütendő téglák. Téglák kiütésénél Collectible-öknek kell lehullani a téglákból.
-A játékban szerepelnie kell még egy élet pontnak, ami ha elfogy, akkor véget ér a játéknak. A program futása közben lehetősége legyen a felhasználónak 
-megállítani a játékot, amivel egy Pause menü előhívását kell lehetővé tenni. Ebben a menüben helyet kell kapnia egy Resume gomb, amivel a felhasználó 
-folytatni tudja a játékot és egy Exit gombnak kell helyet adni, ami a játék bezárását végzi.Szerepelnie kell egy Game over menünek, aminek akkor kell 
-aktiválódnia, ha a játékos elveszíti az összes életét. 
+A játéknak rendelkeznie kell egy főmenüvel, amelyben 5 gombnak kell szerepelnie. Egy "New Game"(új játék) gomb, amely lenyomására elindul a játék, szerepelnie kell egy "Select Level" gombnak, amit ha lenyomunk egy pályaválasztási menübe lépünk be. Helyet kap egy Description gomb, ami a játék rövid leírását tartalmazza. Egy "Options" (Beállítások) gombnak is helyet kell adni, ami a játék irányításának testreszabhatóságát teszi lehetővé. A főmenü utolsó gombjának az "Exit" (Kilépés)-nek kell lennie, ami a játék bezárását teszi lehetővé. Az almenükből a főmenübe való visszajutást egy "Back" (vissza) gombnak kell biztosítania.
 
-	Grafikai megjelenés
-	...................
 
-	A stílusa az xy játék grafikai megjelenéséhez hasonul. A menük hátterét egyedi képek alkotják, melyeken elhelyezkednek az egyedi gombok, egyedi 
-megjelenéssel és dizájnnal, amik egységes dizájnt hoznak létre.A kurzor ráhelyezésekor a színűk változik. A főmenü és almenük háttere egy kép, amin a 
-sötét szín dominál. A pause menü háttere átlátszó és áttetsző. A menük egyszerűek és letisztulat lesznek. A játéktér alján elhelyezkedő játékállapot sáv 
-egy kép, melyeken az életpont, téglák száma és a score található, melyek mellett egy ikon fog helyet kapni. Az játék grafiaki elemei egyediek, és stílusban
-illenek a játék elemeihez.
+A játéktérben kell egy ütő és egy labda, valamint a kiüthető téglák. Téglák kiütésénél felvehető tárgyaknak kell lehullani a téglákból. A játékban szerepelnie kell még egy élet pontnak, ami ha elfogy, akkor véget ér a játéknak. A program futása közben lehetősége legyen a felhasználónak megállítani a játékot, amivel egy Pause menü előhívását kell lehetővé tenni. Ebben a menüben helyet kell kapnia egy "Resume" (folytatás) gombnak, amivel a felhasználó folytatni tudja a játékot és egy "Exit"(kilépés) gombnak kell helyet adni, ami a játék bezárását végzi. Szerepelnie kell egy Game Over (játék vége) menünek, aminek akkor kell aktiválódnia, ha a játékos elveszíti az összes életét. 
+
+
+Grafikai megjelenés:
+
+A stílusa az BrickBreaker játék grafikai megjelenéséhez hasonul. A menük hátterét egyedi képek alkotják, melyeken elhelyezkednek az egyedi gombok, egyedi megjelenéssel és dizájnnal, amik egységes dizájnt hoznak létre. A kurzor ráhelyezésekor a színűk változik. A főmenü és almenük háttere egy kép, amin a sötét szín dominál. A pause menü háttere átlátszó és áttetsző. A menük egyszerűek és letisztulat lesznek. A játéktér alján elhelyezkedő játékállapot sáv egy kép, melyeken az életpont, téglák száma és a pontszám található, melyek mellett egy ikon fog helyet kapni. A játék grafikai elemei egyediek, és stílusban illenek a játék elemeihez.
