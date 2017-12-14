@@ -2,75 +2,27 @@
 BEVEZETÉS
 -----------------------------
 
-A dokumentum Horváth Krisztián, Holló Márk, Sipos Dávid és Tóth-Pál Márkó közös projektje keretein belül létrejött szoftvert specifikálja.
+A dokumentum Horváth Krisztián, Holló Márk, Sipos Dávid és Tóth-Pál Márkó közös projektje 
+keretein belül létrejött szoftvert specifikálja.
 
 -----------------------------
 A RENDSZER CÉLJA
 -----------------------------
 
-Egy olyan fallabda játékot létrehozni, amely a fiataloknak megmutatja milyen is egy igazi retro 2D-s, de modern designnal rendelkezõ játék.
-Az alkalmazás Windows operációs rendszeren fut, .NET segítségével.
+Egy olyan fallabda játékot létrehozni, amely a fiataloknak megmutatja milyen is egy igazi retro 2D-s, 
+de modern designnal rendelkezõ játék.Az alkalmazás Windows operációs rendszereken fusson, .NET segítségével.
+A felhasználó képes legyen fejlõdni a játékmenet során úgy, hogy a kiütött téglák alapján kap pontot és minden 
+teljesített szint után egy újabb küldetés vár rá, amit teljesítenie kell. A felhasználót segítenie kell a játék 
+során extra jutalmak, amik hulló tárgyak képében jellenek meg a játékban. Ezeket felvéve kapja meg a játékos a 
+különbözõ képességeket. A játéknak képesnek kell lenni pálya választási lehetõséget felkínálni a felhasználó számára, 
+amivel a játékos kedve szerint eldöntheti, hogy melyik kihívást akarja teljesíteni. Ezek a kihívások nem érnek véget, 
+ha egy teljesítve van akkor a soron következõ pálya fog betöltõdni a játékos számára.A játéknak biztosítania kell egy 
+beállítás menüt, melyben a játékos kedve szerint tud a saját csatlakoztatott perifériájának kínálatából az irányítás
+módosítást és a játék indítási lehetõségét változtatni.Ezek mellett a felhasználónak lehetõse legyen a játék közben
+megállítani a rendszert. A rendszer célközönsége a fiatalok, valamint a középkorú emberek, akikben nosztalgikus hagnulatot
+produkál egy ilyen játék látványa és játszhatósága.
 
------------------------------
-PROJEKT TERV
------------------------------
 
-Projekt szerepkörök, felelõsségek:
-
---------
-Szerepek
---------
-
-- Admin: Teljeskörû adminisztrátor, mindent lát, mindent tud állítani. A projekthez tartozó összes részt.
-- Leader: Egy adott Cég/Csoport vezetõje, a céghez/csoporthoz tartozó összes projektet látja, kezeli.
-- User: A tipikus felhasználó egyén, akinek nincs joga a projekt módosítására.
-
--------
-Entitás
--------
-
-Cég (Company) / Csoport (Group)
-Azon csoportok, akik riportolásra használják a webes felületet, ebben a kontextusban ilyen a Horváth Krisztián, Holló Márk, Sipos Dávid, Tóth-Pál Márkó alkotta csoport.
-Hozzájuk tartozik a Leader szinttõl lefele a webes felhasználók köre.
-
-Projekt (Project)
-Tipikusan egy ügyfél felé intézett mérési folyamat egésze, lehetnek szakaszai, mint a következõ sor is mutatja.
-A Projekt mindig projekt szakaszokat csoportosít egy adott ügyfél felé.
-természetesen egy fizikai ügyfélre nyitható több projekt is.
-
-Projekt szakasz (Project section)
-Projekten belül egy szakasz tipikusan egy konfigurációs állapotot jelent.
-Új szakaszt akkor kezdünk, ha például az alapadatok (lásd lenn az alapadat definíciót) változnak.
-Szakasznak kezdeti dátuma és állapota van.
-Egy projekten belül egy idõben csak egy aktív szakasz van, egymást fedõ szakaszok nincsenek
-
-Felhasználó (User):
-- Tipikus felhasználó egyén.
-
-Dimenzió (Dimension):
-- Ez tipikusan egy általánosítás mind az alapadatokra, mind a webes felületre nézve.
-A példa során az jött ki, hogy a modell szempontjából kettõ statikus képernyõ van
-Az index (fõmenü)
-A játék oldala (gameboard)
-Az összes többi dolog felfogható olyan dimenzióként, ami kapcsolja közvetetten vagy közvetlenül ezt a két statikus elemet vagy logikailag leszûri a tevékenységeket a felhasználó felé.
-Így igazából nem különböztetünk meg külön csoportokat, vagy területeket.
-A különbözõ dimenziók közötti átmeneteket, lehet gyakorlatilag mind a szûrésekkel, mind a logikai csoportokkal definiálni.
-Ebbõl majd közvetlenül lehet megadni, milyen képernyõket szeretnénk sorban látni egy tevékenység indításakor.
-Dimenzió tehát lehet:
-- Felhasználói csoport
-- Terület
-
---------------------------------------------
-Projekt munkások és felelõsségeik
--------------------------------------------
-
-Projekt munkások:
-    Horváth Krisztián (Admin)
-    Holló Márk (Leader)
-    Sipos Dávid (Leader)
-    Tóth-Pál Márkó (Leader)
-
-A projekt szervezését, igazítását Horváth Krisztián végzi. Az elvégezendõ feladatokat közös megbeszélés alapján kerül kiosztásra és elvégzésre.
 
 -----------------------------
 ÜTEMTERV
@@ -197,18 +149,32 @@ Fõ elem a Main.cs
 Ez az õs osztály, itt összpontosul a hívások nagy része. 
 
 Tagok:
+.....
+
 LevelList(): - a megírt pályák listába töltése
+
 ChangeState(): a fõmenü és a gameboard közötti váltó 
+
 Main(): beállítja a grafikai elemeket alapértelmezettnek
+
 Initialize(): a játékablak méreteinek beállítása
+
 LoadContent(): Csinál egy új SpriteBatch-t, ami a textúrák kirajzolásához használható, itt töltõdik be minden külsõ grafikai elem.
+
 StartGame(): beállítja a kezdõ pályát és legenerálja a brickeket. LoadContent hívja meg és példányosítja a grafikai elemeket.SetLevelt hívja meg.
+
 Update():frissíti a játéktér adatait(timerek,menüket,aktuális pályát) 
+
 Draw(): a játér grafikai elemeit rajzolja ki futásidõben
+
 SetLevel():ellenõrzi, hogy level típusú level van megadva.Indexeli a level tipusú pályákat.
+
 GetBrickSprite(BrickType type):visszatér egy indexelt brick tipussal, amit a LoadContentben felhasználva tölti be az entitit.
+
 GetBallSprite(BallType type):visszatér egy indexelt ball tipussal, amit a LoadContentben felhasználva tölti be az entitit.
+
 GetRacketSprite(RacketType type):visszatér egy indexelt racekt tipussal, amit a LoadContentben felhasználva tölti be az entitit.
+
 GetCollectibleSprite(CollectibleType type):visszatér egy indexelt collectible tipussal, amit a LoadContentben felhasználva tölti be az entitit.
 
 
@@ -217,8 +183,11 @@ Entity.cs
 Minden test õsosztálya.
 
 Entity(int x, int y, Texture2D sprite):Az entity textúrája és pozícióját állítja be
+
 Draw: kirajzolja a test textúráját, az entity testét, amiben a pozíciója van eltárolva,ami az ütközéshez kell.
+
 Update(GameTime gameTime): frissíti a játék adatait(timerek)
+
 Destroy():Eltünteti az adott entity-t.
 
 
@@ -228,7 +197,9 @@ Ball.cs
 A labda mozgásának kidolgozása
 
 Kill:eltünteti a labdát.
+
 Update(GameTime gameTime):frissíti a timert,HandleCollisions() hívja meg, ami az ütközéseket kezeli más entity-kel.Ellenõrzi hogy hányszor esett le a labda.
+
 HandleCollisions():Az ütközéseket kezeli más Entitykkel.Ellenõrzi a tégla és a labda ütközését.Ellenõrzi az ütõ és a labda ütközését.Megakadályozza, hogy a labda kimenjen a képernyõrõl.
 
 
@@ -244,6 +215,7 @@ Collectible.cs
 A felvehetõ tárgyakat kezeli.
 
 Update(GameTime gameTime):timereket frissít, vizsgálja hogy a játékos felvette-e a collectible-t.Meghívja az OnPickup-ot és a Destroy-t
+
 OnPickup():Akkor hívódik meg, ha felveszi a játékos a collectiblet.Meghívja a Destroy-t, amivel eltünteti.
 
 
@@ -252,8 +224,11 @@ Brick.cs
 A téglák definiálása 
 
 OnHit:Akkor hívódik meg amikor a téglát megüti a labda.
+
 OnBreak:Akkor fut le, amikor a tégla széttörik.Chance=az esélye annak, hogy egy collectible-t fog dobni.
+
 Update:A labda és a téglák ütközését vizsgálja, timerek frissítése.Meghívja az OnHit metódust.
+
 Destroy:overridolt metódus, eltünteti a kiütött téglákat.
 
 
@@ -262,6 +237,7 @@ MovingEntity.cs
 Minden mozgó entity õse. A mozgás definiálása.
 
 Update: Move-ot hívja meg és frissíti a timert.
+
 Move: Az x és y tengelyi mozgást állítja be.
 
 
@@ -270,6 +246,7 @@ Player.cs
 Az ütõ kidolgozása
 
 Update: Timer frissítése, keyboardState, az ütõ mozgatása billentyûlenyomásra.isFrozen ha felveszi a játékos az ütõ fagyasztót.IsInputInverted ha a játékos trollfacet vesz fel. 
+
 Draw:játék idõben rajzolja ki ha a játékos felveszi az ütõ hosszabítót,scaleEffect 1,7x növeli az ütõt.
 
 
@@ -278,14 +255,23 @@ Level.cs
 A pályák õsosztálya.
 
 Level:Listába tölti az entitiket. Definiálja az elsõ labdát a játékban.Meghívja a Initialize-t, ami az ütõ és a labda létrehozásáért felel.
+
 Initialize:az elsõ ütõt és a labdát hozza létre.
+
 Update:Timert és minden entity-t frissít a játékban.
+
 Draw:A pályán lévõ entity-k kirajzolása.
+
 GenerateBricks:feltölti a pályát téglákkal. Levelx.cs-ben van kidolgozva.
+
 SpawnCollectible:Létrehoz egy Collectible-t x,y pozíció szerint, típust választ és sebességet ad neki.
+
 DestroyEntity:Eltöröl egy Entity-t.
+
 CreateBall:Létrehoz egy labdát x,y pozíció alapján és beállítja a típusát a labdának.Hozzáadja az EntityListhez.
+
 CreateBrick:Létrehoz egy téglát x,y pozícióval.Hozzáadja az EntityListhez. 
+
 CreatePlayer: Létrehozza az ütõt a játékban és hozzáadja az EntityListhez.
 
 
@@ -294,7 +280,9 @@ DescriptionState.cs
 A leírás menüpont kidolgozása
 
 Draw(GameTime gameTime, SpriteBatch SpriteBatch) : Betölti a képet, illetve megváltoztatja az aktuális kép méretét.
+
 Update(GameTime gameTime) : Meghívja a visszagombot.
+
 BackButton_Click(object sender, EventArgs e) : Lekezeli a visszalépés gombot.
 
 
@@ -303,6 +291,7 @@ GameState.cs
 A játék elemeinek lekezelése.
 
 Draw(GameTime gameTime, SpriteBatch SpriteBatch) : Betölti a hátteret és az alsó szegõt, illetve kiíratja a hátralevõ életek számát, a téglák számát és a pontszámot.
+
 Update(GameTime gameTime) : Meghívja az aktuális pályát.
 
 
@@ -311,11 +300,17 @@ MenuState.cs
 A fõmenüt és annak gombjait kezeli.
 
 Draw(GameTime gameTime, SpriteBatch SpriteBatch) : Kirajzolja a fõmenü alapvetõ elemeit.
+
 Update(GameTime gameTime) :
+
 newGameButton_Click(object sender, EventArgs e) : Gomb, ami új játékot indít.
+
 selectLevelGameButton_Click(object sender, EventArgs e) : Gomb, ami a pálya kiválasztása almenüt hívja meg.
+
 quitGameButton_Click(object sender, EventArgs e) : Gomb, ami kilép a programból.
+
 DescriptionGameButton_Click(object sender, EventArgs e) : Gomb, ami a leírás almenüt hívja meg.
+
 OptionsGameButton_Click(object sender, EventArgs e) : Gomb, ami a beállítások almenüt hívja meg.
 
 
@@ -324,10 +319,15 @@ OptionsState.cs
 A beállítások almenüt kezeli.
 
 Draw(GameTime gameTime, SpriteBatch SpriteBatch) : Options kiíratása betûméret változtatásával
+
 Update(GameTime gameTime): Lekezeli a gombok állíthatóságát.
+
 BackButton_Click(object sender, EventArgs e) : Lekezeli a visszalépés gombot.
+
 LeftButton_Click(object sender, EventArgs e) : Keybindings beállítása balra.
+
 RightButton_Click(object sender, EventArgs e) : Keybindings beállítása jobbra.
+
 StartButton_Click(object sender, EventArgs e) : Keybindings beállítása elindításhoz.
 
 
@@ -336,28 +336,41 @@ SelectLevelState.cs
 A pályaválasztás almenüt kezeli.
 
 Draw(GameTime gameTime, SpriteBatch SpriteBatch) : Lekezeli a hat darab pályagombot, egy random level gombot és a visszalépés gombot.
+
 Update(GameTime gameTime):
+
 BackButton_Click(object sender, EventArgs e) : Lekezeli a visszalépés gombot.
+
 Level1Button_Click(object sender, EventArgs e) : Meghívja az 1. pályát.
+
 Level2Button_Click(object sender, EventArgs e) : Meghívja a 2. pályát.
+
 Level3Button_Click(object sender, EventArgs e) : Meghívja a 3. pályát.
+
 Level4Button_Click(object sender, EventArgs e) : Meghívja a 4. pályát.
+
 Level5Button_Click(object sender, EventArgs e) : Meghívja az 5. pályát.
+
 Level6Button_Click(object sender, EventArgs e) : Meghívja a 6. pályát.
+
 RandomLevel_Click(object sender, EventArgs e) : Kiválaszt egy pályát véletlenszerûen.
 
 
 State.cs
 --------------------
 Draw(GameTime gameTime, SpriteBatch SpriteBatch) : kirajzolásban segéd metódus
+
 Update(GameTime gameTime) :Timerek frissítése
+
 State(Main game, GraphicsDevice graphicsDevice, ContentManager content) : játék indításában van szerepe
 
 
 Component.cs
 --------------------
 A játék komponenseinek kirajzolásában segít
+
 Draw(): a játék grafikai elemeit rajzolja ki futásidõben
+
 Update():frissíti a játéktér adatait(timerek,menüket,aktuális pályát) 
 
 
@@ -365,21 +378,29 @@ DelayedAction.cs
 ------------------------
 
 DelayedAction():
+
 Update():frissíti a játéktér adatait(timerek,menüket,aktuális pályát) 
 
 Button.cs
 --------------
 Pause menü gombok létrehozása
+
 Load(): Betöltjük a gombok textúráját és a pozícióknak adunk egy alap értéket
+
 Update(): Timerek frissítése, megadjuk a gombok pozícióját
+
 Draw():Kirajzoljuk a gombokat a megadott pozícióban
 
 ButtonMenu.cs
 --------------------
 MainMenu gombok létrehozása
+
 Rectangle(): új négyzet deklarálása és pozíciójának meghatározása
+
 ButtonMenu(): textúra és betûtipus meghatározása
+
 Draw():Gombok és azok szövegeinek kirajzolása
+
 Update():frissíti a játéktér adatait
 
 
