@@ -6,32 +6,51 @@ Követelményelemzés:
 ...................
 
 	Rendszer célja: Egy olyan fallabda játékot létrehozni, amely a fiataloknak megmutatja milyen is egy igazi retro 2D-s, de modern designal rendelkező játék.
-Jelenlegi helyzet:A játék jelenleg minden funkciót tartalmaz, de esetleges bugog felléphetnek. A bugok fixelése után a játékos képes legyen a Főmenüben testreszabni, valamint pályát
-választani kedve szerint. A játékot pillanatmegállítóval meg lehessen állítani és szabadon a főmenübe lehessen lépni.A játékos képes legyen collectibleöket felvenni és 
-azok hatására folytatni a játékot. A játékos még rendelkezzen 3 élettel, ami ha elfogy vége a játéknak. 
+A felhasználó képes legyen fejlődni a játékmenet során úgy, hogy a kiütött téglák alapján kap pontot és minden teljesített szint után egy újabb küldetés vár rá, 
+amit teljesítenie kell. A felhasználót segítenie kell a játék során extra jutalmak, amik hulló tárgyak képében jellenek meg a játékban. Ezeket felvéve kapja meg 
+a játékos a különböző képességeket. A játéknak képesnek kell lenni pálya választási lehetőséget felkínálni a felhasználó számára, amivel a játékos kedve szerint 
+eldöntheti, hogy melyik kihívást akarja teljesíteni. Ezek a kihívások nem érnek véget, ha egy teljesítve van akkor a soron következő pálya fog betöltődni a játékos 
+számára.A játéknak biztosítania kell egy beállítás menüt, melyben a játékos kedve szerint tud a saját csatlakoztatott perifériájának kínálatából az irányítás
+módosítást és a játék indítási lehetőségét változtatni.Ezek mellett a felhasználónak lehetőse legyen a játék közben megállítani a rendszert. A rendszer célközönsége
+a fiatalok, valamint a középkorú emberek, akikben nosztalgikus hagnulatot produkál egy ilyen játék látványa és játszhatósága.
+
+Jelenlegi helyzet:
+..................
+	
+	A játék jelenleg minden funkciót tartalmaz, de esetleges bugog felléphetnek. A bugok fixelése után a játékos képes legyen a Főmenüből egy options gomb lenyomása 
+után testreszabni az irányítást. A játékos esc gomb lenyomásával képes legyen megállítani a játék menetét kedve szerint majd egy pause menü jelenjen meg és ott választási
+lehetőséget kapjon, Resume gomb amivel vissza tud térni a felhasználó az aktuális játékba, valamint egy Exit gomb amivel a főmenübe képes lépni.A játékos képes legyen 
+collectibleöket felvenni és azok hatása szerint folytatni a játékot. A játékos rendelkezzen 3 élettel kezdetben, amit képes növelni ha a megfelelő collectible-t veszi fel. 
+A három élet elvesztése után véget ér a játék és egy game over menü jelenik meg, amiben két választható lehetőség (gomb) van. A restart gombbal újra indíthatja a felhszanáló 
+a játékot az első pályáról, vagy az exit gombra kattintva kiléphet az adott játékból. A játéktér alsó sávjában meg kell jelennie a téglák száma, a kiütött téglák utáni pontszám 
+és az élet száma.  
 
 	A megrendelő által megszabott feltétel alapján a rendszert 2 részre kell tagolni.Ezek a fő részek a főmenü (main menü) és a játéktér (main).
 Minden grafiaki elemnek egyedinek kell lennie, a fejlesztőket terheli ennek elkészítése.
 
 	A játéknak rendelkeznie kell egy főmenüvel, amelyben 5 gombnak kell szerepelnie. Egy "New Game" ("Új Játék") gomb, amely az egy új játok indít a felhasználónak.
-Szerepelnie kell a az előző gomb alatt egy "Select Level" ("Pálya Választás") gomb, amely lehetőseg ad a felhasználónak a rendszer pályáji közül választani.Egy "Options" (Beállítások)
-gombnak is helyet kell adni, ami a játék irányításának testreszabhatóságát teszi lehetővé, egy "Discription" ("Leírás") gomb, amiben a játék rövid leírása és használati útmutatójának kell szerepelnie.
-A főmenü utolsó gombjának az "Exit" ("Kilépés")-nek kell lennie, ami a játék bezárását teszi lehetővé.Az almenükből a főmenübe való visszajutást egy gombnak kell biztosítania ("Back").
+Szerepelnie kell a az előző gomb alatt egy "Select Level" ("Pálya Választás") gomb, amely lehetőseg ad a felhasználónak a rendszer pályáji közül választani.Egy "Options" 
+(Beállítások) gombnak is helyet kell adni, ami a játék irányításának testreszabhatóságát teszi lehetővé, egy "Discription" ("Leírás") gomb, amiben a játék rövid leírása és
+használati útmutatójának kell szerepelnie. A főmenü utolsó gombjának az "Exit" ("Kilépés")-nek kell lennie, ami a játék bezárását teszi lehetővé.Az almenükből a főmenübe való
+visszajutást egy gombnak kell biztosítania ("Back").
 
 	A játéktérnek tartalmaznia kell a játék elindulása előtt egy "Press Space To Start" képet, ennek biztosítania kell, hogy a játékos felkészülten tudja kezdeni 
 a játék menetét. Szerepelnie kell egy racketnek és egy ballnak, valamint a kiütendő brickeknek . Téglák kiütésénél Collectible-öknek kell az ütő irányában esniük.
 A játéktér alján egy sávnak kell lennie, ami magába kell foglalnia a játékos életét "Health Points", a téglák számát "Bricks" és a szerzett pontokat "Score". 
 A játékosnak rendelkeznie kell 3 élettel kezdetben, és 0 ponttal. A program futása közben lehetősége legyen a felhasználónak megállítani a játékot az Esc gomb lenyomásával, amivel
-egy Pause menü előhívását kell lehetővé tennie. Ebben a menüben helyet kell kapnia egy Resume gomb, amivel a felhasználó folytatni tudja a játékot és egy Exit gombnak kell helyet adni, ami a játék bezárását végi.
-Szerepelnie kell egy Game over menünek, aminek akkor kell aktiválódnia, ha a játékos elveszíti az összes életét. 
+egy Pause menü előhívását kell lehetővé tennie. Ebben a menüben helyet kell kapnia egy Resume gomb, amivel a felhasználó folytatni tudja a játékot és egy Exit gombnak kell helyet 
+adni, ami a játék bezárását végi. Szerepelnie kell egy Game over menünek, aminek akkor kell aktiválódnia, ha a játékos elveszíti az összes életét. 
 
 
-	A rendszer funkcionalitását tekintve fontos, hogy a pályarendszer a pályákat egymás után töltse be, valamint a Collectible-ök felvétele befolyásolja a játék folyamatát.A főmenü letisztul és könnyen áttekinthető legyen.
-Az options menüben a felhasználó be tudja állítani az ütő mozgatását egy könnyen kezelhető menü keretein belül. A Select Level menüben képes legyen a felhasználó pályát választani vagy egy random gomb lenyomással véletlen pályát kiválasztani a meglévők közül.
-A felhasználó képes legyen a játékfutása alatt a programot pillanatmegállítózni és ezzel egy pause menü jöjjön elő, ahol kiválaszthatja, hogy visszatér a játékba, vagy kilép belőle.
+	A rendszer funkcionalitását tekintve fontos, hogy a pályarendszer a pályákat egymás után töltse be, valamint a Collectible-ök felvétele befolyásolja a játék folyamatát.
+A főmenü letisztul és könnyen áttekinthető legyen. Az options menüben a felhasználó be tudja állítani az ütő mozgatását egy könnyen kezelhető menü keretein belül. A Select Level 
+menüben képes legyen a felhasználó pályát választani vagy egy random gomb lenyomással véletlen pályát kiválasztani a meglévők közül. A felhasználó képes legyen a játékfutása alatt
+a programot pillanatmegállítózni és ezzel egy pause menü jöjjön elő, ahol kiválaszthatja, hogy visszatér a játékba, vagy kilép belőle.
 
 
-Vágyálom redszer: Egy átlátható könnyen navigálható platform és a játék felhasználója fejlődni tudjunk a játékban (szintet lépni).
+Vágyálom redszer:
+Egy fejlődés képes, új dizájnal megjelent retro stílusú labda játék, amely megjelenésben és funkciókban egyedi.
+Egy átlátható könnyen navigálható platform és a játék felhasználója fejlődni tudjunk a játékban (szintet lépni).
 Menürendszer kialakítása, amely tartalmaz főmenüt és almenüket.
 
 Játék irányításának testreszabása.
@@ -43,16 +62,17 @@ Jelenlegi üzleti folyamatok modellje:
 Igényelt üzleti folyamatok modellje: 
 
 Követelménylista:
+.................
 Kortól függetlenül bárkinek
 Átlátható rendszer
 Menürendszer 
 Modern design
 Testreszabhatóság
 Minimális erőforrás igényre való törekvés
-Hiba mentes futtatás
 
 
 Használati esetek[Use cases]
+............................
 
 Rendszerhatár:
 ..............
@@ -77,6 +97,7 @@ Előfordulhatnak nem várt hibák a programmal kapcsolatban.
 
 Fogalomszótár:
 ..............
+
 actor - szereplő
 New Game -új játék indítása
 brick - tégla 
