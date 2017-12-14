@@ -1,0 +1,17 @@
+﻿Ajánlatkérés
+............
+
+Bevezetés:
+
+		Mekk Elek magánszemély megrendelést ad egy 2D-s labdajátékra, ami ingyenesen bárki
+	számára elérhető és használható.Egy hasonló retro játék,mint az elődjei, de stílusban eltér, 
+	azaz moder grafikával készül.
+
+Ajánlatkérő bemutatása:
+-----------------------
+Név: Mekk Elek
+Születési év: 1911.10.20
+Cím:9960 Bugyi Fürjes utca 5/c
+Elérhetőség:
+Tel.: 06 91 666 6667
+E-mail:meki_elek@asd.com
