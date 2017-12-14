@@ -48,27 +48,25 @@ A tesztprogram az ebben a dokumentumban meghatározott tesztterv alapján fut.
 ---------------------------------------
 Feladatkörök és felelősségek 
 Tesztelő:     
-A teszt végrehajtása
-Észrevételek dokumentálása,
+ - A teszt végrehajtása
+ - Észrevételek dokumentálása,
  - Teszt dokumentáció archiválása
-
- 
 Szakértő: 
-Észrevételek elemzése 
-Megoldások javaslása
+ - Észrevételek elemzése 
+ - Megoldások javaslása
 Teszt-koordinátor: 
-Teszt terv készítése
-A tesztterv jóváhagyatása a projektmenedzserrel
-Teszt forgatókönyvek létrehozása
-Inkonzisztenciák kezelése
-Helyes és időbeni hibakezelés
-Szükség esetén problémák eszkalálása a projekt menedzsernek
-Végső riport készítése
-Teszt dokumentum archiválása
-Az észrevételek státuszának követése, ill. dokumentálása
+ - Teszt terv készítése
+ - A tesztterv jóváhagyatása a projektmenedzserrel
+ - Teszt forgatókönyvek létrehozása
+ - Inkonzisztenciák kezelése
+ - Helyes és időbeni hibakezelés
+ - Szükség esetén problémák eszkalálása a projekt menedzsernek
+ - Végső riport készítése
+ - Teszt dokumentum archiválása
+ - Az észrevételek státuszának követése, ill. dokumentálása
 Projektvezető:   
-Teszt terv jóváhagyása
-Teszt forgatókönyv
+ - Teszt terv jóváhagyása
+ - Teszt forgatókönyv
 
 2.2 Tesztkörnyezet
 ---------------------------------------
