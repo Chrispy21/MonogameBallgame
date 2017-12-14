@@ -6,32 +6,32 @@ Készítők:
 Horváth Krisztián, Tóth-Pál Márkó, Holló Márk, Sipos Dávid
 
 -----------------------------------------------
+Program rövid leírása:
 
-A dokumentum bemutatása:
-
--A dokumentum célja bemutatni a Ball Game játék specifikációit.
--A dinamikus fejlesztés folyamata illeszkedni fog a sprintek végleges kidolgozásához.
--A fejlesztés 6 sprintből fog állni. (2 hetes sprintekkel tervezve) 
-
------------------------------------------------
-Játék célja:
- 
-- Egy könnyen kezelhető labdajáték, amit kortól függetlenül bárki használhat. 
-Fő motívuma a szórakozás és az időtöltés. 
-- Létrehozni egy olyan ingyenes játékot, 
-amit bárki elérhet bármilyen rendszeren és bármikor használhat.
+Az alábbi program, azaz fallabda játék (BallGame), melynek feladata a játékos szórakoztatása.
+Fő célja, hogy a játék ingyenesen elérhető legyen minden korosztály számára szórakoztató pillanatokat nyújtson.
+A játék további célja, hogy a felhasználó koordinációs- és figyelő képességét javítsa.
 
 -----------------------------------------------
-Specifikáció / Leírás:
+Specifikáció:
 
--A játékos célja, hogy kiüsse az összes téglát a pályán. 
--A pályák egymást követve váltakoznak. 
--Az ügyességet egy pontozó rendszer fogja mérni.
--A pontozást úgy nevezett szorzók módosítják majd,
- amiket játék közben a felhasználónak lehetősége adódik “felvenni”, 
+-A játékos célja, hogy kiüsse az összes téglát az adott pályán, majd a következő nehezebb szintre lépve folytassa ezt.
+-Az ügyességet egy pontozó rendszer méri, ami a kiütött téglák alapján számolja a pontokat.
+-A pontozást úgy nevezett szorzók módosítják, amiket játék közben a felhasználónak lehetősége adódik “felvenni”, 
  ezáltal megnövelve pontszámát.
+-A játékosnak továbbá lehetősége van felvenni különböző potyogó tárgyakat is amik segítik vagy hátráltatják a játék további menetében.
+-A játékos megtudja változtatni az irányítást a neki megfelelő billentyűzetkiosztásra a Options (Beállítások) menüpontban.
+-A játékos tud pályát választani a Select Level (Pálya választás) menüpontban.
+-----------------------------------------------
+Használhatóság:
 
+A rendszer úgy készül, hogy elsajátítása minél könnyebb legyen.
+Felhasználói felülete jól áttekinthető és a különböző menük tartalma logikailag összetartozó információkat jelenítsen meg.
+Ezáltal a játék megismerése rövid időt vesz igénybe egy tapasztalatlan felhasználó esetében is.
+A gyakorlott felhasználóknak szinte egy két perc elegendő, hogy elsajátítsák a program kezelését.
+Alapértelmezett nyelve angol, és az egyes gombok, menük feliratai is erőteljesen rávilágítanak arra mi történik ha a felhasználó rákattint.
 
+-----------------------------------------------
 Mérföldkövek:
 -----------------------------------------------
 1, Játéklogika, és grafika:
