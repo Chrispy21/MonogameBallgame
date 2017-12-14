@@ -110,19 +110,19 @@ Módszere:
 ---------------------------------------
 Az elfogadási teszt (angolul User Acceptance Test) célja a rendszer teljes funkcionalitásának vizsgálata a felhasználók szemszögéből. 
 Módszere:
--A gombok oda vezetnek-e ami rájuk van írva vagy sem
--Az írányítás változtatása az "Options" menüponton belül.
--Az aktuális pálya végénél átdob-e másik pályára a játék vagy sem
--Pályák elrendezésének megtekintése
--A pályák közötti váltogatás a "Select Level" menüponton belül
+-A gombok oda vezetnek ami rájuk van írva (Back -> visszavisz az előzö menübe)
+-Az irányítás változtatása ("Options" menüben található meg) 
+-Az aktuális pálya teljesítésekor átvisz a következő pályára a játék
+-Az aktuális pályának a pálya felülete megfelelő
+-A pályák közötti váltogatás ("Select Level" menüben található meg)
 -A játék tetszőleges megállítása az "ESC" billentyűzet lenyomásával
--Újrakezdésnél a játék a legelejétől kezdődik-e vagy sem
--Halál esetén újraindul-e a játék az elejétől vagy sem
--A felvehető tárgyak a megfelelő képességet adják-e vagy sem
--Irányítás megfelelő működése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy-e vagy sem)
--A labda leesésekor veszítesz életet vagy sem, és ha igen akkor mennyit
--Start gomb (alapértelmezetten SPACE) lenyomására elindul-e a játék vagy sem
--Az ütőbe beleragad-e (pl végigfut rajta balról jobbra) a labda vagy sem
+-Újrakezdésnél a játék a legelejétől kezdődik
+-Halál esetén újraindul a játék az elejétől
+-A felvehető tárgyak a megfelelő képességet adják
+-Irányítás megfelelő működése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy az ütő)
+-A labda leesésekor életpont elveszítése
+-Start gomb (alapértelmezetten SPACE) lenyomására a játék elindul
+-Az ütőbe beleragad (pl végigfut rajta balról jobbra) a labda
 
 3.4 Tesztelési feladatok, teszt esetek leírása
 ---------------------------------------
