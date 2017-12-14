@@ -35,9 +35,9 @@ A teszt végrehajtásáért a projekt menedzser felel Horváth Krisztián, és a
 1.2 Elvárások
 ---------------------------------------
 Az alábbi alap elvárások képezik ennek a teszttervnek az alapját:
-Az olvasó ismeri az alap dokumentumokat, amelyek meghatározzák a rendszert.
-A MonogameBallgame szervezeti egység / projektcsapat felelős a tesztadatok előállításáért. 
-A tesztprogram az ebben a dokumentumban meghatározott tesztterv alapján fut.
+-Az olvasó ismeri az alap dokumentumokat, amelyek meghatározzák a rendszert.
+-A MonogameBallgame szervezeti egység / projektcsapat felelős a tesztadatok előállításáért. 
+-A tesztprogram az ebben a dokumentumban meghatározott tesztterv alapján fut.
 
 
 ---------------------------------------
@@ -85,44 +85,44 @@ a következő szempontok alapján:
 ---------------------------------------
 A fejlesztői tesztelés célja a rendszer alapvető funkcióinak ellenőrzése, a hibakezelés és az alapvető funkciók működésének vizsgálata. 
 Módszere:
-A gombok megfelelő működése
-Pálya végén új szint betöltése
-A játék tetszőleges megállítása
-Újrakezdésnél a játék alap helyzetbe kerül
-Halál esetén újrakezdési lehetőség
-Felvehető / potyogó tárgyak megfelelő működése
-Irányítás megfelelő működése
-Életek száma a labda leesésekkel arányosan csökken
-Start gomb lenyomására indul a játék
-A labda beragadásának megakadályozása
+-A gombok megfelelő működése
+-Pálya végén új szint betöltése
+-A játék tetszőleges megállítása
+-Újrakezdésnél a játék alap helyzetbe kerül
+-Halál esetén újrakezdési lehetőség
+-Felvehető / potyogó tárgyak megfelelő működése
+-Irányítás megfelelő működése
+-Életek száma a labda leesésekkel arányosan csökken
+-Start gomb lenyomására indul a játék
+-A labda beragadásának megakadályozása
 
 3.2 Prototípus (modul) teszt
 ---------------------------------------
 A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer már működő moduljainak önálló tesztelése,
 a modulon belüli hibák azonosításának és kiküszöbölésének érdekében. 
 Módszere:
-Irányítás megfelelő működése
-A labda beragadásának megakadályozása
-Téglák kiüthetősége
-Labda realisztikus mozgásának tesztelése
+-Irányítás megfelelő működése
+-A labda beragadásának megakadályozása
+-Téglák kiüthetősége
+-Labda realisztikus mozgásának tesztelése
 
 3.3 Elfogadási teszt
 ---------------------------------------
 Az elfogadási teszt (angolul User Acceptance Test) célja a rendszer teljes funkcionalitásának vizsgálata a felhasználók szemszögéből. 
 Módszere:
-A gombok megfelelő működése
-Vezérlő gombok állíthatóak
-Pálya végén új szint betöltése
-Pályák megfelelő működése
-A pálya kiválasztás játékban történő lekezelése
-A játék tetszőleges megállítása
-Újrakezdésnél a játék alap helyzetbe kerül
-Halál esetén újrakezdési lehetőség
-Felvehető / potyogó tárgyak megfelelő működése
-Irányítás megfelelő működése
-Életek száma a labda leesésekkel arányosan csökken
-Start gomb lenyomására indul a játék
-A labda beragadásának megakadályozása
+-A gombok oda vezetnek-e ami rájuk van írva vagy sem
+-Az írányítás változtatása az "Options" menüponton belül.
+-Az aktuális pálya végénél átdob-e másik pályára a játék vagy sem
+-Pályák elrendezésének megtekintése
+-A pályák közötti váltogatás a "Select Level" menüponton belül
+-A játék tetszőleges megállítása az "ESC" billentyűzet lenyomásával
+-Újrakezdésnél a játék a legelejétől kezdődik-e vagy sem
+-Halál esetén újraindul-e a játék az elejétől vagy sem
+-A felvehető tárgyak a megfelelő képességet adják-e vagy sem
+-Irányítás megfelelő működése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy-e vagy sem)
+-A labda leesésekor veszítesz életet vagy sem, és ha igen akkor mennyit
+-Start gomb (alapértelmezetten SPACE) lenyomására elindul-e a játék vagy sem
+-Az ütőbe beleragad-e (pl végigfut rajta balról jobbra) a labda vagy sem
 
 3.4 Tesztelési feladatok, teszt esetek leírása
 ---------------------------------------
@@ -152,31 +152,31 @@ következő szintre, ahol megvizsgálja hogy az előbb elvégzett tesztek másik
 4.1 Tesztelt elvárások
 --------------------------------------- 
 Az alábbi funkcionális elvárások szerepelnek a funkcionális specifikációban, amelyek tesztelésre is kerültek:
-Ütő mozgás
-Potyogó tárgyak
-Labda mozgása
-Téglák törése
+-Ütő mozgás
+-Potyogó tárgyak
+-Labda mozgása
+-Téglák törése
 
 Az alábbi nem-funkcionális elvárások szerepelnek a követelmény specifikációban, amelyek tesztelésre is kerültek:
-A menü gombok funkciószerű működése
-A játék tetszőleges megállítása
-Újrakezdési lehetőség
-Kiválasztott pálya betöltése
+-A menü gombok funkciószerű működése
+-A játék tetszőleges megállítása
+-Újrakezdési lehetőség
+-Kiválasztott pálya betöltése
 
 4.2        Elfogadási kritériumok
 ---------------------------------------
 A teszt sikerességének kritériumai:
-Technikai, a teszt forgatókönyvben leírtak szerint
-A projekt menedzser jóváhagyása a tesztek sikeres teljesítésére
+-Technikai, a teszt forgatókönyvben leírtak szerint
+-A projekt menedzser jóváhagyása a tesztek sikeres teljesítésére
 
 4.3 Tesztelési időintervallumok
 ---------------------------------------
 Tesztelés azonosító: 01 - Alfa teszt 
-Időtartam: 5 nap
+Időtartam: 6 nap
 Teszt kezdete: 2017/12/04
 Teszt vége: 2017/12/09
 
 Tesztelési azonosító: 02 - Béta teszt 
-Időtartam: 3 nap
+Időtartam: 4 nap
 Teszt kezdete: 2017/12/10
 Teszt vége:2017/12/13
