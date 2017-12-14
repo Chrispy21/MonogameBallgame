@@ -1,9 +1,79 @@
-Tesztelõ;Észrevétel helye (hol?);Dátum;Prioritás (1-10);Leírás;Melléklet (opcionális);Operációs rendszer
-Zsolt;Restartnál;2017.12.13;10;Kifagy a játék;;Windows
-Zsolt;Labda pályáról való kiesésénél;2017.12.13;8;Beakad a vonalra és végig jön a rúd mozgásával;;Windows
-Zsolt;ESC nyomásnál;2017.12.13;8;"A ""buffok"" tovább esnek";;Windows
-Máté;Játék közben;2017.12.13;10;A paddle alá esik a golyó és kb instant halál;;Windows
-Máté;Pályaválasztásnál;2017.12.13;10;Mikor kilépek és új pályát választottam a labda egy helyben áll, és a space-re sem reagál;;Windows
-Balog Balázs;Játék közben;2017.12.13;8;Labda és ütõ érintkezésekor elõfordul ,hogy a labda beszorul az ütõ alá;Csak akkor fordul elõ mikor a szélét érinti;Windows 10 Home Premium
-Balog Balázs;Játék közben;2017.12.13;7;Néha a labda átesik az uõn majd visszapattan az ablak aljáról ;Egyszer tapasztaltam;Windows 10 Home Premium
-Baranyai István;Játék végén;2017.12.13;9;A játék végén a restart megnyomása után kifagy az egész ;;Windows 7
+Tesztelõ;Észrevétel helye (hol?);Dátum;Prioritás (1-10);Leírás;Melléklet (opcionális);Operációs rendszer;;;;
+Piros Zsolt;Játék elején;2017.12.10;7;A gombok oda vezetnek ami rájuk van írva (Back -> visszavisz az elõzö menübe);Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék elején;2017.12.10;9;"Az irányítás változtatása (""Options"" menüben található meg)";Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék végén;2017.12.10;8;Az aktuális pálya teljesítésekor átvisz a következõ pályára a játék;Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék elején;2017.12.10;3;Az aktuális pályának a pálya felülete megfelelõ;Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék elején;2017.12.10;7;"A pályák közötti váltogatás (""Select Level"" menüben található meg)";Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék közben;2017.12.10;6;"A játék tetszõleges megállítása az ""ESC"" billentyûzet lenyomásával";Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék közben;2017.12.10;7;Újrakezdésnél a játék a legelejétõl kezdõdik;Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék közben;2017.12.10;8;Halál esetén újraindul a játék az elejétõl;Teszt részben sikeres, 5-bõl 1x nem indul újra a játék.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék közben;2017.12.10;8;A felvehetõ tárgyak a megfelelõ képességet adják;Teszt részben sikeres 5-bõl 1x nem indult újra.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék közben;2017.12.10;9;Irányítás megfelelõ mûködése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy az ütõ);Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék közben;2017.12.10;8;A labda leesésekor életpont elveszítése;Teszt sikeres.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék elején;2017.12.10;7;Start gomb (alapértelmezetten SPACE) lenyomására a játék elindul;Teszt részben sikeres, ha select level-el indítom a játékot, nem mindegyik pálya indul el start leütésére.;Windows 8 64 bit;;;;
+Piros Zsolt;Játék közben;2017.12.10;10;Az ütõbe beleragad (pl végigfut rajta balról jobbra) a labda;Teszt sikertelen, többször tapasztaltam;Windows 8 64 bit;;;;
+Murányi Máté;Játék elején;2017.12.11;7;A gombok oda vezetnek ami rájuk van írva (Back -> visszavisz az elõzö menübe);Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék elején;2017.12.11;9;"Az irányítás változtatása (""Options"" menüben található meg)";Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék végén;2017.12.11;8;Az aktuális pálya teljesítésekor átvisz a következõ pályára a játék;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék elején;2017.12.11;3;Az aktuális pályának a pálya felülete megfelelõ;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék elején;2017.12.11;7;"A pályák közötti váltogatás (""Select Level"" menüben található meg)";Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék közben;2017.12.11;6;"A játék tetszõleges megállítása az ""ESC"" billentyûzet lenyomásával";Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék közben;2017.12.11;7;Újrakezdésnél a játék a legelejétõl kezdõdik;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék közben;2017.12.11;8;Halál esetén újraindul a játék az elejétõl;Teszt részben sikeres, 5-bõl 1x nem indul újra a játék.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék közben;2017.12.11;8;A felvehetõ tárgyak a megfelelõ képességet adják;Teszt részben sikeres 5-bõl 1x nem indult újra.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék közben;2017.12.11;9;Irányítás megfelelõ mûködése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy az ütõ);Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék közben;2017.12.11;8;A labda leesésekor életpont elveszítése;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék elején;2017.12.11;7;Start gomb (alapértelmezetten SPACE) lenyomására a játék elindul;Teszt részben sikeres, ha select level-el indítom a játékot, nem mindegyik pálya indul el start leütésére.;Windows 10 Pro 64 bit;;;;
+Murányi Máté;Játék közben;2017.12.11;10;Az ütõbe beleragad (pl végigfut rajta balról jobbra) a labda;Teszt sikertelen, többször tapasztaltam;Windows 10 Pro 64 bit;;;;
+Balog Balázs;Játék elején;2017.12.12;7;A gombok oda vezetnek ami rájuk van írva (Back -> visszavisz az elõzö menübe);Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék elején;2017.12.12;9;"Az irányítás változtatása (""Options"" menüben található meg)";Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék végén;2017.12.12;8;Az aktuális pálya teljesítésekor átvisz a következõ pályára a játék;Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék elején;2017.12.12;3;Az aktuális pályának a pálya felülete megfelelõ;Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék elején;2017.12.12;7;"A pályák közötti váltogatás (""Select Level"" menüben található meg)";Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék közben;2017.12.12;6;"A játék tetszõleges megállítása az ""ESC"" billentyûzet lenyomásával";Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék közben;2017.12.12;7;Újrakezdésnél a játék a legelejétõl kezdõdik;Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék közben;2017.12.12;8;Halál esetén újraindul a játék az elejétõl;Teszt részben sikeres, 5-bõl 1x nem indul újra a játék.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék közben;2017.12.12;8;A felvehetõ tárgyak a megfelelõ képességet adják;Teszt részben sikeres 5-bõl 1x nem indult újra.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék közben;2017.12.12;9;Irányítás megfelelõ mûködése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy az ütõ);Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék közben;2017.12.12;8;A labda leesésekor életpont elveszítése;Teszt sikeres.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék elején;2017.12.12;7;Start gomb (alapértelmezetten SPACE) lenyomására a játék elindul;Teszt részben sikeres, ha select level-el indítom a játékot, nem mindegyik pálya indul el start leütésére.;Windows 10 Home Premium;;;;
+Balog Balázs;Játék közben;2017.12.12;10;Az ütõbe beleragad (pl végigfut rajta balról jobbra) a labda;Teszt sikertelen, többször tapasztaltam;Windows 10 Home Premium;;;;
+Baranyai István;Játék elején;2017.12.13;7;A gombok oda vezetnek ami rájuk van írva (Back -> visszavisz az elõzö menübe);Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék elején;2017.12.13;9;"Az irányítás változtatása (""Options"" menüben található meg)";Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék végén;2017.12.13;8;Az aktuális pálya teljesítésekor átvisz a következõ pályára a játék;Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék elején;2017.12.13;3;Az aktuális pályának a pálya felülete megfelelõ;Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék elején;2017.12.13;7;"A pályák közötti váltogatás (""Select Level"" menüben található meg)";Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék közben;2017.12.13;6;"A játék tetszõleges megállítása az ""ESC"" billentyûzet lenyomásával";Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék közben;2017.12.13;7;Újrakezdésnél a játék a legelejétõl kezdõdik;Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék közben;2017.12.13;8;Halál esetén újraindul a játék az elejétõl;Teszt részben sikeres, 5-bõl 1x nem indul újra a játék.;Windows 7 64 bit;;;;
+Baranyai István;Játék közben;2017.12.13;8;A felvehetõ tárgyak a megfelelõ képességet adják;Teszt részben sikeres 5-bõl 1x nem indult újra.;Windows 7 64 bit;;;;
+Baranyai István;Játék közben;2017.12.13;9;Irányítás megfelelõ mûködése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy az ütõ);Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék közben;2017.12.13;8;A labda leesésekor életpont elveszítése;Teszt sikeres.;Windows 7 64 bit;;;;
+Baranyai István;Játék elején;2017.12.13;7;Start gomb (alapértelmezetten SPACE) lenyomására a játék elindul;Teszt részben sikeres, ha select level-el indítom a játékot, nem mindegyik pálya indul el start leütésére.;Windows 7 64 bit;;;;
+Baranyai István;Játék közben;2017.12.13;10;Az ütõbe beleragad (pl végigfut rajta balról jobbra) a labda;Teszt sikertelen, többször tapasztaltam;Windows 7 64 bit;;;;
+Csapó Roland;Játék elején;2017.12.13;7;A gombok oda vezetnek ami rájuk van írva (Back -> visszavisz az elõzö menübe);Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék elején;2017.12.13;9;"Az irányítás változtatása (""Options"" menüben található meg)";Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék végén;2017.12.13;8;Az aktuális pálya teljesítésekor átvisz a következõ pályára a játék;Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék elején;2017.12.13;3;Az aktuális pályának a pálya felülete megfelelõ;Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék elején;2017.12.13;7;"A pályák közötti váltogatás (""Select Level"" menüben található meg)";Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék közben;2017.12.13;6;"A játék tetszõleges megállítása az ""ESC"" billentyûzet lenyomásával";Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék közben;2017.12.13;7;Újrakezdésnél a játék a legelejétõl kezdõdik;Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék közben;2017.12.13;8;Halál esetén újraindul a játék az elejétõl;Teszt részben sikeres, 5-bõl 1x nem indul újra a játék.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék közben;2017.12.13;8;A felvehetõ tárgyak a megfelelõ képességet adják;Teszt részben sikeres 5-bõl 1x nem indult újra.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék közben;2017.12.13;9;Irányítás megfelelõ mûködése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy az ütõ);Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék közben;2017.12.13;8;A labda leesésekor életpont elveszítése;Teszt sikeres.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék elején;2017.12.13;7;Start gomb (alapértelmezetten SPACE) lenyomására a játék elindul;Teszt részben sikeres, ha select level-el indítom a játékot, nem mindegyik pálya indul el start leütésére.;Windows 8.1 64 bit;;;;
+Csapó Roland;Játék közben;2017.12.13;10;Az ütõbe beleragad (pl végigfut rajta balról jobbra) a labda;Teszt sikertelen, többször tapasztaltam;Windows 8.1 64 bit;;;;
+Bettenbuk Dániel;Játék elején;2017.12.11;7;A gombok oda vezetnek ami rájuk van írva (Back -> visszavisz az elõzö menübe);Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék elején;2017.12.11;9;"Az irányítás változtatása (""Options"" menüben található meg)";Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék végén;2017.12.11;8;Az aktuális pálya teljesítésekor átvisz a következõ pályára a játék;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék elején;2017.12.11;3;Az aktuális pályának a pálya felülete megfelelõ;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék elején;2017.12.11;7;"A pályák közötti váltogatás (""Select Level"" menüben található meg)";Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék közben;2017.12.11;6;"A játék tetszõleges megállítása az ""ESC"" billentyûzet lenyomásával";Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék közben;2017.12.11;7;Újrakezdésnél a játék a legelejétõl kezdõdik;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék közben;2017.12.11;8;Halál esetén újraindul a játék az elejétõl;Teszt részben sikeres, 5-bõl 1x nem indul újra a játék.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék közben;2017.12.11;8;A felvehetõ tárgyak a megfelelõ képességet adják;Teszt részben sikeres 5-bõl 1x nem indult újra;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék közben;2017.12.11;9;Irányítás megfelelõ mûködése (Ha a balra nyilat / beállított balra gombot nyomod le akkor balra megy az ütõ);Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék közben;2017.12.11;8;A labda leesésekor életpont elveszítése;Teszt sikeres.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék elején;2017.12.11;7;Start gomb (alapértelmezetten SPACE) lenyomására a játék elindul;Teszt részben sikeres, ha select level-el indítom a játékot, nem mindegyik pálya indul el start leütésére.;Windows 10 Pro 64 bit;;;;
+Bettenbuk Dániel;Játék közben;2017.12.11;10;Az ütõbe beleragad (pl végigfut rajta balról jobbra) a labda;Teszt sikertelen, többször tapasztaltam;Windows 10 Pro 64 bit;;;;
