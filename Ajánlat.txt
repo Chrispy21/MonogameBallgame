@@ -1,24 +1,27 @@
-Ajánlat
+﻿Ajánlat
 -------
 
 	Funkció
-    .......
-		A rendszert 2  fő részre kell tagolni, melyek a főmenü (main menü) és a játéktér (main).
-A játéknak rendelkeznie kell egy főmenüvel, amelyben 5 gombnak kell szerepelnie. Egy "New Game" ("Új Játék") gomb, amely az egy új játok indít a felhasználónak.
-Szerepelnie kell a az előző gomb alatt egy "Select Level" ("Pálya Választás") gomb, amely lehetőseg ad a felhasználónak a rendszer pályáji közül választani.Egy "Options" (Beállítások)
-gombnak is helyet kell adni, ami a játék irányításának testreszabhatóságát teszi lehetővé, egy "Discription" ("Leírás") gomb, amiben a játék rövid leírása és használati útmutatójának kell szerepelnie.
-A főmenü utolsó gombjának az "Exit" ("Kilépés")-nek kell lennie, ami a játék bezárását teszi lehetővé.Az almenükből a főmenübe való visszajutást egy gombnak kell biztosítania ("Back").
-		A játéktérnek tartalmaznia kell a játék elindulása előtt egy "Press Space To Start" képet, ennek biztosítania kell, hogy a játékos felkészülten tudja kezdeni 
-a játék menetét. Szerepelnie kell egy racketnek és egy ballnak, valamint a kiütendő brickeknek . Téglák kiütésénél Collectible-öknek kell az ütő irányában esniük.
-A játéktér alján egy sávnak kell lennie, ami magába kell foglalnia a játékos életét "Health Points", a téglák számát "Bricks" és a szerzett pontokat "Score". 
-A játékosnak rendelkeznie kell 3 élettel kezdetben, és 0 ponttal. A program futása közben lehetősége legyen a felhasználónak megállítani a játékot az Esc gomb lenyomásával, amivel
-egy Pause menü előhívását kell lehetővé tennie. Ebben a menüben helyet kell kapnia egy Resume gomb, amivel a felhasználó folytatni tudja a játékot és egy Exit gombnak kell helyet adni, ami a játék bezárását végi.
-Szerepelnie kell egy Game over menünek, aminek akkor kell aktiválódnia, ha a játékos elveszíti az összes életét. 
+  	.......
 
-	Stílus
-	......
-	A menük hátterét egyedi képek alkotják, melyeken helyezkednek el az egyedi gombok, amik egységes dizájnt hoznak létre.A kurzor ráhelyezésekor a színűk változik.
-A főmenü és almenük háttere egy kép, amin a sötét szín dominál. A pause és a gameover menü háttere átlátszó és áttetsző. A menük egyszerűek és letisztulat lesznek.
-	A játéktér alján elhelyezkedő játékállapot sáv egy kép, melyeken a életpont, téglák száma és a score található, melyek mellett egy ikon fog helyet kapni.
-Az játék grafiaki elemei egyediek, és stílusban illenek a játék elemeihez.
-	
+		A rendszert 2  fő részre kell tagolni, melyek a főmenü (main menü) és a játéktér (main).
+A játéknak rendelkeznie kell egy főmenüvel, amelyben 5 gombnak kell szerepelnie. Egy New Game gomb, amely lenyomására elindul a játék, szerepelnie 
+kell egy Select Level gombnak, amit ha lenyomunk egy pályaválasztási menübe lépünk be. Helyet kap egy Description gomb, ami a játék rövid leírását 
+tartalmazza. Egy "Options" (Beállítások) gombnak is helyet kell adni, ami a játék irányításának testreszabhatóságát teszi lehetővé.
+A főmenü utolsó gombjának az "Exit" ("Kilépés")-nek kell lennie, ami a játék bezárását teszi lehetővé.Az almenükből a főmenübe való visszajutást
+egy gombnak kell biztosítania ("Back").
+
+		A játéktérben kell egy ütő és egy labda, valamint a kiütendő téglák. Téglák kiütésénél Collectible-öknek kell lehullani a téglákból.
+A játékban szerepelnie kell még egy élet pontnak, ami ha elfogy, akkor véget ér a játéknak. A program futása közben lehetősége legyen a felhasználónak 
+megállítani a játékot, amivel egy Pause menü előhívását kell lehetővé tenni. Ebben a menüben helyet kell kapnia egy Resume gomb, amivel a felhasználó 
+folytatni tudja a játékot és egy Exit gombnak kell helyet adni, ami a játék bezárását végzi.Szerepelnie kell egy Game over menünek, aminek akkor kell 
+aktiválódnia, ha a játékos elveszíti az összes életét. 
+
+	Grafikai megjelenés
+	...................
+
+	A stílusa az xy játék grafikai megjelenéséhez hasonul. A menük hátterét egyedi képek alkotják, melyeken elhelyezkednek az egyedi gombok, egyedi 
+megjelenéssel és dizájnnal, amik egységes dizájnt hoznak létre.A kurzor ráhelyezésekor a színűk változik. A főmenü és almenük háttere egy kép, amin a 
+sötét szín dominál. A pause menü háttere átlátszó és áttetsző. A menük egyszerűek és letisztulat lesznek. A játéktér alján elhelyezkedő játékállapot sáv 
+egy kép, melyeken az életpont, téglák száma és a score található, melyek mellett egy ikon fog helyet kapni. Az játék grafiaki elemei egyediek, és stílusban
+illenek a játék elemeihez.
