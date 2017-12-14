@@ -2,24 +2,50 @@ Csoportgyûlés
 .............
 
 Második csoportgyûlés:
+----------------------
 
-Jelenlévõk: Horváth Krisztián, Sípos Dávid, Holló Márk,Tóth - Pál Márkó
-Megbeszélés helye, ideje: 3300 Eger,Leányka Út C épület, 2017.09.27 9:30 – 12:00
+Jelenlévõk:	Horváth Krisztián
+		Sípos Dávid
+		Holló Márk
+		Tóth - Pál Márkó
+
+Megbeszélés helye:	300 Eger, Leányka Út C épület 
+
+Ideje:			2017.09.27 9:30 – 12:00
 
 Megbeszéltek:
 -------------
  
 - 1, Õsosztályok és gyermekosztályok létrehozása
-	- Entity, MovingEntity osztályok
+	- Minden entitásnak az õsosztályát létrehozni.
+	- Az entitások mozgásának létrehozása
+	- Entitások textúra hozzáadásának rendszerét kidolgozni
+	
 - 2, Az ütõ és a labda mozgását lekezleni
-	- Player,Ball osztályok
+	- Player osztály kidolgozásának kigondolása
+	- Player osztály kidolgozása 
+	- Bal osztály kigondolása és kidolgozása
+	- ütközések implementálása entitykkel
+	- az ütõ és labda grafikájának eltervezése
+
 - 3, Ütközések érzékelését kidolgozni
-	- Collider
+	- Collider kigondolása és kidolgozása
+	- Labda mozgásának lekezelése az adott kijelzõn. 
+
 - 4, Téglák kiütésének a logikáját implementálni
+	- collectibleök tervezése és implementálása
+	- téglák grafikai megjelenésének tervezete 
+
 - 5, Labda leesésekor legyen vége a játéknak
+	- hp rendszer kidolgozása
+	- player és level osztályok kidolgozása
+	- game over menü eltervezése 
 
 Feladatok:
 ----------
+
+A fentebb említett feladatokat kapták a fejlesztõk.
+
 3-5, 	Horváth Krisztián
 5, 	Tóth-Pál Márkó
 1, 	Holló Márk
@@ -27,7 +53,14 @@ Feladatok:
 
 A feladatok határideje: Az elsõ sprint határideje: 2017.10.08.
 
-A csoportgyûlés tagjai elfogadták a feledatokat. 
+Korábbi fennmaradt feladat/ok:
+------------------------------
+
+- Nincs elmúlaszott feladat.
+
+
+A nem teljeseített feladatokat a fejlesztõk utólag fogják befejezni.
+A csoportgyûlés tagjai elfogadták a feledatokat.
 
 
 .................
