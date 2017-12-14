@@ -1,4 +1,4 @@
-—————————-
+﻿—————————-
 Sprint 1-1 [17/10/08]
 —————————-
 Osztályok megvalósítása :
@@ -73,4 +73,4 @@ Pályák és választási lehetőségek hozzáadása:
 -Előre megírt pályák
 -Pályák kiválasztásának lehetősége
 
-Pályák kiválasztásának lehetősége, hogy a játékosnak lehetősége legyen a pályák közötti váltásra.
+Pályák kiválasztásának lehetősége, a játékos képes legyen a pályák között váltani.

@@ -1,4 +1,4 @@
-Árajánlat
+﻿Árajánlat
 ---------
 
 Tartalomjegyzék
@@ -7,7 +7,6 @@ Tartalomjegyzék
 2.Vezetői összefoglaló
 3.Felhasználni kívánt technikák bemutatása
 4.A feladat bemutatása
-5.Projektterv
 6.Funkcionális specifikáció és ütemterv
 7.Csomagok árral, átadási határidővel
 8.Árajánlat érvényessége, szerződési feltételek
@@ -29,7 +28,7 @@ fennakadás nélkül.
 3.Felhasználni kívánt technikák bemutatása
 -------------------------------------------
 	A játék Visual Studioban, Monogame XNA 4 framework programozási felületen történik. Ennek során a jelenleg elérhető legújabb
-verzióval szeretnék a felhasználó számára leginkább kényelmes használatot biztosítani. Monogame-mel a grafikai elemeket valósítjuk meg C# programozási nyelvvel
+verzióval szeretnénk a felhasználó számára leginkább kényelmes használatot biztosítani. Monogame-mel a grafikai elemeket valósítjuk meg ,C# programozási nyelvben az
 alapvető játék funkciókat dolgozzuk ki.Megválasztásuk során figyelembe vettük, hogy az elkészítendő funkciókat a lehető leghatékonyabban tudjuk megvalósítani.
 
  
@@ -39,17 +38,6 @@ alapvető játék funkciókat dolgozzuk ki.Megválasztásuk során figyelembe ve
 ennek függvényében. Az ütközések által csökkenek a téglák száma, ha a játékos mindegyiket kiütötte akkor a játék véget ér és újabb pálya lesz elérhető.
 A játékosnak legyen lehetősége pályát választani és testreszabni az irányítást.A pályaválasztási lehetőségre egy menüt fogunk biztosítani.
 
-5. Projektterv
---------------
-Projektütemezés
-  - W1, osztályok megvalósítása 14 embernap.
-  - W2, egyéb funkciók megvalósítása 14 embernap.
-  - W3, felszedhető tárgyak kidolgozása 14 embernap.
-  - W4, főmenü elemek kidolgozása 14 embernap.
-  - W5, grafikai elemek kidolgozása 14 embernap
-  - W6, pályák és választási lehetőségek hozzáadása 14 embernap
-
-  A projekt fő fázisai „Ütemterv.txt”-ben van mellékelve.
 
 6. Funkcionális specifikáció és ütemterv
 -------------------------------------
@@ -73,7 +61,7 @@ Melléklet:
   - 1 főre jutó órabér: 1800 Ft/óra 
     - Napi 8 óra munka mellett ez 14400 Ft.-os napidíjat jelent.
   - 63 munkanap
-  - Csomagár: 3628800 Ft.
+  - Csomagár: 2428800 Ft.
   - Átadás határideje: 2017.12.14
 3.Maximum
   - 2 ember
