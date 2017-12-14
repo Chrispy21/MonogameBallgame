@@ -1,0 +1,184 @@
+﻿Tesztelési terv
+BallGame projekt
+
+Tartalomjegyzék
+---------------------------------------
+1 Bevezetés                                                                                                                                                    
+1.1 Tesztelési terv hatóköre, célja                                                                                                         
+1.2 Elvárások
+
+2 Szükséges erőforrások                                                                                                                              
+2.1 Feladatkörök és felelősségek (tesztcsapat meghatározása)                                                          
+2.2 Tesztkörnyezet
+
+3 Tesztelési terv                                                                                                                                             
+3.1 Fejlesztői teszt                                                                                                                                 
+3.2 Prototípus(modul)teszt
+3.3 Elfogadásiteszt
+3.4 Tesztelési feladatok, teszt-esetek leírása                                                                                      
+3.5 Tesztelési ütemterv, függőségek – tesztforgatókönyv    
+
+4  Tesztelési jegyzőkönyv és tesztelési jelentés                                         
+4.1 Tesztelt elvárások                                                                                                                            
+4.2 Elfogadási kritériumok
+4.3 Tesztelési időintervallumok 
+
+---------------------------------------
+1 Bevezetés
+---------------------------------------
+
+1.1 Tesztelési terv hatóköre, célja
+---------------------------------------
+A tesztelési terv célja a tesztelés teljes körűségének biztosítása, a tesztelés során alkalmazott eljárások és megoldások meghatározásával.
+A teszt végrehajtásáért a projekt menedzser felel Horváth Krisztián, és a tesztcsapat hajtja végre a 2.1. fejezetben meghatározott módon.
+ 
+1.2 Elvárások
+---------------------------------------
+Az alábbi alap elvárások képezik ennek a teszttervnek az alapját:
+Az olvasó ismeri az alap dokumentumokat, amelyek meghatározzák a rendszert.
+A MonogameBallgame szervezeti egység / projektcsapat felelős a tesztadatok előállításáért. 
+A tesztprogram az ebben a dokumentumban meghatározott tesztterv alapján fut.
+
+
+---------------------------------------
+2 Szükséges erőforrások
+---------------------------------------
+
+2.1 Feladatkörök és felelősségek (tesztcsapat meghatározása)
+---------------------------------------
+Feladatkörök és felelősségek 
+Tesztelő:     
+A teszt végrehajtása
+Észrevételek dokumentálása,
+ - Teszt dokumentáció archiválása
+
+ 
+Szakértő: 
+Észrevételek elemzése 
+Megoldások javaslása
+Teszt-koordinátor: 
+Teszt terv készítése
+A tesztterv jóváhagyatása a projektmenedzserrel
+Teszt forgatókönyvek létrehozása
+Inkonzisztenciák kezelése
+Helyes és időbeni hibakezelés
+Szükség esetén problémák eszkalálása a projekt menedzsernek
+Végső riport készítése
+Teszt dokumentum archiválása
+Az észrevételek státuszának követése, ill. dokumentálása
+Projektvezető:   
+Teszt terv jóváhagyása
+Teszt forgatókönyv
+
+2.2 Tesztkörnyezet
+---------------------------------------
+A tesztelési környezet otthoni körülmények között zajlik, átlag felhasználói hozzáféréssel
+a következő szempontok alapján:
+ - .NET megléte az eszközön
+ - legalább 1280x768 felbontású képernyő
+ - 100 MB szabad lemezterület
+
+
+--------------------------------------
+3 Tesztelési terv
+---------------------------------------
+
+3.1 Fejlesztői teszt
+---------------------------------------
+A fejlesztői tesztelés célja a rendszer alapvető funkcióinak ellenőrzése, a hibakezelés és az alapvető funkciók működésének vizsgálata. 
+Módszere:
+A gombok megfelelő működése
+Pálya végén új szint betöltése
+A játék tetszőleges megállítása
+Újrakezdésnél a játék alap helyzetbe kerül
+Halál esetén újrakezdési lehetőség
+Felvehető / potyogó tárgyak megfelelő működése
+Irányítás megfelelő működése
+Életek száma a labda leesésekkel arányosan csökken
+Start gomb lenyomására indul a játék
+A labda beragadásának megakadályozása
+
+3.2 Prototípus (modul) teszt
+---------------------------------------
+A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer már működő moduljainak önálló tesztelése,
+a modulon belüli hibák azonosításának és kiküszöbölésének érdekében. 
+Módszere:
+Irányítás megfelelő működése
+A labda beragadásának megakadályozása
+Téglák kiüthetősége
+Labda realisztikus mozgásának tesztelése
+
+3.3 Elfogadási teszt
+---------------------------------------
+Az elfogadási teszt (angolul User Acceptance Test) célja a rendszer teljes funkcionalitásának vizsgálata a felhasználók szemszögéből. 
+Módszere:
+A gombok megfelelő működése
+Vezérlő gombok állíthatóak
+Pálya végén új szint betöltése
+Pályák megfelelő működése
+A pálya kiválasztás játékban történő lekezelése
+A játék tetszőleges megállítása
+Újrakezdésnél a játék alap helyzetbe kerül
+Halál esetén újrakezdési lehetőség
+Felvehető / potyogó tárgyak megfelelő működése
+Irányítás megfelelő működése
+Életek száma a labda leesésekkel arányosan csökken
+Start gomb lenyomására indul a játék
+A labda beragadásának megakadályozása
+
+3.4 Tesztelési feladatok, teszt esetek leírása
+---------------------------------------
+A tesztelési feladat a következő teszt eseteket foglalja magában:
+ - Harmadik személyek tesztelik a programot
+ - Tesztelő csapat teszteli a programot
+ - Az alkotók tesztelik a programot
+ 
+3.5 Tesztelési ütemterv, függőségek – teszt forgatókönyv
+---------------------------------------
+A tesztelő az előírt sorrendben vizsgálja meg a játék funkcióit a hiteles teszt elvégzése érdekében.
+Először a tesztelő elindítja az alkalmazást majd megvizsgálja hogy a játék megfelelően fut-e.
+Ezek után megvizsgálja a menügombok megfelelő működését, illetve hogy a hozzájuk kapcsolódó menüpont hívódik-e meg. Ezek után az “Options” (beállítások)
+menüben leteszteli a gombok testreszabhatóságát. Ha ezekkel megvan belép a “Select Level” (pálya kiválasztás) menübe, ahol megnézi hogy minden gomb a kívánt
+pályát tölti-e be, valamint a véletlenszerűen választott pályát eltudja indítani. Mindezek után elindítja a játékot a “New Game” gombbal (új játék) a menüben 
+és megvizsgálja hogy az ütő megfelelően működik-e, a játék a start gomb megnyomásával indul-e el, illetve hogy a labda megfelelő mozgást produkál (nem csak egy 
+tengelyen mozog vagy nem ragad be sehova). Továbbá a tesztelő kipróbálja az összes “potyogó” tárgyat, hogy azok az előírt funkciók szerint működnek-e. 
+Mindeközben leteszteli a “pause menü” meghívását is, és megnézi, hogy ilyenkor a labda és a potyogó tárgyak mozgása nullára csökken-e, valamint az ütő mozgása 
+le van-e tiltva. Ha minden pause menü funkció megfelelően működött, befejezi az adott pályát. Ha végzett az első pályával folytatja a tesztelést és átlép a 
+következő szintre, ahol megvizsgálja hogy az előbb elvégzett tesztek másik pálya betöltésekor is ugyan úgy működnek.
+ 
+ 
+---------------------------------------
+4 Tesztelési jegyzőkönyv és tesztelési jelentés
+---------------------------------------
+
+4.1 Tesztelt elvárások
+--------------------------------------- 
+Az alábbi funkcionális elvárások szerepelnek a funkcionális specifikációban, amelyek tesztelésre is kerültek:
+Ütő mozgás
+Potyogó tárgyak
+Labda mozgása
+Téglák törése
+
+Az alábbi nem-funkcionális elvárások szerepelnek a követelmény specifikációban, amelyek tesztelésre is kerültek:
+A menü gombok funkciószerű működése
+A játék tetszőleges megállítása
+Újrakezdési lehetőség
+Kiválasztott pálya betöltése
+
+4.2        Elfogadási kritériumok
+---------------------------------------
+A teszt sikerességének kritériumai:
+Technikai, a teszt forgatókönyvben leírtak szerint
+A projekt menedzser jóváhagyása a tesztek sikeres teljesítésére
+
+4.3 Tesztelési időintervallumok
+---------------------------------------
+Tesztelés azonosító: 01 - Alfa teszt 
+Időtartam: 5 nap
+Teszt kezdete: 2017/12/04
+Teszt vége: 2017/12/09
+
+Tesztelési azonosító: 02 - Béta teszt 
+Időtartam: 3 nap
+Teszt kezdete: 2017/12/10
+Teszt vége:2017/12/13
