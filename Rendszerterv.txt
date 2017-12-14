@@ -9,20 +9,8 @@ keretein belül létrejött szoftvert specifikálja.
 A RENDSZER CÉLJA
 -----------------------------
 
-Egy olyan fallabda játékot létrehozni, amely a fiataloknak megmutatja milyen is egy igazi retro 2D-s, 
-de modern designnal rendelkezõ játék.Az alkalmazás Windows operációs rendszereken fusson, .NET segítségével.
-A felhasználó képes legyen fejlõdni a játékmenet során úgy, hogy a kiütött téglák alapján kap pontot és minden 
-teljesített szint után egy újabb küldetés vár rá, amit teljesítenie kell. A felhasználót segítenie kell a játék 
-során extra jutalmak, amik hulló tárgyak képében jellenek meg a játékban. Ezeket felvéve kapja meg a játékos a 
-különbözõ képességeket. A játéknak képesnek kell lenni pálya választási lehetõséget felkínálni a felhasználó számára, 
-amivel a játékos kedve szerint eldöntheti, hogy melyik kihívást akarja teljesíteni. Ezek a kihívások nem érnek véget, 
-ha egy teljesítve van akkor a soron következõ pálya fog betöltõdni a játékos számára.A játéknak biztosítania kell egy 
-beállítás menüt, melyben a játékos kedve szerint tud a saját csatlakoztatott perifériájának kínálatából az irányítás
-módosítást és a játék indítási lehetõségét változtatni.Ezek mellett a felhasználónak lehetõse legyen a játék közben
-megállítani a rendszert. A rendszer célközönsége a fiatalok, valamint a középkorú emberek, akikben nosztalgikus hagnulatot
-produkál egy ilyen játék látványa és játszhatósága.
-
-
+A szoftver azon embereket célozza meg, akik szeretnek játszani és hajlandóak ezzel eltölteni a szabadidejüket is. A játék egy kellemes kikapcsolódást nyújt elvonja a figyelmet a mindennapi dolgokról
+ezzel segítve a stressz levezetését.
 
 -----------------------------
 ÜTEMTERV
