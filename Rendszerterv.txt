@@ -293,7 +293,7 @@ Update(GameTime gameTime) :
 
 newGameButton_Click(object sender, EventArgs e) : Gomb, ami új játékot indít.
 
-selectLevelGameButton_Click(object sender, EventArgs e) : Gomb, ami a pálya kiválasztása almenüt hívja meg.
+selectLevelGameButton_Click(object sender, EventArgs e) : Gomb, aminek lenyomására belépünk a selectLevel menübe
 
 quitGameButton_Click(object sender, EventArgs e) : Gomb, ami kilép a programból.
 
@@ -348,7 +348,7 @@ State.cs
 --------------------
 Draw(GameTime gameTime, SpriteBatch SpriteBatch) : kirajzolásban segéd metódus
 
-Update(GameTime gameTime) :Timerek frissítése
+Update(GameTime gameTime) :Frissíti a timereket
 
 State(Main game, GraphicsDevice graphicsDevice, ContentManager content) : játék indításában van szerepe
 
