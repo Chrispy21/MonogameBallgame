@@ -70,7 +70,7 @@ namespace Ballgame.Entities
 
         public override void Update(GameTime gameTime)
         {
-            Entity ball = Main.CurrentLevel.EntityList.Find(x => x is Ball && this.Body.Intersects(x.Body));
+            Entity ball = Main.CurrentLevel.EntityList.Find(x => x is Ball && this.GetIntersectionWith(x) != CollisionResult.None);
             if (ball != null)
             {
                 this.OnHit(ball as Ball);

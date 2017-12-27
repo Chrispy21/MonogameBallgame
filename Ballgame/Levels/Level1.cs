@@ -26,7 +26,7 @@ namespace Ballgame.Levels
                 for (float y = 0 ; y < (Main.Resolution.Y / 4) - 100; y += Brick.defaultBrickSize.Y + 10)
                 {
 
-                    Level.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
+                    Main.CurrentLevel.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
 
                     Main.target++;
                 }
@@ -39,7 +39,7 @@ namespace Ballgame.Levels
                 for (float y = (Main.Resolution.Y / 4); y < (Main.Resolution.Y / 4) * 2 - 100; y += Brick.defaultBrickSize.Y + 10)
                 {
 
-                    Level.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
+                    Main.CurrentLevel.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
 
                     Main.target++;
                 }
@@ -51,7 +51,7 @@ namespace Ballgame.Levels
                 for (float y = (Main.Resolution.Y / 4); y < (Main.Resolution.Y / 4) * 2 - 100; y += Brick.defaultBrickSize.Y + 10)
                 {
 
-                    Level.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
+                    Main.CurrentLevel.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
 
                     Main.target++;
                 }
@@ -62,7 +62,7 @@ namespace Ballgame.Levels
                 for (float y = (Main.Resolution.Y / 4) * 2; y < (Main.Resolution.Y / 4) * 3 - 100; y += Brick.defaultBrickSize.Y + 10)
                 {
 
-                    Level.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
+                    Main.CurrentLevel.CreateBrick(new Point((int)x, (int)y), BrickType.DefaultBrick);
 
                     Main.target++;
                 }

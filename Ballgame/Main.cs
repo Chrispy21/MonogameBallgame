@@ -11,7 +11,7 @@ using Ballgame.States;
 using Ballgame.Levels;
 namespace Ballgame
 {
-    public enum CollectibleType { Dislike, Like, Trollface, Iceball, Hp, Racket, Ball };
+    public enum CollectibleType { Dislike, Like, Trollface, Iceball, Hp, Racket };
     public enum BallType { Bowling };
     public enum RacketType { BlueGray, LongRacket };
     public enum BrickType { DefaultBrick };
@@ -33,7 +33,7 @@ namespace Ballgame
         public static SpriteFont nextLevelSprite;
 
         public const float baseBallSpeed = -5;
-        private static int collectibleTypeCount = 7;
+        private static int collectibleTypeCount = 6;
 
         private static int ballTypeCount = 1;
         private static int racketTypeCount = 2;
@@ -242,7 +242,6 @@ namespace Ballgame
         public void StartGame()
         {
             this.SetLevel(typeof(Level1)); //<----mindig így állítsátok be a level-t
-            CurrentLevel.GenerateBricks();
         }
 
 

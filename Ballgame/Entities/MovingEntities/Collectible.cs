@@ -14,7 +14,8 @@ namespace Ballgame.Entities
         {
             this.Type = type;
             this.Speed.X = 0;
-            this.Speed.Y = speed;
+            this.Speed.Y = 1;
+            this.Velocity = speed;
         }
 
         public override void Update(GameTime gameTime)
@@ -92,13 +93,6 @@ namespace Ballgame.Entities
                     () => Main.CurrentLevel.Player.scaleEffect = false,
                     10000,
                     false));
-                    break;
-
-                case CollectibleType.Ball:
-                    foreach (Ball b in Main.CurrentLevel.EntityList.FindAll(x => x is Ball))
-                    {
-                        Level.addBall = true;
-                    }
                     break;
             }
             this.Destroy();

@@ -114,11 +114,11 @@ namespace Ballgame.Entities
         /// 
 
 
-        public static Brick CreateBrick(Point position, BrickType type, ParticleType particleType = ParticleType.DefaultBrick, byte hitsNeeded = 1)
+        public Brick CreateBrick(Point position, BrickType type, ParticleType particleType = ParticleType.DefaultBrick, byte hitsNeeded = 1)
         {
             Brick brick = new Brick(position.X, position.Y, type, particleType, hitsNeeded);
 
-            Main.CurrentLevel.EntityList.Add(brick);
+            this.EntityList.Add(brick);
             return brick;
         }
 

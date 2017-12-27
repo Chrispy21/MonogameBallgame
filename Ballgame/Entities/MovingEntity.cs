@@ -11,11 +11,13 @@ namespace Ballgame.Entities
         /// Az entity sebessége
         /// </summary>
         public Vector2 Speed;
+        public float Velocity;
 
         protected MovingEntity(int x, int y, Texture2D sprite)
             : base(x, y, sprite)
         {
             this.Speed = new Vector2(0, 0);
+            this.Velocity = 1;
         }
 
         public override void Update(GameTime gameTime)
@@ -25,8 +27,8 @@ namespace Ballgame.Entities
 
         private void Move()
         {
-            this.Body.X += (int)this.Speed.X;
-            this.Body.Y += (int)this.Speed.Y;
+            this.Body.X += (int)(this.Velocity * this.Speed.X);
+            this.Body.Y += (int)(this.Velocity * this.Speed.Y);
         }
     }
 }
